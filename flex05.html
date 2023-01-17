@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flexbox {
+            display: flex;
+            height: 200px;
+            align-items: stretch; /*flex-start:위부터정렬 flex-end:아래부터정렬 center:중앙정렬 baseline:글자기준정렬 stretch:기본값,부모요소의 세로크기*/
+            background-color: #ccc;
+        }
+        .flexbox div {
+            flex: 1 1 100px;
+            background-color: darkslateblue;
+            font-size: 20px;
+            margin: 10px;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="flexbox">
+        <div>첫번째</div>
+        <div><h1>두번째</h1></div>
+        <div>세번째</div>
+    </div>
+</body>
+</html>

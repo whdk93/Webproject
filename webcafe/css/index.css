@@ -1,0 +1,449 @@
+@charset "utf-8";
+/* usefulArea 영역 시작 */
+#usefulArea {
+    width: 280px;
+    margin-right: 30px;
+}
+/* 로그인 영역 */
+.login {
+    background-image: radial-gradient(circle at top right, #ffc848, #ff8208);
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: -1px -1px 5px rgba(0, 0, 0, 0.2);
+}
+.login h2 {
+    color: #feff9a;
+    font-size: 14px;
+    padding: 0 0 10px 10px;
+}
+.login form {
+    position: relative;
+    background-color: #fff;
+    border-radius: 3px 3px 0 0;
+    padding: 10px 10px 0 10px;
+}
+.login fieldset {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+.login label {
+    display: inline-block;
+    width: 50px;
+}
+.login input {
+    width: 120px;
+    height: 18px;
+    padding: 1px 1px 1px 4px; /*4px - 커서크기 고려 */
+    border: 1px solid #ccc;
+}
+.login input::placeholder {
+    color: #949494;
+}
+.login button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 11px;
+    border: 1px solid #ff4e00;
+    border-radius: 3px;
+    background-image: linear-gradient(to bottom, #fe5f18 0%, #fa4306 100%);
+}
+#userId {
+    margin-bottom: 6px;
+}
+.memberLink {
+    background-color: #fff;
+    border-radius: 0 0 3px 3px;
+    padding: 0 10px;
+    overflow: hidden; /* 자식을 보호하느라 높이가 생김 */
+}
+.memberLink a::before {
+    font-family: "webcafeIcon";
+    content: "g";
+    color: #fa3d00;
+    position: relative;
+    top: 2px;
+    margin-right: 3px;
+}
+.memberLink .join {
+    float: left;
+    padding: 10px 0;
+}
+.memberLink .find {
+    float: right;
+    padding: 10px 0;
+}
+/* 유효성 검사 링크 영역 */
+.validation {
+    margin-top: 20px;
+}
+.validation li {
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    background-image: linear-gradient(to bottom, #fff 0%, #ebebeb 100%);
+}
+.validation a {
+    display: block;
+    height: 30px;
+    color: #9c9c9c;
+    font-weight: bold;
+    text-indent: 70px;
+    line-height: 30px; /* 글자 높이 중앙에 맞추는 법 1.줄간격 */
+    background: url(images/validation_icon.png) no-repeat 40px 5px;
+    background-size: 20px 20px;
+}
+/* 웹 관련 용어 영역 */
+.term {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-image: linear-gradient(to bottom, #fff 0%, #f4f4f4 100%);
+    padding: 15px 25px;
+}
+.term h2 {
+    font-size: 14px;
+}
+.term dl {
+    margin-top: 15px;
+    overflow: hidden;
+}
+.term dt {
+    float: right;
+    color: #296897;
+    font-weight: bold;
+    width: 130px;
+    margin-bottom: 5px;
+}
+.term dd:nth-of-type(1) {
+    float: left;
+}
+/* nth-of-type : 같은 타입에서 순서 nth-of-child : 같은 부모를 가진 자식들에서 순서
+   nth-of-child로 하면 번호를 2, 3으로 넣으면 됨*/
+.term dd:nth-of-type(2) {
+    float: right;
+    width: 130px;
+    line-height: 1.45;
+    text-align: justify; /* justify : 양쪽정렬 */
+}
+/* usefulArea 영역 종료 */
+/* infoArea 영역 */
+#infoArea {
+    width: 410px;
+    margin-right: 30px;
+}
+/* 웹 카페 검색 영역 */
+.search {
+    border-radius: 15px 15px 0 0;
+    background-image: linear-gradient(to bottom, #ddd 0%, #f8f8f8 50%, #fff 100%);
+    padding: 10px 20px 0 20px;
+}
+.search label {
+    color: #999;
+    font-weight: bold;
+    padding: 2px 0 4px 2px;
+}
+.search label::before{
+    font-family: "webcafeIcon";
+    content: "z";
+    color: #7d7d7d;
+    font-weight: bold;
+    font-size: 18px;
+    margin-right: 5px;
+    position: relative;
+    top: 5px;
+}
+#keyword{
+    width: 220px;
+    height: 18px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin: 0 5px;
+}
+#keyword::placeholder{
+    color: #949494;
+}
+.search button{
+    padding: 3px 10px;
+    color: #fff;
+    background: linear-gradient(to bottom, #9c9da1 0%, #666 30%, #4e4f56 100%);
+    border:  1px solid #949494;
+    border-radius: 3px;
+    font-weight: bold;
+}
+/* 공지사항 및 자료실 영역 */
+.board{
+    margin-top: 20px;
+    height: 170px;
+    position: relative;
+}
+.board::before{
+    content: "";
+    position: absolute;
+    top: 27px;
+    left: 0;
+    width: 370px;
+    height: 1px;
+    background-image: linear-gradient(to right, #ccc 0%, #fff 100%);
+}
+.board section{
+    position: relative;
+}
+.board section:target { /* target:선택 됐을때, hover:마우스를 올려놨을때 */
+    z-index: 10;
+}
+.board h2 {
+    float: left;
+    font-size: 12px;
+}
+.board h2 a {
+    display: inline-block;
+    padding: 6px 15px;
+    color: #7a7a7a;
+    font-family: "NanumEx";
+    border: 1px solid #c9c9c9;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-image: linear-gradient(to bottom, #fcfcfc 0%, #eaeaea 100%);
+}
+.board section:target h2 a{
+    color: #ff4911;
+    border: 1px solid #ff6738;
+    background: #fff;
+    border-bottom: #fff;
+}
+.board ul {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+}
+.board ul a{
+    display: inline-block;
+    width: 300px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.board ul a::before{
+    font-family: "webcafeIcon";
+    content: "r";
+    color: #666;
+    position: relative;
+    top: 2px;
+}
+.board time{
+    float: right;
+    color: #666;
+}
+.board li{
+    margin-bottom: 10px;
+}
+.board .more {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 8px;
+}
+.more::before{
+    font-family: "webcafeIcon";
+    content: "p";
+    position: relative;
+    top: 2px;
+    color: #00b745;
+    margin-right: 3px;
+}
+/* 새소식 영역 */
+.news{
+    margin-top: 20px;
+    position: relative;
+}
+.news::before{
+    content: "";
+    position: absolute;
+    top: 27px;
+    left: 0;
+    width: 370px;
+    height: 1px;
+    background-image: linear-gradient(to right, #ccc 0%, #fff 100%);}
+.news h2{
+    color: #ff5a00;
+    font-size: 14px;
+}
+.news .more{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 8px;
+}
+.news article{
+    margin: 25px 0 0 130px;
+}
+.news article h3{
+    margin-bottom: 10px;
+    font-size: 12px;
+    color: #666;
+}
+.news article h3::before{
+    font-family: "webcafeIcon";
+    content: "r";
+    color: #666;
+    position: relative;
+    top: 2px;
+}
+.news time{
+    font-size: 11px;
+    margin-left: 12px;
+}
+.news p {
+    margin-top: 5px;
+    margin-left: 12px;
+    line-height: 1.8;
+}
+.news figure{
+    position: absolute;
+    top: 45px;
+    left: 0;
+    text-align: center; /* figure안의 img와 figcaption 둘다 inline요소라서 둘다 정렬됨*/
+}
+.news figure img{
+    box-shadow: 0 10px 15px #eee;
+    margin-bottom: 15px;
+}
+/* infoArea 영역 종료 */
+/* linkArea 영역 */
+#linkArea {
+    width: 214px;
+    margin-right: 30px;
+}
+#linkArea h2{
+    font-size: 14px;
+    padding-bottom: 10px;
+}
+#linkArea h2 > span{
+    color:#ff3c00;
+}
+.eventrelatedArea{
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-image: linear-gradient(to bottom, #fff 0%, #f4f4f4 100%);
+    padding: 10px 13px;
+}
+/* 이벤트 영역 */
+.event{
+    position: relative;
+}
+.event img{
+    border: 1px solid #eee;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+}
+.event p{
+    padding: 10px 0;
+}
+.event em{
+    font-style: normal;
+    display: block;
+}
+.btnEventArea{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.btnEventArea a{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-indent: 20px;
+    background-image: url(images/back_forward.png);
+    background-repeat: no-repeat;
+}
+.btnEventPrev{
+    background-position: 0 0;
+}
+.btnEventNext{
+    background-position: 100% 0;
+}
+/* 관련 사이트 영역 */
+.relatedLink > h2 {
+    padding: 10px 0;
+    border-top: 1px solid #ccc;
+}
+.relatedLink ul{
+    height: 25px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    transition: height 0.5s;
+}
+.relatedLink ul:hover{
+    height: 125px;
+    padding: 10px 0;
+}
+.relatedLink li{
+    height: 25px;
+    line-height: 25px;
+    text-indent: 1.5em;
+}
+/* 인기 사이트 영역 */
+.hotLink{
+    margin-top: 20px;
+    position: relative;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-image: linear-gradient(to bottom, #fff 0%,#f4f4f4 100%);
+    padding: 10px 12px 8px 10px;
+}
+.hotLink .more{
+    position: absolute;
+    top: 8px;
+    right: 6px;
+    padding: 8px;
+}
+.hotLink ol{
+    margin-top: 5px;
+    padding: 0;
+    overflow: hidden;
+}
+.hotLink li{
+    position: relative;
+    margin-top: 7px;
+    counter-increment: number;
+}
+.hotLink li::before{
+    content: counter(number, decimal);
+    padding: 2px 5px;
+    border-radius: 3px;
+    background-color: #a1a1a1;
+    margin-right: 5px;
+    color: #fff;
+    font-size: 0.75em;
+}
+.hotLink li:last-child{
+    margin-bottom: 2px;
+}
+.hotLink em{
+    float: right;
+    width: 8px;
+    background: url(images/rank.png) no-repeat 0 0;
+    overflow: hidden;              
+    height: 0;
+    padding-top: 12px;
+}
+.hotLink .up{
+    background-position: 0 0;
+}
+.hotLink .stop{
+    background-position: 0 50%;
+}
+.hotLink .down{
+    background-position: 0 100%;
+}
+/* linkArea 영역 종료 */

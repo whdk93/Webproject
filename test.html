@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 중요성</title>
+    <script>
+        //이벤트
+        window.onload=function () { // 익명함수/일반함수
+            var output=""; //var:변수선언
+            var date=new Date(); // 사용자정의함수/내장함수
+            var hour=date.getHours();
+            if(hour>16) {
+                output+="<ul>";
+                output+="<li>후라이드치킨</li>";
+                output+="<li>골뱅이무침</li>";
+                output+="<li>마른오징어</li>";
+                output+="</ul>";
+            }else{
+                output+="<ul>";
+                output+="<li>김치찌개</li>";
+                output+="<li>순두부찌개</li>";
+                output+="<li>제육볶음</li>";
+                output+="<li>돈까스</li>";
+                output+="</ul>";
+            }
+            //DOM: Document Object Model  BOM:Browser Object Model
+            document.body.innerHTML+=output; 
+        }
+    </script>
+</head>
+<body>
+    <h2>오늘의 메뉴</h2>
+</body>
+</html>
