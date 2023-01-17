@@ -1,0 +1,22 @@
+@charset "uft-8";
+body{
+    text-align: center;
+}
+.calcButton {
+    margin-top: 50px;
+    color: #fff;
+    background-color: #007bff;
+    text-align: center;
+    border-radius: 5px;
+    line-height: 1.5;
+    padding: 10px 20px;
+}
+.calcButton:hover{
+    background-color: #218838;
+}
+#result{
+    margin-top: 50px;
+    padding: 20px 30px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
