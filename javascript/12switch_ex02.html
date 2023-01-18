@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트12-switch문2</title>
+    <script>
+        // case 값을 문자로 설정 : prompt 가 받는 값이 문자라서
+        // let choice=prompt("관심 분야를 선택해 주세요. 1-웹, 2-게임, 3-네트워크","1");
+        // switch(choice) {
+        //         case "1" :
+        //             document.write("웹 개발은 304호 입니다.");
+        //             break;
+        //         case "2" :
+        //             document.write("게임 개발은 302호 입니다.");
+        //             break;
+        //         case "3" :
+        //             document.write("네트워크 개발은 305호 입니다.");
+        //             break;
+        //         default :
+        //             document.write("잘못 입력했습니다.");                   
+        //     }
+        // *************************************************************************
+        // Number로 캐스팅 1
+        // let choice=Number(prompt)("관심 분야를 선택해 주세요. 1-웹, 2-게임, 3-네트워크","1");
+        // switch(choice) {
+        //         case 1 :
+        //             document.write("웹 개발은 304호 입니다.");
+        //             break;
+        //         case 2 :
+        //             document.write("게임 개발은 302호 입니다.");
+        //             break;
+        //         case 3 :
+        //             document.write("네트워크 개발은 305호 입니다.");
+        //             break;
+        //         default :
+        //             document.write("잘못 입력했습니다.");       
+        //     }
+        // *************************************************************************
+        // Number로 캐스팅 2
+        let choice=prompt("관심 분야를 선택해 주세요. 1-웹, 2-게임, 3-네트워크","1");
+        switch(Number(choice)) {
+                case 1 :
+                    document.write("웹 개발은 304호 입니다.");
+                    break;
+                case 2 :
+                    document.write("게임 개발은 302호 입니다.");
+                    break;
+                case 3 :
+                    document.write("<p>네트워크 개발은 <strong>305호</strong> 입니다.</p>");
+                    break;
+                default :
+                    document.write("잘못 입력했습니다.");       
+            }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
