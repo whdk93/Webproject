@@ -1,0 +1,20 @@
+h1 {
+    font-size: 50px;
+    font-style: bold;
+    color: #bbb;
+    text-shadow: -1px -1px 1px rgba(0,0,0,0.5);
+    background: linear-gradient(to bottom, cyan 0%, pink 100%);
+}
+div {
+    display: inline-block;
+    width:150px;
+    height: 280px;
+    border: 1px solid;
+    text-align: center;
+    background: linear-gradient(to bottom, cyan 0%,pink 70%, pink 100%);
+}
+div h3{
+    font-size: 25px;
+    text-shadow: -1px -1px 1px rgba(0,0,0,0.5);
+    color: #bbb;
+}
