@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트28-함수9(내장함수)</title>
+    <script>
+        // setTimeout(익명함수,밀리초); - 정해진 시간이 되면 딱 한번만 수행
+        setTimeout(function(){
+            alert("경과시간 : 3초 o(〃＾▽＾〃)o");
+        },3000);
+        setTimeout(() => {
+            alert("경과시간 : 3초 o(〃＾▽＾〃)o");
+        }, 3000);
+
+        // setInterval(익명함수,밀리초); - 정해진 시간이 될 때마다 수행
+        setInterval(function(){
+            alert("5초가 지났습니다 o(〃＾▽＾〃)o");
+        },5000);
+        let st=setTimeout(function(){
+            window.open("http://www.kbs.co.kr","","width=500, height=300");
+        },3000);
+        function stop() {
+            clearTimeout(st);
+        }
+        // clearTimeout(변수);
+        // clearInterval(변수);
+
+        // var site=["http://www.kbs.co.kr","http://www.sbs.co.kr","http://www.imbc.com"]
+        // let st=setInterval(function(){
+        //     window.open(site[count],"","width=500px height=300px");
+        //     count++;
+        //     if(count==3) count=0;
+        // },5000);
+        // function stop() {
+        //     clearInterval(st);
+        // }
+    </script>
+</head>
+<body>
+    <button onclick="stop();">팝업 차단</button>
+</body>
+</html>

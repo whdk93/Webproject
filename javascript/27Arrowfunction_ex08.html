@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트27-함수8(화살표 함수)</title>
+    <script>
+        var hello=function () {
+            return "안녕하세요";
+        }
+        var hello= () => "안녕하세요";
+        document.write("<h1>"+hello()+"</h1>");
+        // ***********************************************
+        var hello=function (name) {
+            return name+"님 안녕하세요";
+        }
+        var hello= (name) => name + "님 안녕하세요"; // return 생략 가능, 수행식이 한줄이면 {} 생략가능
+        var hello= (name) => '${name}님 안녕하세요';
+        document.write("<h1>"+hello('김철수')+"</h1>"); 
+        // ***********************************************
+        var add=function(a,b) {
+            return a+b;
+        }
+        let add = (a,b) => a+b;
+        document.write("<h1>두 수의 합="+add(10,20)+"</h1>")
+    </script>
+</head>
+<body>
+
+</body>
+</html>

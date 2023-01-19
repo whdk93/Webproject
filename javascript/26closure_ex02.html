@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트26-함수7(클로저)</title>
+    <script>
+        // document.write(result()); // 함수이름 뒤에 ()괄호를 넣으면 호출
+        // let sum=function(a,b){
+        //     return a+b;
+        // }
+        // document.write(sum(10,20));
+        let result=(function (a,b) {
+            return a+b;
+        }(30,70));
+        document.write(result);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

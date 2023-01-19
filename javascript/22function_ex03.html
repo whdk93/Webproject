@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트22-함수3</title>
+    <script>
+        let num1=parseInt(prompt("첫번째 숫자는?")); // parseInt(): 문자를 숫자로 변환
+        let num2=parseInt(prompt("두번째 숫자는?"));
+        let result=addNumber(num1,num2);
+        alert("두 수의 합="+result);
+        function addNumber(a,b) {
+            let sum=a+b;
+            return sum;
+            // return a+b; // 변수 없이 바로 리턴값으로 돌려줘도 됨
+        }
+        // addNumber(num1, num2);
+
+        // function addNumber (a,b) {
+        //     let sum=a+b;
+        //     alert("두 수의 합="+sum);
+        // }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

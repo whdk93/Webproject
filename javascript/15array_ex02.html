@@ -6,20 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>자바스크립트15-배열2</title>
     <script>
-        // window.onload=function () {
-        //     let h=document.querySelector('#head');
-        //     let color=["red","orange","yellow","green","cyan","blue","purple"];
-        //     let cnt=0;
-        //     setInterval(function () {
-        //         h.style.color=color[cnt];
-        //         cnt++;
-        //         if(cnt==7){
-        //             cnt=0;
-        //         }
-        //     },1000);    
-        // }
+        window.onload=function () {
+            let h=document.querySelector('#head');
+            let color=["red","orange","yellow","green","cyan","blue","purple"];
+            let cnt=0;
+            setInterval(function () {
+                h.style.color=color[cnt];
+                cnt++;
+                if(cnt==7){
+                    cnt=0;
+                }
+            },1000);    
+        }
         // ↑ 광과민성 발작 위험이 있으므로 xxx
-
+        //*************************************************************************
         // Array : 내장 함수(내장 객체)    
         const num = new Array(); // 빈 배열 1
         const nem = []; // 빈 배열 2   
@@ -27,7 +27,7 @@
         nam[0]=20;
         const nim =[,,,,];
         const nom =new Array(10,20,30); // const nom = new Array[10,20,30];
-        
+        //*************************************************************************        
         let product = {
             제품명: '건조망고',
             가격: 5000,

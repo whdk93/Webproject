@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트25-함수6(클로저)</title>
+    <script>
+        // 클로저: 지역변수를 남겨두는 현상 / 함수 내부에 생성되는 공간
+        function test(name) {
+            let output=name + "님 안녕하세요";
+            return function() {
+                alert(output);
+            }
+        }
+        test("김철수")();
+        // alert(output); //output이 지역변수라서 호출 불가
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
