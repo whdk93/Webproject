@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>클로저</title>
+    <script>
+        function Person(name,age) {
+            let _name=name; //내부변수
+            let _age=age;
+            return function () {
+                alert(_name + "의 나이는 " +_age + "입니다.")
+            }
+        }
+        let person1=Person("홍길동",15);
+        let person2=Person("김철수",16);
+        let person3=Person("이영희",18);
+        person1();
+        person2._name='김돼지';
+        person2();
+        person3();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
