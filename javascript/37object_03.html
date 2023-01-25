@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+       let student= {};
+       student.이름='홍길동';
+       student.취미='축구';
+       student.특기='프로그래밍';
+       student.가나='다라';
+       student.toString = function () {
+           let output="";
+           for(let key in this) {
+            if(key != 'toString'){
+               output+= key + " : " + this[key] + "<br>";
+               }
+           }  
+           return output;
+       }
+       //document.write(student.toString());
+       delete(student.가나);
+       document.write(student);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

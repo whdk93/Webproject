@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+       let book= {
+        title : '이것이 자바다',
+        author : '신용권',
+        price : 33000
+       };
+       function Book (title, author, price) {
+        this._title=title;
+        this._author=author;
+        this._price=price;
+       }
+       let java=new Book('이것이 자바다','신용권',33000);
+       let c=new Book('c언어 기본','김철수',25000);
+       let python=new Book('기초 파이썬','이영희',28000);
+       //alert(javaBook._title);
+       let bookList=[java, c, python];
+       document.write("<h2>프로그래밍 기본서</h2>");
+       for(let i=0; i<bookList.length; i++) {
+        document.write("<p>"+ bookList[i]._title +"</p>")
+       }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
