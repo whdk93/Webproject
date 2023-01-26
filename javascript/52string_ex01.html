@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String 객체</title>
+    <script>
+        // let str=prompt("사용할 id를 입력해주세요","6글자이상");
+        // if(str.length<6) {
+        //     alert("6글자 이상으로 입력해주세요");
+        // }else {
+        //     alert("참 잘했어요");
+        // }
+        let str="computer"; // String: 원본은 불변
+        // str.toUpperCase();
+        // alert(str); // 해도 바뀌지않음
+        let str1=new String("computer");
+        let str2=str.toUpperCase();
+        //alert(str2);
+        let ch=str.charAt(2); // n번째에 위치한 문자 값(n은 0부터 시작)
+        let str3="hello thank you good luck you";
+        let pos1=str3.indexOf("you"); // indexOf: 문자의 시작 위치 값, 시작위치 지정가능 
+        let pos2=str3.indexOf("you",16); // 시작위치 지정가능, 위치를 못 찾으면 -1 리턴
+        let pos3=str3.indexOf("thank",16); 
+        let pos4=str3.lastIndexOf("you"); // 뒤에서부터 찾음, 숫자순서는 앞에서부터 0 
+        let pos5=str3.lastIndexOf("you",25); 
+        let strm=str3.match("you"); // 문자를 찾으면 문자값을 리턴해주고 없으면 null 
+        let info="지금은 html 공부중";
+        let info2=info.replace("html","javascript");
+        let pos6=str3.search("you"); // indexOf랑 비슷함
+        alert(pos6);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열4</title>
+    <script>
+        // 배열의 메소드
+        // cocat(),join(),slice() : 불변
+        // *pop(),*push(),*reverse(),*sort(),*splice() : 자기자신이 변함
+
+        let fruits1=["딸기","수박","바나나"];
+        let fruits2=["사과","감귤","망고"];
+        
+        fruits1.pop(); // pop: 배열의 맨 끝의 요소를 추출(삭제)
+        //console.log(fruits1);
+        //alert(fruits1.length);
+        fruits2.shift();
+        //console.log(fruits2); // shift: 배열의 첫 요소를 추출(삭제)
+
+        let fruits3=["딸기","수박","바나나","참외","포도"];
+        let fruits4=["사과","감귤","망고","배"];
+
+        // splice: 원하는 위치의 요소를 삭제하거나 추가
+        fruits3.splice(2);
+        console.log(fruits3);
+        fruits4.splice(2,1); // ㅇㅇ.splice(삭제할 위치, 삭제할 개수)
+        console.log(fruits4);
+        fruits4.splice(2,1,"파인애플") // 2번째 위치의 요소 삭제 후 "파인애플" 삽입 
+        console.log(fruits4);
+        let fruits5=["딸기","수박","바나나","참외","포도"];
+        fruits5.splice(2,0,"복숭아");
+        console.log(fruits5);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

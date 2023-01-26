@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열4</title>
+    <script>
+        // 배열의 메소드
+        // cocat(),join(),slice() : 불변
+        // *pop(),*push(),*reverse(),*sort(),*splice() : 자기자신이 변함
+
+        let fruits1=["딸기","수박","바나나","참외","메론","포도"];
+        let newFruits=fruits1.slice(2); // slice: 
+        console.log(newFruits);
+        console.log(fruits1);
+        let sFruits=fruits1.slice(1,4);
+        console.log(sFruits);
+
+        let nums=[56,78,20,96,74];
+        nums.sort();
+        console.log(nums)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
