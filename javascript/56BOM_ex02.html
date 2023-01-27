@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>브라우저 객체 모델(BOM)2</title>
+    <script>
+        let child=window.open("","","width=600 height=300");
+        let width=screen.width;    // screen: 내 컴퓨터 화면정보를 넣음
+        let height=screen.height;
+        setInterval(function() {
+            child.moveBy(10,10);
+            child.resizeBy(-20,-20);
+        }, 1000);
+        if(child) {
+            child.moveTo(0,0);  // moveTo(x,y): 절대위치, moveBy: 상대위치
+            child.resizeTo(width,height); // resizeTo: 창의 절대크기, resizeBy: 상대크기
+            child.document.write("<h2>공지사항</h2>");
+            child.document.write("<p>월요일부터 문서 객체 모델(DOM)을 시작 (p≧▽≦)p</p>");
+            child.document.write("<p>개인 홈페이지 제작도 시작 q(≧▽≦q)</p>");
+        }else {
+            alert("팝업 차단을 해제해주세요 (´。＿。｀)");
+        }
+    </script>
+</head>
+<body>
+    <h1>홈페이지</h1>
+</body>
+</html>

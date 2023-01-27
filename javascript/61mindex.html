@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookCafe</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body { 
+            background-color: #fff;
+        }
+        a {
+            text-decoration: none;
+        }
+        nav a:link, a:visited {
+            color: #fff;
+        }
+        nav a:active {
+            color: yellow;
+        }
+        h1 {
+            font-size: 1.5em;
+        }
+        h2 {
+            font-size: 1.3em;
+        }
+        p {
+            font-size: 1.3em;
+            line-height: 2.5;
+        }
+        li {
+            font-size: 1em;
+            line-height: 2;
+        }
+        #container {
+            width: 100%;
+
+        }
+        header {
+            width: 100%;
+            height: 300px;
+            background: url(mimages/header.jpg) no-repeat center;
+            background-size: cover;
+        }
+        nav {
+            height: 50px;
+            background-color: #000;
+        }
+        #main_nav {
+            list-style: none;
+            padding: 10px;
+        }
+        #main_nav li {
+            display: inline-block;
+            color: #fff;
+            font-size: 0.8em;
+            margin: 5px 15px;
+        }
+        .photo {
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+        }
+        .photo img {
+            width: 100%;
+        }
+        .ice {
+            border: 1px solid white;
+            border: 50%;
+        }
+        ol {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        footer {
+            background-color: #000;
+        }
+        footer p {
+            text-align: center;
+            color: #fff;
+        }
+    </style>
+    <script>
+        let ua=navigator.userAgent;
+        document.write(ua);
+    </script>
+</head>
+<body>
+    <div id="container">
+        <header>
+            <nav>
+                <ul id="main_nav">
+                    <li><a href="#intro">카페소개</a></li>
+                    <li><a href="#choice">이달의 추천</a></li>
+                    <li><a href="#map">오시는 길</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section id="intro">
+            <div class="page_title">
+                <h1>카페 소개</h1>
+            </div>
+            <div class="content">
+                <div class="photo">
+                    <img src="mimages/coffee.jpg" alt="coffee">
+                </div>
+            </div>
+            <div class="text">
+                <p>영업시간 : AM 10:00 ~ PM 10:00</p>
+                <p>휴무일 : 매월 두째주,넷째주 화요일<i><small>
+                    (화요일이 공휴일인 경우 화요일 영업, 다음날 휴무)
+                </small></i></p>
+            </div>
+        </section>
+        <section id="map">
+            <div class="page_title">
+                <h1>오시는 길</h1>
+            </div>
+            <div class="content">
+                <div class="photo">
+                    <img src="mimages/map.jpg" alt="사계 포구에서 서쪽 방향으로 150미터 직진">
+                </div>
+                <div class="text">
+                    <p>서귀포시 안덕면 사계리 2414-251</p>
+                    <p>제주 올레 10코스 산방산 근처</p>
+                </div>
+            </div>
+        </section>
+        <section id="choice">
+            <div class="page_title">
+                <h1>이달의 추천</h1>
+            </div>
+            <div class="content">
+                <div class="photo">
+                    <img class="ice" src="mimages/ice.jpg" alt="아이스 커피">
+                </div>
+                <div class="text">
+                    <h2>핸드드립 아이스커피</h2>
+                    <ol>
+                        <li>1인분을 기준으로 서버에 각얼음 5조각(한조각 20cc)넣고 추출을 시작한다.</li>
+                        <li>평상시보다 원두의 양은 2배 정도(20g)와 추출액은 얼음 포함해서 200cc까지 내린다.</li>
+                        <li>아이스 잔에 얼음 6~7개를 섞어서 시원하게 마신다.</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <p>My times with Coffee</p>
+        </footer>
+    </div>
+</body>
+</html>
