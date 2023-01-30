@@ -9,7 +9,7 @@
         let num=prompt("숫자를 입력하세요","숫자");
         switch(num % 2){
             case 0 :
-                document.write(num + "은 짝수입니다.");
+                document.write(` ${num} 은 짝수입니다. `);
                 break;
             case 1 :
                 document.write(num + "은 홀수입니다.");
@@ -17,7 +17,8 @@
             default :
                 document.write("숫자가 아닙니다.");
         }
-
+        // (불표현식) || (수행할 문장) => 불표현식이 false일때 실행
+        // (불표현식) && (수행할 문장) => 불표현식이 true일때 실행
         num % 2 == 0 || alert("홀수입니다");
         num % 2 == 0 && alert("짝수입니다");
     </script>

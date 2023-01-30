@@ -5,8 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>자바스크립트02-기초2</title>
-    <script src="js/change.js"></script>
-    <!-- 익명함수(이벤트함수):어떠한 이벤트가 있을 때 함수를 수행 -->
+    <script src="js/change.js">
+        //익명함수(이벤트함수):어떠한 이벤트가 있을 때 함수를 수행
+        window.onload = function () {
+            var heading=document.querySelector("#head");
+            heading.onclick = function () {
+                heading.style.color="red";
+                heading.style.border="3px solid blue";
+                heading.style.background="yellow";
+        }
+        }
+    </script>
 </head>
 <body>
     <h1 id="head">자바스크립트를 배워봅시다</h1>
