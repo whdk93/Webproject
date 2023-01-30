@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트71-DOM 08 이벤트</title>
+    <style>
+        #rect {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            margin-left: 70px;
+            transition: all 1s ;
+        }
+    </style>
+    <script>
+        window.onload=function () {
+            let pic=document.querySelector("#pic");
+            let myRect=document.querySelector("#rect");
+            // addEventListener : 이벤트 여러개 추가 가능
+            pic.addEventListener("mouseover", newPic);
+            pic.addEventListener("mouseout", originPic)
+            myRect.addEventListener("mouseover", function() {
+                this.style.backgroundColor="green";
+                this.style.borderRadius=50+"%";
+            });
+            myRect.addEventListener("mouseout", function(){
+                this.style.backgroundColor="";
+                this.style.borderRadius="";
+            })
+        }
+        function newPic() {
+            pic.src="../images/boy.png";
+        }
+        function originPic() {
+            pic.src="../images/girl.png";
+        }
+    </script>
+</head>
+<body>
+    <img src="../images/girl.png" alt="" id="pic">
+    <div id="rect"></div>
+</body>
+</html>

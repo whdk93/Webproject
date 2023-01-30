@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트72-DOM09</title>
+    <script>
+        let canvasWidth=700;
+        let canvasHeight=400;
+        // 생성자 함수
+        function MovingText() {
+            // 위치속성
+            this.x=randomNumber(canvasWidth);
+            this.y=randomNumber(canvasHeight);
+            // 속도 속성
+            this.vx=randomSpeed(10);
+            this.vy=randomSpeed(10);
+            // 객체 속성
+            this.head=document.createElement("h1");
+            this.head.innerHTML=randomAlphabet();
+            this.head.style.position="absolute";
+            document.body.appendChild(this.head);
+        }
+        // 프로토타입
+        MovingText.prototype.move = function() {
+            // 범위 검사
+            if(this.x < 0 || this.x > canvasWidth) {
+                this.vx*=-1;
+            }
+            if(this.y < 0 || this.y > canvasHeight) {
+                this.vy*=-1;
+            }
+            // 이동
+            this.x+=this.vx;
+            this.y+=this.vy;
+            // 화면에 이동 표시
+            this.head.style.left=this.x+"px";
+            this.head.style.top=this.y+"px";
+        }
+        // 일반함수
+        function randomNumber(limit) {
+            return Math.round(Math.random()*limit);
+        } 
+        function randomSpeed(maxSpeed) {
+            return Math.random()*maxSpeed - Math.random()*maxSpeed;
+        }
+        // let alphabet="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        // function randomAlphabet() {
+        //     return alphabet.charAt(randomNumber(25));
+        // }
+        // 클로저
+        let randomAlphabet=(function() {
+            let alphabet="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            return function() {
+                return alphabet.charAt(randomNumber(25));
+            }
+        })();
+        window.onload=function() {
+            let movingTexts=[];
+            for(let i=0; i<100; i++){
+                movingTexts.push(new MovingText());
+            }
+            // setInterval(function() {
+            //     for(let i in movingTexts) {
+            //         movingTexts[i].move();
+            //     }
+            // },1000/60);
+            setInterval(() => {
+                for(let i in movingTexts) {
+                    movingTexts[i].move();
+                }
+            },1000/60);
+            
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

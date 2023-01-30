@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트71-DOM 08 이벤트</title>
+    <script>
+        let onoff=false;
+        window.onload=function () {
+            let pic=document.querySelector("#pic");
+            pic.onclick=changePic;
+            let head=document.querySelector("#header");
+            head.onclick=function () {
+                alert("Hello :)");
+                head.onclick=null; // null값 : 이벤트 제거
+            }
+            document.getElementById("header2").onclick=function () {
+                this.style.color="aqua";
+                this.style.backgroundColor="pink";
+            }
+        }
+        function changePic() {
+            onoff=!onoff;
+            if(onoff) {
+                pic.src="../images/boy.png"
+            }else {
+                pic.src="../images/girl.png"
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1 id="header">Click Me!</h1>
+    <img src="../images/girl.png" alt="소녀" id="pic"> <!-- onclick="changePic();" -->
+    <h2 id="header2">Change CSS STYLE</h2>
+</body>
+</html>
