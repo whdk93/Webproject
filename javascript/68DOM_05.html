@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트68-문서객체모델DOM05</title>
+    <script>
+        window.onload=function() {
+            let contents=["반갑습니다.","문서 객체 모델"];
+            // let head=document.getElementsByTagName("h1");
+            // 같은 종류의 태그가 여러개 있을수 있으니까 배열 형식으로 호출
+            // let head=document.getElementsByClassName("header");
+            // let head=document.querySelectorAll("h1"); // 태그 호출할때는 잘 안씀
+            // querySelector : 선택자로 가장 처음 선택되는 문서 객체만 적용, id에만 쓸만함
+            // querySelectorAll : 선택된 모든 객체를 배열로 가져옴
+            let head=document.querySelectorAll(".header");
+            for(let i=0; i<head.length; i++) {
+                head[i].innerHTML=contents[i]; 
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1 id="head1" class="header">안녕하세요</h1>
+    <h1 id="head2" class="header">브라우저 객체 모델</h1>
+</body>
+</html>

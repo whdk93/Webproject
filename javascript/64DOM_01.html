@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트64-문서객체모델DOM01</title>
+    <script>
+        window.onload=function () {
+            let h=document.querySelector("#head");
+            setTimeout(function () {
+                h.innerHTML="DOM을 배우기 시작했습니다.";
+                h.style.color="red";
+            },3000);
+        }
+    </script>
+</head>
+<body>
+    <!-- DOM의 정의
+    웹 문서의 모든 요소를 자바스크립트를 이용하여 조작할 수 있도록 객체를 사용해 문서를 다루는 방법
+    문서 객체 모델을 사용하면 HTML페이지에 태그를 추가, 삭제, 수정할 수 있음
+    노드(Node) -->
+
+    <h1 id="head">자바스크립트</h1>
+</body>
+</html>

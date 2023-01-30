@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트66-문서객체모델DOM03</title>
+    <script>
+        window.onload=function() {
+            let output="";
+            output+="<ul>";
+            output+="<li>김치찌개</li>";    
+            output+="<li>된장찌개</li>";    
+            output+="<li>부대찌개</li>";
+            output+="</ul>";
+            document.body.innerHTML+=output;
+            // innerHTML+ 로 넣으면 기존 바디의 요소가 지워짐, += 으로 집어넣어야 추가됨   
+        }
+    </script>
+</head>
+<body>
+    <h1>자바스크립트</h1>
+</body>
+</html>

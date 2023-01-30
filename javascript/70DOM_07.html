@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트70-문서객체모델DOM07</title>
+    <script>
+        window.onload=function () {
+            //let head=document.getElementById("header");
+            let head=document.querySelector("#header");
+            head.style.color="blue";
+            head.style.border="2px solid red";
+            head.style.backgroundColor="yellow"; // js에서 -기호는 연산자라서 background-color => backgroundColor로 작성
+            let del=document.getElementById("willRemove");
+            setTimeout(function () {
+                document.body.removeChild(del); // removeChild : 자식 노드 제거
+            },5000);
+        }
+    </script>
+</head>
+<body>
+    <h1 id="header">자바스크립트</h1>
+    <h1 id="willRemove">코로나 곧 사라짐</h1>
+</body>
+</html>
