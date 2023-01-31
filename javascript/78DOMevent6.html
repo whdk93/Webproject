@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트77-DOM 이벤트6</title>
+    <script>
+        window.onload = function () {
+            let myForm=document.getElementById("myForm");
+            myForm.onsubmit=function () {
+                let pass=document.getElementById("pass").value; // input에 값을 가져오기: .value < 연산자에서..했다고? 함
+                let passCheck=document.getElementById("passCheck").value;
+                if(pass == passCheck) {
+                    alert ('비밀번호가 일치합니다');
+                }else {
+                    alert ('비밀번호를 다시 입력해주세요');
+                    return false; // 서버로 전송되는걸 막음
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <form action="member.jsp" method="post" id="myForm" autocomplete="off"> <!-- autocomplete:자동완성 -->
+        <p>
+            <label for="id">아이디</label>
+            <input type="text" name="id" id="id" required> <!-- name:서버의 데이터베이스에 값 전달 -->
+        </p>
+        <p>
+            <label for="pass">비밀번호</label>
+            <input type="password" name="pass" id="pass" required>
+        </p>
+        <p>
+            <label for="passCheck">비밀번호 확인</label>
+            <input type="text" id="passCheck" required>
+        </p>
+        <input type="submit" value="회원가입">
+    </form>
+</body>
+</html>

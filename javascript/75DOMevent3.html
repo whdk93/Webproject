@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트75-DOM 이벤트3</title>
+    <style>
+        #head {cursor:pointer;}
+    </style>
+    <script>
+        window.onload=function() {
+            /*document.getElementById("head").onclick=function() {
+                alert("HelloWorld!"); // 클릭할때마다 계속 이벤트 발생
+            }*/
+            let head=document.getElementById("head");
+            let cnt=0;
+            head.onclick=function() {
+                cnt++;
+                if(cnt > 3) {
+                    alert("이벤트 처리 종료");
+                    head.innerHTML="이벤트 처리 완료"; // 태그와 태그 사이의 내용
+                    head.onclick=null; // 이벤트 제거
+                    head.style.cursor="default"; // 요소 스타일 변경
+                    head.style.color="#ccc";
+                }else {
+                    alert("이벤트 처리중...");
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1 id="head">이벤트 처리</h1>
+</body>
+</html>

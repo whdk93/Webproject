@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트81-DOM 이벤트9</title>
+    <style>
+        ul{list-style: none;}
+        li{font-size: 1.5em; line-height: 1.8;}
+        .check{color: #ccc; font-size: 1.5em; margin-right: 25px; cursor: pointer;}
+        .check:hover{color: #222;}
+    </style>
+    <script>
+        window.onload = function () {
+            // let check=document.querySelectorAll('.check');
+            // for(let i=0; i<check.length; i++) {
+                //     check[i].onclick=function(){
+                    //         alert('임무완료!');
+                    //         check[i].style.cursor='default';
+            //         check[i].style.color="#ccc";
+            //         let todo=document.querySelectorAll('li');
+            //         todo[i].style.color='#ccc'; 
+            //     }
+            // }
+            // for(let i=0; i<check.length; i++) {
+                //     check[i].addEventListener('click',function(){
+                    //         alert('임무완료!');
+                    //         check[i].style.cursor='default';
+                    //         check[i].style.color="#ccc";
+            //         let todo=document.querySelectorAll('li');
+            //         todo[i].style.color='#ccc';
+            //     });
+            // }   
+            // 선생님 풀이
+            let onoff=false;
+            let check=document.querySelectorAll('.check');
+            let list=document.querySelectorAll('ul li');
+            for(let i=0; i<list.length; i++) {
+                check[i].onclick=function() {
+                        alert('임무완료! ( •̀ ω •́ )✧');
+                        this.style.color="#ccc";
+                        this.style.cursor="default";
+                        list[i].style.color="#ccc";
+                        this.onclick=null; // 이벤트 제거(필수!)
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>오늘의 할일</h1>
+    <ul>
+        <li><span class="check">&check;</span>집안 청소하기</li>
+        <li><span class="check">&check;</span>홈페이지 구상,제작</li>
+        <li><span class="check">&check;</span>홈트레이닝</li>
+        <li><span class="check">&check;</span>오늘 수업 복습</li>
+        <li><span class="check">&check;</span>점심 도시락 준비</li>
+    </ul>
+</body>
+</html>

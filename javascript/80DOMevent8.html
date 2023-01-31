@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트80-DOM 이벤트8</title>
+    <style>
+        #head {cursor: pointer;}
+    </style>
+    <script>
+        window.onload = function () {
+            let head=document.querySelector("#head");
+            head.addEventListener("click",hello);
+        }
+        function hello() {
+            alert('안녕하세요');
+            this.style.cursor="default";
+            this.style.color="#ccc";
+            this.removeEventListener("click",hello); // 이벤트리스너 제거
+        }
+    </script>
+</head>
+<body>
+    <h1 id="head">인사하기</h1>
+</body>
+</html>

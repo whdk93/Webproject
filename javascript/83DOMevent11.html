@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트83-DOM 이벤트11</title>
+    <style>
+        
+    </style>
+    <script>
+        function displySelct() {
+            let selectMenu=document.testForm.class;
+            let text=selectMenu.options[selectMenu.selectedIndex].innerText;
+            alert(text + "를 선택하셨군용");
+        }
+    </script>
+</head>
+<body>
+    <form name="testForm">
+        <p>
+            <label>학과</label>
+            <select name="class" id="class" onchange="displySelct();"> <!-- select는 onchange로 이벤트 발생시켜야함 -->
+                <!-- name에 value가 담겨서 서버로 전송 -->
+                <option value="archi">건축공학과</option>
+                <option value="mechanic">기계공학과</option>
+                <option value="indust">산업공학과</option>
+                <option value="elec">전기전자공학과</option>
+                <option value="computer">컴퓨터공학과</option>
+                <option value="chemical">화학공학과</option>
+            </select>
+        </p>
+    </form>
+</body>
+</html>
