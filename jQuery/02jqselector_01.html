@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리-선택자1</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script>
+        $(function () {
+            // $('*').css('color','red'); // *전체선택자 css(속성이름,속성값)
+            // $('p').css('backgroundColor','yellow');
+            // $('#target').css('border','1px solid red');
+            // $('.item').css('color','blue');
+            // $('.select').css('background-color','yellow');
+            // $('.item.select').css('color','blue'); // 2개의 클래스를 동시에 가지고 있는 객체 선택 가능
+            // $('p.item').css('color','blue');
+            // $('h1,p').css('color','pink'); // , 구분자 : 여러개 선택 가능
+            $('p').hover(function () {
+                $(this).css('color','red');
+            }, function () {
+                $(this).css('color','black');
+        });
+    });
+    </script>
+</head>
+<body>
+    <h1>제이쿼리 시작</h1>
+    <p class="item">자바스크립트로 만들어진 라이브러리이다.</p>
+    <ul>
+        <li>선택자</li>
+        <li>메서드</li>
+        <li class="item">이벤트</li>
+        <li class="select">애니메이션</li>
+        <li>플러그인</li>
+        <li>실무응용기술</li>
+    </ul>
+    <p id="target">개인 홈페이지 제작 시간</p>
+    <p class="item select">html, css, javascript</p>
+</body>
+</html>

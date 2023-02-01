@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리-선택자3</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script>
+        $(function () {
+            // $('#box2 > p').css('color','red');
+            // $('#box2 p').css('color','red');
+            // $('li').parent().css('border','1px solid red');
+            // $('ul').children().css('color','orange');
+            // $('li').css('border','1px solid red');
+            // $(선택자).parents() => 선택한 요소의 상위 요소를 모두 선택
+            // $(선택자).closest('요소명') => 선택한 요소의 상위 요소 중 가장 가까운 지정 요소(id,class도 가능)를 선택
+            // $('.item').prev().css('color','orange'); // $(선택자).prev() => 선택한 요소의 이전 형제 요소
+            // $('.item').next().css('color','pink'); // $(선택자).next() => 선택한 요소의 다음 형제 요소
+            // $(선택자).prevAll() => 선택한 요소의 이전 형제요소 전부, $(선택자).nextAll() => 선택한 요소의 이후 형제요소 전부
+            // $(선택자).prevUntil('요소명'),$(선택자).nextUntil('요소명') => 현재 선택자에서 요소명 사이의 형제요소들
+            // $(선택자).siblings() => 선택한 요소의 형제요소들 선택
+            $('.item').siblings().css('color','skyblue');
+        });
+    </script>
+</head>
+<body>
+    <h1>자식선택자와 후손선택자</h1>
+    <div id="box1">
+        <h2>자식선택자</h2>
+        <p>자식 선택자 공부</p>
+    </div>
+    <div id="box2">
+        <h2>후손선택자</h2>
+        <p>후손 선택자 공부</p>
+        <div>
+            <p>후손</p>
+        </div>
+    </div>
+    <ul>
+        <li>오늘 점심 메뉴</li>
+        <li>김밥</li>
+        <li class="item">서브웨이</li>
+        <li>한솥</li>
+    </ul>
+</body>
+</html>

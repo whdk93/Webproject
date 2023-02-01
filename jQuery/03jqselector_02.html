@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리-선택자2</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script>
+        $(function () {
+            $('h1').hover(function () {
+                $(this).css({
+                    color : 'red',
+                    background : 'yellow',
+                    border : '3px solid blue'
+                });
+                // $(this).css('color','red').css('background','yellow').css('border','3px solid blue').css('textShadow','2px 2px 1px black');
+                // width, height 단위 생략 가능
+            },function(){
+                $(this).css('color','black').css('background','white').css('border','none').css('textShadow','');
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>html - 뼈대 구축</h1>
+    <h1>css - 디자인, 레이아웃</h1>
+    <h1>javascript - 동적인 웹페이지</h1>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1제이쿼리</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script>
+        // 제이쿼리 - 자바스크립트, 이벤트 구현, 애니메이션, ajax를 쉽게 구현해준다
+        // 사용방식 - 다운로드, CDN
+
+        // 자바스크립트
+        // window.onload=function() {
+        //     let h1=document.querySelectorAll("h1");
+        //     for(let i=0; i<h1.length; i++) {
+        //         h1[i].onclick=function() {
+        //             this.innerHTML="코로나 퇴치 완료";
+        //             this.style.color="red";
+        //         }   
+        //     }
+        // }
+
+        //제이쿼리
+        //$(document).ready(function(){}); $:제이쿼리 식별자, 문서가 준비되면 실행
+        //$(선택자).메소드();
+        $(function () {
+            $('h1').click(function () {
+                $(this).html('코로나 퇴치 완료').css('color','red'); // 메소드 체이닝
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>서울 지역 코로나</h1>
+    <h1>경기 지역 코로나</h1>
+    <img src="images/car_green.jpg" alt="car_green">
+</body>
+</html>
