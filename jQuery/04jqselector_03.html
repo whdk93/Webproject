@@ -8,19 +8,17 @@
     <script src="js/jquery-3.6.3.min.js"></script>
     <script>
         $(function () {
-            // $('#box2 > p').css('color','red');
-            // $('#box2 p').css('color','red');
-            // $('li').parent().css('border','1px solid red');
-            // $('ul').children().css('color','orange');
-            // $('li').css('border','1px solid red');
-            // $(선택자).parents() => 선택한 요소의 상위 요소를 모두 선택
+            $('#box2 > p').css('color','red');
+            $('#box2 p').css('color','red');
+            $('li').css('border','1px solid red');
+            $('li').parent().css('border','1px solid red'); // $(선택자).parents() => 선택한 요소의 상위 요소를 모두 선택
+            $('ul').children().css('color','orange'); // $(선택자).children() => 선택한 요소의 자식 요소를 모두 선택
             // $(선택자).closest('요소명') => 선택한 요소의 상위 요소 중 가장 가까운 지정 요소(id,class도 가능)를 선택
-            // $('.item').prev().css('color','orange'); // $(선택자).prev() => 선택한 요소의 이전 형제 요소
-            // $('.item').next().css('color','pink'); // $(선택자).next() => 선택한 요소의 다음 형제 요소
+            $('.item').prev().css('color','orange'); // $(선택자).prev() => 선택한 요소의 이전 형제 요소
+            $('.item').next().css('color','pink'); // $(선택자).next() => 선택한 요소의 다음 형제 요소
             // $(선택자).prevAll() => 선택한 요소의 이전 형제요소 전부, $(선택자).nextAll() => 선택한 요소의 이후 형제요소 전부
-            // $(선택자).prevUntil('요소명'),$(선택자).nextUntil('요소명') => 현재 선택자에서 요소명 사이의 형제요소들
-            // $(선택자).siblings() => 선택한 요소의 형제요소들 선택
-            $('.item').siblings().css('color','skyblue');
+            // $(선택자).prevUntil('이전요소명'), $(선택자).nextUntil('이후요소명') => 현재 선택자에서 요소명 사이의 형제요소들
+            $('.item').siblings().css('color','skyblue'); // $(선택자).siblings() => 선택한 요소의 형제요소들 선택
         });
     </script>
 </head>

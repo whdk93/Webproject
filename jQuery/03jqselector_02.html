@@ -14,8 +14,10 @@
                     background : 'yellow',
                     border : '3px solid blue'
                 });
-                // $(this).css('color','red').css('background','yellow').css('border','3px solid blue').css('textShadow','2px 2px 1px black');
-                // width, height 단위 생략 가능
+                // hover(마우스 올렸을때 실행함수),(마우스 뗐을때 실행할 함수)
+                // $(this).css('color','red').css('background','yellow').css('border','3px solid blue').css('textShadow','2px 2px 1px black'); // 메소드 체이닝
+                // width, height는 단위 생략 가능
+                // {} => css스타일 여러개 지정할때 블록안에 자바스크립트 객체처럼 작성 가능
             },function(){
                 $(this).css('color','black').css('background','white').css('border','none').css('textShadow','');
             });

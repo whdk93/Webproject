@@ -8,16 +8,13 @@
     <script src="js/jquery-3.6.3.min.js"></script>
     <script>
         $(function () {
-            // $('li:eq(-1)').css('color','red'); // :eq(index) => 해당 index의 요소를 지정, 0부터 시작, -1로 맨끝부터 셀수있음
-            // $('li:contains(표범)').css('text-decoration','line-through');
-            // $('li:gt(3)').css('color','red'); // gt() : index보다 큰 요소들 지정
-            // $('li:lt(3)').css('color','red'); // lt() : index보다 작은 요소들 지정
-            $('li:nth-child(2n)').css('color','red');
+            $('li:eq(-1)').css('color','red'); // :eq(index) => 해당 index의 요소를 지정, 0부터 시작, -1로 맨끝부터 셀수있음
+            $('li:contains(표범)').css('text-decoration','line-through');
+            $('li:gt(3)').css('color','red'); // gt() : index보다 큰 요소들 지정
+            $('li:lt(3)').css('color','red'); // lt() : index보다 작은 요소들 지정
+            $('li:nth-child(2n)').css('color','red'); // nth-child() : n번째 요소를 지정, ()안에 식 마음대로 작성 가능
             $('li:nth-child(2n+1)').css('color','blue');
-            $('tr:eq(0)').css({
-                color : '#fff',
-                background: '#888'
-            });
+            $('tr:eq(0)').css({color : '#fff',background: '#888'});
             $('td:nth-child(3n+1)').css('background','#FAED7D');
             $('td:nth-child(3n+2)').css('background','#B2EBF4');
             $('td:nth-child(3n)').css('background','#FFB2F5');
