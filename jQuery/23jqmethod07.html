@@ -8,7 +8,22 @@
     <script src="js/jquery-3.6.3.min.js"></script>
     <script>
         $(function() {
-            
+            let imgs=["images/box2.png","images/lightbulb.png","images/웃는사람.png",
+                    "images/box1.png","images/lightbulb1.png","images/우는사람.png"];
+            // $('img').each(function (index) {
+            //     $(this).hover(function(){
+            //         $(this).attr('src', imgs[index]);
+            //     },function(){
+            //         $(this).attr('src', imgs[index+3]);
+            //     });
+            // });
+            let index;
+            $('img').hover(function(){
+                index=$(this).index();
+                $(this).attr('src', imgs[index]);
+            },function(){
+                $(this).attr('src', imgs[index+3]);
+            });
         });
     </script>
 </head>
