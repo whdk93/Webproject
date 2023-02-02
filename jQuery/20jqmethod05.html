@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20제이쿼리-메소드5</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script>
+        $(function() {
+            /* let s=$('img').attr('alt'); // attr(); : 선택자의 속성값에 관여
+            alert(s); */
+            $('img').attr({
+                width : function (index) {
+                    return (index+1)*200;
+                },
+                height : 350
+            });
+        });
+    </script>
+</head>
+<body>
+    <img src="images/Koala.jpg" alt="코알라">
+    <img src="images/Penguins.jpg" alt="펭귄">
+    <img src="images/Lighthouse.jpg" alt="등대">
+</body>
+</html>

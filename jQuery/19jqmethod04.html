@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>19제이쿼리-메소드4</title>
+    <style>
+        .item{background-color: yellow;}
+        .select{border: 1px solid red;}
+    </style>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script>
+        $(function() {
+            // 문제) 5초 후 border 삭제
+            setTimeout(function() {
+                $('h1').removeClass('select');
+            }, 5000);
+        });
+    </script>
+</head>
+<body>
+    <h1 class="item">제이쿼리 선택자</h1>
+    <h1 class="item">제이쿼리 메서드</h1>
+    <h1 class="item select">제이쿼리 이벤트</h1>
+    <h1>제이쿼리 애니메이션</h1>
+    <h1 class="select">제이쿼리 실무응용기술</h1>
+    <h1>제이쿼리 플러그인</h1>
+</body>
+</html>

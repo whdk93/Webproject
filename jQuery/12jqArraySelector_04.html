@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리-선택자,배열03</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script>
+        $(function() {
+            // 문제) h1에 css,마크업 건드리지 않고 다양한 색 적용
+
+            let color=['red','yellow','green','blue','pink','cyan'];
+            // 1. 반복문 
+            // for(let i=0; i<=5; i++) {
+            //     $('h1').eq(i).css('background',color[i]);
+            // }
+
+            // 2. each메소드
+            // $('h1').each(function (index) {
+            //     $(this).css('background',color[index]);
+            // });
+
+            // 3. 익명함수
+            // $('h1').css('background',function(index){
+            //     return color[index];
+            // });
+            $('h1').css({
+                color : 'white',
+                background : function(index){
+                    return color[index];
+                },
+                border : '5px solid gray'
+           });
+        });
+    </script>
+</head>
+<body>
+    <h1>제이쿼리 선택자</h1>
+    <h1>제이쿼리 메서드</h1>
+    <h1>제이쿼리 이벤트</h1>
+    <h1>제이쿼리 애니메이션</h1>
+    <h1>제이쿼리 실무응용기술</h1>
+    <h1>제이쿼리 플러그인</h1>
+</body>
+</html>

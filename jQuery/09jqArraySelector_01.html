@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리-선택자,배열 01</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script>
+        $(function () {
+            // let ballpen={
+            //     제조사 : '모나미',
+            //     가격 : 500,
+            //     굵기 : '0.5m'
+            // };
+            // alert(ballpen.제조사);
+            // $('h1').css({
+            //     color : 'red',
+            //     background : 'yellow',
+            //     border : '1px solid blue'
+            // });
+            let brsite=[
+                {
+                    name : '서울방송',
+                    link : 'http://www.sbs.co.kr'
+                },
+                {
+                    name : '한국방송',
+                    link : 'http://www.kbs.co.kr'
+                },
+                {
+                    name : '문화방송',
+                    link : 'http://www.imbc.com'
+                }
+            ];
+            // 자바스크립트
+            // for(let i=0; i<brsite.length; i++){
+            //     let output='';
+            //     output+='<a href="' + brsite[i].link + '">';
+            //     output+='<h2>' + brsite[i].name + '</h2>';
+            //     output+='</a>';
+            //     document.body.innerHTML+=output;
+            // }
+
+            //제이쿼리
+                $.each(brsite, function (index,item) {
+                    let output='';
+                    output+='<a href="' + item.link + '">';
+                    output+='<h2>' + item.name + '</h2>';
+                    output+='</a>';
+                    document.body.innerHTML+=output;
+                });
+            // each : 배열의 정보를 각각 처리해줌, index=순서 item=객체정보 (index랑 item은 사용자가 생성한 변수라서 이름 변경 가능)
+        });
+    </script>
+</head>
+<body>
+    <h1>방송사이트</h1>
+</body>
+</html>

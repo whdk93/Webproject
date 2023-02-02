@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리-선택자,배열03</title>
+    <style>
+        .high_light0{background-color: yellow;}
+        .high_light1{background-color: orange;}
+        .high_light2{background-color: cyan;}
+        .high_light3{background-color: rosybrown;}
+        .high_light4{background-color: greenyellow;}
+        .high_light5{background-color: cornflowerblue;}
+    </style>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script>
+        $(function() {
+            // 문제) 각각의 개체에 마우스오버 시 배경색 onoff
+            let index;
+            $('h1').hover(function(){
+                index=$(this).index();
+                $(this).addClass('high_light' + index);
+            },function(){
+                $(this).removeClass('high_light' + index);
+            });
+
+            // 일반 메소드는 index를 가질수 있지만, 이벤트 메소드는 index를 가질 수 없음
+            // 이벤트메소드는 인덱스 대신 이벤트를 가짐 따라서 index메소드를 이용해야함
+
+            // $('h1').click(function (event) {
+            //     if(event.shiftKey) {
+            //         alert('안녕하세요');
+            //     }else {
+            //         alert('잘가세요');
+            //     }
+            // });
+
+            // $('h1').click(function () {
+            //     let index=$(this).index();
+            //     alert(index);
+            //     //$(this).addClass('high_light' + index);
+            // });
+        });
+    </script>
+</head>
+<body>
+    <h1>제이쿼리 선택자</h1>
+    <h1>제이쿼리 메서드</h1>
+    <h1>제이쿼리 이벤트</h1>
+    <h1>제이쿼리 애니메이션</h1>
+    <h1>제이쿼리 실무응용기술</h1>
+    <h1>제이쿼리 플러그인</h1>
+</body>
+</html>

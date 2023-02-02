@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>17제이쿼리-메소드2</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script>
+        $(function() {
+            /* $('h1').css('background','yellow');
+            $('h1:even').css('color','red');
+            $('h1:odd').css('color','blue'); */
+            // $('h1').css('background','yellow').filter(':even').css('color','red').filter(':odd').css('color','blue');
+            // filter를 메소드 체이닝 하면 앞에 필터부터 누적됨
+            $('h1').css('background','yellow').filter(':even').css('color','red').end().filter(':odd').css('color','blue');
+            // end() : 객체에 적용되는 메소드를 한단계 전으로 돌리는 메소드
+        });
+    </script>
+</head>
+<body>
+    <h1>제이쿼리 선택자</h1>
+    <h1>제이쿼리 메서드</h1>
+    <h1>제이쿼리 이벤트</h1>
+    <h1>제이쿼리 애니메이션</h1>
+    <h1>제이쿼리 실무응용기술</h1>
+    <h1>제이쿼리 플러그인</h1>
+</body>
+</html>

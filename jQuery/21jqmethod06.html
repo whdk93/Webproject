@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>21제이쿼리-메소드6</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script>
+        $(function() {
+            $('img').hover(function () {
+                $(this).attr('src','images/box2.png');
+            },function () {
+                $(this).attr('src','images/box1.png');
+            });
+        });
+    </script>
+</head>
+<body>
+    <img src="images/box1.png" alt="보물상자">
+</body>
+</html>

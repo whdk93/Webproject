@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리-선택자,배열 02</title>
+    <style>
+        .high_light{background-color: yellow;color: red;border: 3px solid blue;}
+    </style>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script>
+        $(function() {
+            $('h1').hover(function () {
+                $(this).addClass('high_light'); // 선택자 this로 해서 당사자만 적용
+            },function () {
+                $(this).removeClass('high_light'); // removeClass : 요소에 클래스명 제거
+            });
+            // $('h1').addClass('high_light'); // addClass : 요소에 클래스명 추가
+        });
+    </script>
+</head>
+<body>
+    <h1>제이쿼리 선택자</h1>
+    <h1>제이쿼리 메서드</h1>
+    <h1>제이쿼리 이벤트</h1>
+    <h1>제이쿼리 애니메이션</h1>
+    <h1>제이쿼리 실무응용기술</h1>
+    <h1>제이쿼리 플러그인</h1>
+</body>
+</html>

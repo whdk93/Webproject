@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15제이쿼리-충돌방지</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script>
+        $.noConflict(); // $.noConflict(); : 제이쿼리 충돌방지($식별자 인식x)
+        // 기본식별자가 jQuery인데 길어서 $를 사용함, 플러그인이랑 충돌나면 script의 식별자를 변경
+        // jQuery 다 쓰기 귀찮으면 변수에 넣어서 쓸수있음
+        let J=jQuery;
+        J(function(){
+            J('h1').css('color','red');
+        });
+    </script>
+</head>
+<body>
+    <h1>플러그인 간의 충돌 방지</h1>
+</body>
+</html>

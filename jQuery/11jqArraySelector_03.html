@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리-선택자,배열03</title>
+    <style>
+        .high_light0{background-color: yellow;}
+        .high_light1{background-color: orange;}
+        .high_light2{background-color: cyan;}
+        .high_light3{background-color: rosybrown;}
+        .high_light4{background-color: greenyellow;}
+        .high_light5{background-color: cornflowerblue;}
+    </style>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script>
+        $(function() {
+            // 문제) 마크업 건드리지 않고 h1에 스타일 개별적용
+
+            // 1. 반복문 + eq메소드
+            // for(let i=0; i<=5; i++){
+            //     // $('h1:eq(' + i + ')').addClass('high_light' + i);
+            //     $('h1').eq(i).addClass('high_light' + i);                
+            // }
+
+            // 2. each메소드
+            // $('h1').each(function (index) {
+            //     $(this).addClass('high_light' + index);
+            // });
+            // index : 부모로부터 받는 순번, 0부터 순차적으로 증가
+
+            // 3. addClass메소드의 class값에 익명함수로 'high_light'+index 리턴
+            $('h1').addClass(function (index) {
+                return 'high_light'+index;
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>제이쿼리 선택자</h1>
+    <h1>제이쿼리 메서드</h1>
+    <h1>제이쿼리 이벤트</h1>
+    <h1>제이쿼리 애니메이션</h1>
+    <h1>제이쿼리 실무응용기술</h1>
+    <h1>제이쿼리 플러그인</h1>
+</body>
+</html>

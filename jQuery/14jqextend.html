@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14제이쿼리-확장</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script>
+        $(function(){
+            let person={
+                name : '홍길동'
+            };
+            // extend(객체,{}); => 객체를 확장
+            $.extend(person,{
+                age : 25,
+                address : '서울시 용산구'
+            }); 
+            // person 객체에 age와 address 추가
+            $.each(person,function(key,item){
+                document.write(key + ' : ' + item + "<br>");
+            });
+            // 결과:
+            // name : 홍길동
+            // age : 25
+            // address : 서울시 용산구
+        });
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

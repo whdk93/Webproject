@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리 test2</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script>
+        $(function () {
+           $('#move').click(function () {
+            $('html, body').animate({
+                scrollTop:0
+            },2000);
+           });
+           $(window).scroll(function() {
+                let pos=$(this).scrollTop();
+                if(pos>850) {
+                    $('#p').attr('src','images/pf.png');
+                }
+                // console.log($(this).scrollTop());
+           });
+        });
+    </script>
+</head>
+<body>
+    <h1 id="top">오늘의 뉴스</h1>
+    <p>인간의 장거리 우주여행을 가능하게 하는 열쇠를 북극에 서식하는 다람쥐에서 찾기 위한 연구가 본격적으로 시작됐다. 
+        체온이 영하로 내려가도 거뜬히 생존하는 이 동물의 몸 속 원리를 규명하면 인간이 동면 상태로 우주 비행에 나설 수 있는 시대가 올 것이라는 기대가 나온다.</p>
+    <p>미국 항공우주국(NASA)은 1일(현지시간) 알래스카 페어뱅크스대 연구진이 추진하고 있는 ‘북극 땅다람쥐’의 동면 과정 분석을 연구자금 지원 대상으로 선정했다고 밝혔다. 
+        이 대학 연구진은 관련 연구를 지난 10여년간 해오고 있었는데, 이번에 NASA의 본격적인 지원을 받게 됐다.</p>
+    <img src="images/Koala.jpg" alt="코알라">
+    <img id="p" src="images/Penguins.jpg" alt="펭귄">
+    <img src="images/Lighthouse.jpg" alt="등대">
+    <p><a id="move" href="#">맨 위로↑</a></p>
+</body>
+</html>
