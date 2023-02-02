@@ -9,6 +9,7 @@
         window.onload=function () {
             let pic=document.querySelector("#pic");
             pic.onclick=changePic;
+
             let head=document.querySelector("#header");
             head.onclick=function () {
                 alert("Hello :)");
@@ -18,7 +19,7 @@
                 this.style.color="aqua";
                 this.style.backgroundColor="pink";
             }
-        }
+        } 
         function changePic() {
             onoff=!onoff;
             if(onoff) {
