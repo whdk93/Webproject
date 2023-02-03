@@ -8,8 +8,8 @@
     <script src="js/jquery-3.6.3.min.js"></script>
     <script>
         $(function() {
-            /* let s=$('img').attr('alt'); // attr(); : 선택자의 속성값에 관여
-            alert(s); */
+            let s=$('img').attr('alt'); // attr(); : 선택자의 속성값에 관여
+            //alert(s); //attr('속성')=속성값 반환, attr('속성','속성값')=속성의 속성값 수정
             $('img').attr({
                 width : function (index) {
                     return (index+1)*200;

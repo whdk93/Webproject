@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>29제이쿼리-메소드13</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <style>
+        #carColor{width: 375px;text-align: center;}
+        #carColor > p {display: inline-block; width: 50px; height: 50px; margin: 10px; cursor: pointer;}
+        #carColor > p:nth-child(1){background-color: greenyellow; border: 3px solid black;}
+        #carColor > p:nth-child(2){background-color: purple;}
+        #carColor > p:nth-child(3){background-color: red;}
+    </style>
+    <script>        
+        $(function() {
+            let color=['green','purple','red'];
+            let index;
+            $('#carColor>p').click(function () {
+                index=$(this).index();
+                $('#carColor>p').css('border','none');
+                $(this).css('border','3px solid black');
+                $('img').attr('src','images/car_' + color[index] + '.jpg');
+            });
+        });
+    </script>
+</head>
+<body>
+    <img class="myCar" src="images/car_green.jpg" alt="">
+    <div id="carColor">
+        <p></p>
+        <p></p>
+        <p></p>
+    </div>
+    
+</body>
+</html>

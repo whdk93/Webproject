@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>30제이쿼리-메소드14</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <style>
+        #carChange{width: 300px;text-align: center;}
+        #carChange > img {display: inline-block; width: 60px; height: 36px; margin: 2px; cursor: pointer;}
+    </style>
+    <script>        
+        $(function() {
+            $("#carChange > img").click(function () {
+                $('.myCar').attr('src', $(this).attr('src'));
+            });
+        });
+    </script>
+</head>
+<body>
+    <img class="myCar" src="images/car1.jpg" alt="">
+    <div id="carChange">
+        <img src="images/car1.jpg" alt="">
+        <img src="images/car2.jpg" alt="">
+        <img src="images/car3.jpg" alt="">
+        <img src="images/car4.jpg" alt="">
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>28제이쿼리-메소드12</title>
+    <style>
+    </style>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script>        
+        $(function() {
+            $('h1').html(function (index, html) {
+                return "♨" + html + "♨"; // index=인덱스 번호 html=내용을 받을수있음.
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>제이쿼리 선택자</h1>
+    <h1>제이쿼리 메서드</h1>
+    <h1>제이쿼리 이벤트</h1>
+</body>
+</html>

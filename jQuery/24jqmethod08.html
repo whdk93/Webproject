@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>24제이쿼리-메소드8</title>
+    <style>
+        div{width: 600px; height: 700px; border: 3px solid black; text-align: center;display: inline-block;
+            background-color: #000;}
+        div img{opacity: 0;}
+        .sw{vertical-align: bottom;}
+    </style>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script>
+        $(function() {
+            let sw=false;
+            $('.sw').click(function () {
+                sw=!sw;
+                if(sw) {
+                    $(this).attr('src','images/light-switch.png');
+                    $('div').css('backgroundColor','#fff');
+                    $('div img').css('opacity',1);
+                }else {
+                    $(this).attr('src','images/light-switch1.png');
+                    $('div').css('backgroundColor','#000');
+                    $('div img').css('opacity',0);
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <img src="images/귀신.jpg" alt="귀신">
+    </div>
+    <img class="sw" src="images/light-switch1.png" alt="스위치오프">
+</body>
+</html>

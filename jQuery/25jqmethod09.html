@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>25제이쿼리-메소드9</title>
+    <style>
+        
+    </style>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script>
+        $(function() {
+            $('img').click(function (event) {
+                if(event.shiftKey) {
+                    $(this).attr('width',200);
+                }else{
+                    $(this).removeAttr('width');
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <img src="images/Penguins.jpg" alt="펭귄" width="200">
+</body>
+</html>

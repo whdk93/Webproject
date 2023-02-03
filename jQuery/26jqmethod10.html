@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>26제이쿼리-메소드10</title>
+    <style>
+    </style>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script>
+        $(function() {
+            // h1 바탕색 : 노랑, 글꼴색 : 빨 초 파 로 변경
+            // let c=$('#target').css('color'); // 모든 메소드: 메소드('속성') > 속성값 리턴
+            // alert(c);
+            //let color=["red","green","blue"];
+            // 1. 익명함수
+            // $('h1').css({backgroundColor : 'yellow', color : function(index){return color[index];}});
+            // 2. 반복문
+            // for(let i=0; i<color.length; i++){
+            //     $('h1').css('backgroundColor','yellow').eq(i).css('color',color[i]);
+            // }
+            // 선생님 풀이
+            let color=['red','green','blue'];
+            $('h1').css({
+                color : function (index) {
+                    return color[index];
+                },
+                backgroundColor : 'yellow'
+            });
+            //$('h1').html('지금 배우는 중...');
+            $('h1').click(function () {
+                $(this).html($(this).html()+'-지금 배우는 중...'); 
+                // html메소드(html()) : 태그사이의 글자 값 가져옴, ()안에 내용 넣으면 태그 사이의 글자를 바꿔줌 (이전값 삭제됨)
+                //                      태그 인식 가능해서 태그삽입할수있음
+            });
+            //$('#box').html('<h1>오늘은 금요일</h1>');
+            $('#box').text('<h1>오늘은 금요일</h1>'); 
+            // text메소드(text()) : 태그사이의 글자 값 가져옴, 내용 바꿔줌, 태그인식 불가 
+        });
+    </script>
+</head>
+<body>
+    <h1>제이쿼리 선택자</h1>
+    <h1>제이쿼리 메서드</h1>
+    <h1>제이쿼리 이벤트</h1>
+    <div id="box">
+
+    </div>
+</body>
+</html>

@@ -8,8 +8,10 @@
     <script src="js/jquery-3.6.3.min.js"></script>
     <script>
         $(function() {
-            let imgs=["images/box2.png","images/lightbulb.png","images/웃는사람.png",
-                    "images/box1.png","images/lightbulb1.png","images/우는사람.png"];
+            // 이미지 배열 선언
+            // let imgs=["images/box2.png","images/lightbulb.png","images/웃는사람.png",
+            //         "images/box1.png","images/lightbulb1.png","images/우는사람.png"];
+            // 1. each 메소드 사용
             // $('img').each(function (index) {
             //     $(this).hover(function(){
             //         $(this).attr('src', imgs[index]);
@@ -17,12 +19,26 @@
             //         $(this).attr('src', imgs[index+3]);
             //     });
             // });
-            let index;
-            $('img').hover(function(){
+            // 2. index 메소드 사용
+            // let index;
+            // $('img').hover(function(){
+            //     index=$(this).index();
+            //     $(this).attr('src', imgs[index]);
+            // },function(){
+            //     $(this).attr('src', imgs[index+3]);
+            // });
+
+            // 선생님 풀이
+            let newImage=["box2.png","lightbulb.png","웃는사람.png"];
+            //let oldImage=["box1.png","lightbulb1.png","우는사람.png"];
+            let index,oldImage;
+            $('img').hover(function () {
                 index=$(this).index();
-                $(this).attr('src', imgs[index]);
-            },function(){
-                $(this).attr('src', imgs[index+3]);
+                oldImage=$(this).attr('src'); // 마우스 오버시 기존 src값을 oldImage에 저장, attr('속성')=속성값 리턴
+                $(this).attr('src','images/'+ newImage[index]); // 배열에 파일명만 넣고 폴더경로는 +연산자로 더함
+            },function () {
+                //$(this).attr('src','images/'+oldImage[index]);
+                $(this).attr('src',oldImage);
             });
         });
     </script>
