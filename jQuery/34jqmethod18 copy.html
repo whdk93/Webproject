@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>34제이쿼리-문서 객체 이동</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <style>
+        #images{width: 250px; height:200px; overflow: hidden;}
+    </style>
+    <script>        
+        $(function() {
+            $('#images>img').css('width',250);
+            setInterval(function () {
+                $('#images>img').first().appendTo('#images');
+            },2000);
+        });
+    </script>
+</head>
+<body>
+    <h1>문서 객체 이동</h1>
+    <div id="images">
+        <img src="images/Koala.jpg" alt="">
+        <img src="images/Tulips.jpg" alt="">
+        <img src="images/Lighthouse.jpg" alt="">
+        <img src="images/Penguins.jpg" alt="">
+        <img src="images/Jellyfish.jpg" alt="">
+    </div>    
+</body>
+</html>

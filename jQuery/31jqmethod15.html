@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>31제이쿼리-메소드15</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <style>
+        #box{width: 300px;height: 300px;border: 1px solid black;}
+    </style>
+    <script>        
+        $(function() {
+            // $('#box>h1').first().remove(); // remove(remove()) : 문서객체를 제거
+            $('#box').empty(); // empty(empty()) : 문서객체 비우기
+        });
+    </script>
+</head>
+<body>
+    <div id="box">
+        <h1>곧 제거됨</h1>
+        <h1>제이쿼리 메소드</h1>
+    </div>
+</body>
+</html>

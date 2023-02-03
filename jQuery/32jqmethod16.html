@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>32제이쿼리-문서 객체 추가(생성)</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script>        
+        $(function() {
+            $('<h1></h1>').html('나는 생성된 객체').appendTo('#festival'); // 객체 생성 : h1객체 생성
+            // appendTo('객체') : 선택된 객체 안에 맨마지막에 삽입
+            $('<h2>남극 펭귄</h2>').appendTo('#festival');
+            $('<img>').attr({
+                src : 'images/Penguins.jpg',
+                alt : 'Penguins',
+                width : 500,
+                height : 350
+            }).appendTo('#festival');
+            let content=['금요일 수업','지금은 문서 객체 생성 수업','홈페이지 제작은 2월 20일까지 쭉']
+            for (let i=0; i<content.length; i++) {
+                $('<p></p>').html(content[i]).appendTo('#festival');
+            }
+            // $(A).appendTo(B) : 생성된 A 객체를 B 내부의 맨마지막에 추가
+            // $(A).prependTo(B) : 생성된 A 객체를 B 내부의 맨앞에 추가
+            $('<h1>겨울축제</h1>').prependTo('#festival');
+            $('<h2>나는 어디에 추가될까</h2>').insertAfter('#festival');
+            $('<h2>나는 외톨이</h2>').insertBefore('body');
+            // $(A).insertAfter(B) : 생성된 A 객체를 B의 뒤에 추가
+            // $(A).insertBefore(B) : 생성된 A 객체를 B의 앞에 추가
+            
+        });
+    </script>
+</head>
+<body>
+    <h1>문서 객체 생성</h1>
+    <div id="festival">
+
+    </div>
+</body>
+</html>

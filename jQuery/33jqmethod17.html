@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>33제이쿼리-메소드17</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <style>
+
+    </style>
+    <script>        
+        $(function() {
+            // $(A).append(B) : 생성된 B 객체를 A 내부의 맨마지막에 추가
+            // $(A).prepend(B) : 생성된 B 객체를 A 내부의 맨앞에 추가
+            // $(A).After(B) : 생성된 B 객체를 A의 뒤에 추가
+            // $(A).Before(B) : 생성된 B 객체를 A의 앞에 추가
+            let title="<h2>산천어 축제</h2>";
+            let sub="<p>이번 축제는 코로나로 인하여 기간이 축소됩니다.</p>";
+            $("#festival").append(title,sub);
+            let content=[
+                {name : '강백호', address : '서울시 종로구'},
+                {name : '서태웅', address : '서울시 용산구'},
+                {name : '정대만', address : '인천광역시 부평구'}
+            ];
+            $('#address>div').append(function(index) {
+                let item=content[index];
+                let output='';
+                output+='<h2>' + item.name + '</h2>';
+                output+='<p>' + item.address + '</p>';
+                return output;
+            }).css({
+                border : '1px solid black',
+                'margin-bottom' : '10px',
+                'text-align' : 'center'
+            }).hover(function () {
+                $(this).css('background','yellowgreen');
+            },function () {
+                $(this).css('background','#fff');
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>문서 객체 생성</h1>
+    <div id="festival">
+
+    </div>
+    <div id="address">
+        <h1>주소록 관리</h1>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>
