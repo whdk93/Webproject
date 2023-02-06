@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>33제이쿼리-메소드17</title>
+    <title>33제이쿼리-문서 객체 추가(생성)</title>
     <script src="js/jquery-3.6.3.min.js"></script>
     <style>
 
@@ -18,22 +18,28 @@
             let title="<h2>산천어 축제</h2>";
             let sub="<p>이번 축제는 코로나로 인하여 기간이 축소됩니다.</p>";
             $("#festival").append(title,sub);
+
             let content=[
                 {name : '강백호', address : '서울시 종로구'},
                 {name : '서태웅', address : '서울시 용산구'},
                 {name : '정대만', address : '인천광역시 부평구'}
             ];
+            // content배열 삽입
             $('#address>div').append(function(index) {
                 let item=content[index];
                 let output='';
                 output+='<h2>' + item.name + '</h2>';
                 output+='<p>' + item.address + '</p>';
                 return output;
-            }).css({
+            });
+            // css 스타일 변경
+            $('#address>div').css({
                 border : '1px solid black',
                 'margin-bottom' : '10px',
                 'text-align' : 'center'
-            }).hover(function () {
+            });
+            // 마우스 오버시 이벤트
+            $('#address>div').hover(function () {
                 $(this).css('background','yellowgreen');
             },function () {
                 $(this).css('background','#fff');

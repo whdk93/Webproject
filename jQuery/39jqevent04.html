@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>39제이쿼리-이벤트04</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <style>
+        #canvas {
+            border: 3px solid;
+            margin-top: 10px;
+        }
+        .clear {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 1px solid #ccc;
+        }
+    </style>
+    <script>        
+        $(function() {
+            let position, x, y;
+            let can = document.getElementById('canvas');
+            let context = can.getContext('2d'); // getContext > 제이쿼리 지원안됨
+            let lineWidth=1;
+            let color="#000";
+            let oldColor, oldLineWidth;
+            let sw=false;
+            let clearSW=false;
+            // 지우개 이벤트
+            $('.clear').click(function () {
+                clearSW=!clearSW;
+                if(clearSW) {
+                    $(this).css('border','3px solid black');
+                    $(can).css('cursor','grabbing');
+                    oldColor=color;
+                    oldLineWidth=lineWidth;
+                    color='#fff';
+                    lineWidth=20;
+                }else {
+                    $(this).css('border','1px solid #ccc');
+                    $(can).css('cursor','default');
+                    color=oldColor;
+                    lineWidth=oldLineWidth;
+                }
+            });
+            // 선 굵기 값
+            $('select').change(function () {
+                // alert ('굵기 변경');
+                lineWidth=$('select>option:selected').val();
+            });
+            // 선 색상 값
+            $('.colorChange').change(function () {
+                color=$(this).val();
+            });
+            // 캔버스 초기화
+            $('button').click(function () {
+                can.width = can.width; // 캔버스의 너비를 그대로 다시 주면 초기화됨
+            });
+            // 캔버스 이벤트
+            $(can).on({
+                mousedown : function (event) {
+                    // console.log('캔버스 위에서 마우스를 눌렀습니다.');
+                    sw=true;
+                    position=$(this).offset();
+                    x=event.pageX-position.left; // pageX,Y : 마우스포인터의 위치
+                    y=event.pageY-position.top;
+                    context.beginPath();
+                    context.moveTo(x,y);
+                },
+                mousemove : function (event) {
+                    // console.log('캔버스 위에서 돌아다니고 있습니다.');
+                    if(sw) {
+                        position=$(this).offset();
+                        x=event.pageX-position.left;
+                        y=event.pageY-position.top;
+                        context.lineWidth=lineWidth;
+                        context.strokeStyle=color;
+                        context.lineTo(x,y); // 움직이는 좌표값
+                        context.stroke(); // 선이그어짐
+                    }
+                },
+                mouseup : function (event) {
+                    // console.log('캔버스 위에서 마우스를 뗐습니다.');
+                    sw=false;
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <p>오이깎기🥒</p>
+    <span>붓의 두께</span>
+    <select>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+        <option>7</option>
+        <option>8</option>
+        <option>9</option>
+        <option>10</option>
+        <option>11</option>
+        <option>12</option>
+    </select>
+    <span>붓의 색상</span>
+    <input type="color" class="colorChange">
+    <span>지우개</span>
+    <div class="clear"></div>
+    <button>리셋</button>
+    <canvas id="canvas" width="800" height="500"></canvas>
+</body>
+</html>

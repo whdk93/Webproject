@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>41제이쿼리-이벤트</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <style>
+        * {
+            margin: 5px;
+            padding: 5px;
+            border: 3px solid black;
+        }
+    </style>
+    <script>        
+        $(function () {
+            // 이벤트 버블링 : 한 요소에 이벤트가 발생하면 그 상위 부모요소에까지 이벤트 발생
+            $('h1').click(function () {
+                $(this).css('background-color','red');
+            });
+            $('a').click(function (event) {
+                $(this).css('background-color','blue');
+                // event.preventDefault(); // preventDefault() : 기본이벤트 제거 (a태그 - 클릭하면 사이트로 이동)
+                // event.stopPropagation(); // 이벤트 전달을 제거
+                return false; // false > 기본이벤트 제거 + 이벤트전달 제거
+            });
+        });      
+    </script>
+</head>
+<body>
+    <h1>
+        <a href="http://www.kbs.co.kr">한국방송</a>
+    </h1>
+</body>
+</html>

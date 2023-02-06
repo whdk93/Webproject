@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>40제이쿼리-이벤트 강제발생</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <style>
+    </style>
+    <script>        
+        $(function () {
+            $('h1').on('click',function () {
+                $(this).html(function(index, html){
+                    return html + "🏀";
+                });
+            });
+            // $(선택자).trigger(이벤트이름) : 이벤트 강제발생
+            let stop;
+            // setInterval(함수,인터벌); : 인터벌마다 함수 실행
+            stop=setInterval(() => {
+                $('h1').last().trigger('click');
+            },3000);
+            $('button').click(function(){
+                clearInterval(stop); // setInterval 멈춤
+            });
+        });      
+    </script>
+</head>
+<body>
+    <button>중지</button>
+    <h1>강백호 -</h1>
+    <h1>서태웅 -</h1>
+</body>
+</html>

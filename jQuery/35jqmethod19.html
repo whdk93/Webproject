@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>35제이쿼리-문서 객체</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <style>
+        
+    </style>
+    <script>        
+        $(function() {
+            // $('div').append($('h1')); // 문서 객체 이동
+            $('div').append($('h1').clone()); // clone() : 객체 복제
+
+            // $(선택자).find('xx'); // 선택자 안에서 xx를 찾을때 사용?
+            // let result=$(선택자).prop('chekced'); // 선택자가 체크박스나 라디오인 경우 사용, 선택자가 체크되어 있으면 true
+        });
+    </script>
+</head>
+<body>
+      <h1>문서객체복제</h1>
+      <hr>
+      <div>
+
+      </div>
+</body>
+</html>
