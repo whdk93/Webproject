@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Layout</title>
+    <style>
+        .flexbox {
+            height: 200px;
+            background-color: #ccc;
+            display: flex;
+            flex-direction: row; /*row:기본값,좌→우 column*/
+            justify-content: space-around; /*flex-start:왼쪽정렬 flex-end:오른쪽정렬 center:중앙정렬*/
+        }
+
+        .flexbox>div{
+            margin: 10px;
+            background-color: cyan;
+            flex: 1; /*가중치,안드로이드의 weight와 비슷 | 1 = 1 1 0의 줄임표현*/
+            width: 200px;
+            flex: 0 0 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="flexbox">
+        <div><img src="../images/13.png" alt="1"></div>
+        <div><img src="../images/13.png" alt="2"></div>
+        <div><img src="../images/13.png" alt="3"></div>
+    </div>
+</body>
+</html>

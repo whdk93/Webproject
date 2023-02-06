@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*모바일*/
+        ul {
+            padding: 0;
+            margin: 0;
+        }
+        li {
+            list-style: none;
+        }
+        .menu {
+            display: flex;
+            flex-direction: column;
+        }
+        .menu > li {
+            flex: 1;
+            margin: 2px;
+        }
+        .menu li a{
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            background-color: coral;
+        }
+        /*태블릿*/
+        @media all and (min-width:768px) {
+            .menu {
+                flex-direction: row;
+                justify-content: space-around;
+                background-color: coral;
+            }
+            .menu>li{
+                flex: 0 0 80px;
+                margin: 10px;
+            }
+            .menu li a{
+                padding: 0;
+            }
+        }
+        @media all and (min-width:1025px) {
+            .menu {
+                justify-content: flex-start;
+                background-color: coral;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h3>메뉴</h3>
+    <ul class="menu">
+        <li><a href="#">회사소개</a></li>
+        <li><a href="#">제품소개</a></li>
+        <li><a href="#">서비스</a></li>
+        <li><a href="#">제품지원</a></li>
+        <li><a href="#">커뮤니티</a></li>
+    </ul>
+</body>
+</html>
