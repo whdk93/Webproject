@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>50제이쿼리-애니메이션05</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <style>
+        #person {
+            position: relative;
+
+        }
+        #person > img {
+            width: 500px;
+            position: absolute;
+        }
+    </style>
+    <script>        
+        $(function () {
+            // fadeIn : 객체를 서서히 나타나게함
+            // fadeOut : 객체를 서서히 사라지게함
+            // fadeToggle : fadeIn과 fadeOut을 번갈아 실행
+            $('#person>img').eq(2).fadeOut(10000, function () {
+                $('#person>img').eq(1).fadeOut(10000);
+            });
+        });      
+    </script>
+</head>
+<body>
+    <div id="person">
+        <img src="images/송해.jpg" alt="">
+        <img src="images/호동.jpg" alt="">
+        <img src="images/형돈.jpg" alt="">
+    </div>
+</body>
+</html>

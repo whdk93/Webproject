@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>47제이쿼리-애니메이션01</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <style>
+        .news {
+            display: none;
+        }
+    </style>
+    <script>        
+        $(function () {
+            // show : 객체를 보이게 함
+            // hide : 객체를 보이지 않게 함
+            // toggle : show와 hide를 번갈아 실행
+            // 활용예 1. show(); 2. show(speed); 3. show(speed,callback); 4.show(speed, easing, callback);
+            // ※ speed : slow, normal, fast, 숫자(밀리초) / callback : 애니메이션 (효과)를 모두 완료하고 실행할 함수를 지정 / easing : 가속도 효과
+            // show, slide, fade 메소드 모두 적용
+            $('button').click(function () {
+                $('.news').show(5000,function () { // show : 객체를 크게 보여줌
+                    // alert('이상 스포츠 뉴스입니다.');
+                    $('.news h2').css('color','red');
+                }); 
+            });
+        });      
+    </script>
+</head>
+<body>
+    <button>뉴스보기</button>
+    <div class="news">
+        <h2>‘반등 자신’ 구자철 “운동장에서 팬들에게 사랑 돌려줄 것”</h2>
+        <p>구자철은 7일 제주 서귀포시 빠레브호텔에서 열린 2023시즌 K리그 동계 전지훈련 미디어데이에서 “기대되는 시즌이 될 것 같다”며 “몸 관리를 계속하면서 근육, 컨디션 문제가 없이 한국으로 돌아왔다. </p>
+        <p>지난해 제주 유니폼을 입으며 K리그에 복귀한 구자철은 기대에 미치지 못했다. 지난 시즌 9경기에 나서 1골 1도움을 올리는 데 그쳤다. 잦은 부상으로 컨디션을 끌어올리는 데 애먹었다. </p>
+    </div>
+</body>
+</html>

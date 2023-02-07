@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>47제이쿼리-애니메이션02</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <style>
+        /* .images {
+            display: none;
+        } */
+        .images img {
+            width: 500px;
+        }
+    </style>
+    <script>        
+        $(function () {
+            $('button').click(function () {
+                $('.images').toggle(2000); // show : 객체를 크게 보여줌
+            });
+        });      
+    </script>
+</head>
+<body>
+    <button>이미지토글</button>
+    <div class="images">
+        <img src="images/Penguins.jpg" alt="">
+    </div>
+</body>
+</html>
