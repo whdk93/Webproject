@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>42제이쿼리-이벤트07</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <style>
+
+    </style>
+    <script>        
+        $(function () {
+            // $(선택자).on(이벤트이름,함수); -> 현재 존재하는 객체에만 이벤트 발생 (미래에 생성되는 객체에는 적용 xx)
+            /* $('h1').on('click', function () {
+                let length=$('h1').length; // h1의 개수
+                let targetHTML=$(this).html();
+                $('#wrap').append('<h1>' + targetHTML + ' - ' + length + '</h1>');
+            }); */
+
+            // $(선택자1).on(이벤트이름,선택자2,함수); -> 미래에 생성되는 객체에도 이벤트 연결 (단, 선택자 1와 선택자 2는 부모자식관계여야함)
+            $('#wrap').on('click','h1',function () {
+                let length=$('h1').length; // h1의 개수
+                let targetHTML=$(this).html();
+                $('#wrap').append('<h1>' + targetHTML + ' - ' + length + '</h1>');
+            });    
+        });      
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <h1>메르스</h1>
+    </div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>36제이쿼리-이벤트01</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <style>
+        .reverse {
+            background-color: black; 
+            color: white;
+        }
+    </style>
+    <script>        
+        $(function() {
+            // on메소드 : 이벤트 연결 메소드, 현재뿐만 아니라 미래에 존재할 객체에도 연결 가능,
+            //           이벤트 여러개 연결 가능, on(이벤트이름, 함수);
+            // $('h1').on('click',function () {
+            //     $(this).html(function (index, html) {
+            //         return html + '♪' ;
+            //     });
+            // });
+
+            // $('h1').click(function () {
+            //     $(this).html(function (index, html) {
+            //         return html + '♪' ;
+            //     });   
+            // });
+
+            // hover 메소드 : mouseenter 이벤트와 mouseleave 이벤트를 동시에 연결하는 메소드
+            // $('h1').hover(function () {
+            //         $(this).addClass('reverse');
+            //     },function () {
+            //         $(this).removeClass('reverse');
+            //     });
+            // 이벤트 종류 : click(클릭), dblclick(더블클릭), mousedown(마우스누를때), mouseup(마우스눌렀다뗄때),
+            //              mousemove(객체위에서 마우스를 움직였을때),mouseover(마우스올려놨을때),mouseout(올려놨다벗어났을때)
+            //              mouseenter(밖에서안으로들어올때), mouseleave(안에서밖으로빠져나갈때?), scroll, resize, focus 
+            $('h1').on({
+                mouseenter : function () {
+                    $(this).addClass('reverse');
+                },
+                mouseleave : function () {
+                    $(this).removeClass('reverse');
+                },
+                click : function () {
+                    $(this).html(function (index, html) {
+                        return html + '♪' ;
+                    });   
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+      <h1>첫번째 이벤트 시작 - </h1>
+      <h1>두번째 이벤트 시작 - </h1>
+      <h1>세번째 이벤트 시작 - </h1>
+</body>
+</html>

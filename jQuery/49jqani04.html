@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>49제이쿼리-애니메이션04</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <style>
+        .news {
+            display: none;
+        }
+    </style>
+    <script>        
+        $(function () {
+            $('button').click(function () {
+                // $('.news').slideDown('slow');
+                // $('.news').slideUp('slow', function () {
+                //     $('.news').after('<h2>다음 뉴스는 9시에...</h2>');
+                // });
+                $('.news').slideToggle(2000);
+            });
+        });      
+    </script>
+</head>
+<body>
+    <button>뉴스보기</button>
+    <div class="news">
+        <h2>‘반등 자신’ 구자철 “운동장에서 팬들에게 사랑 돌려줄 것”</h2>
+        <p>구자철은 7일 제주 서귀포시 빠레브호텔에서 열린 2023시즌 K리그 동계 전지훈련 미디어데이에서 “기대되는 시즌이 될 것 같다”며 “몸 관리를 계속하면서 근육, 컨디션 문제가 없이 한국으로 돌아왔다. </p>
+        <p>지난해 제주 유니폼을 입으며 K리그에 복귀한 구자철은 기대에 미치지 못했다. 지난 시즌 9경기에 나서 1골 1도움을 올리는 데 그쳤다. 잦은 부상으로 컨디션을 끌어올리는 데 애먹었다. </p>
+    </div>
+</body>
+</html>

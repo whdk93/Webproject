@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>38제이쿼리-이벤트03</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <style>
+        h1 { 
+            cursor: pointer;
+        }
+    </style>
+    <script>        
+        // 전자제품 특별 한정판매를 진행합니다.
+        // 냉장고 - 3대
+        // 청소기 - 5대
+        // 에어컨 - 2대
+        // 해당 제품 이름을 클릭하면 '구입해주셔서 감사합니다.', '마감임박! 남은 수량 n대' 라고 alert
+        // 판매가 완료되면 alert '완판되었습니다.' , 글씨가 '000 완판♪' 으로 변경  
+        $(function() {
+            let count=[3,5,2];
+            let name=['냉장고','청소기','에어컨'];
+            $('h1').on('click', function () {
+                let idx=$(this).index();
+                alert('구입해주셔서 감사합니다.');
+                count[idx]--;
+                if (count[idx]==0) {
+                    alert('완판되었습니다.');
+                    $(this).css({
+                        cursor : 'default',
+                        color : '#ccc'
+                    });
+                    $(this).html(name[idx] + ' 완판♪');
+                    $(this).off();
+                }else {
+                    alert('마감임박! 남은 수량 ' + count[idx] + '대');
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>냉장고 판매중</h1>
+    <h1>청소기 판매중</h1>
+    <h1>에어컨 판매중</h1>
+</body>
+</html>

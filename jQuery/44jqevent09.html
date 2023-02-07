@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>44제이쿼리-키보드이벤트</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <style>
+        div {
+            width: 160px;
+        }
+        textarea {
+            resize: none;
+        }
+        p {
+            text-align: right;
+        }
+    </style>
+    <script>        
+        $(function () {
+            // 키보드 이벤트
+            // keydown:키보드누름
+            // keypress :글자입력
+            // keyup:키보드뗌
+            // 1. 사용자가 키보드 누름
+            // 2. keydown 이벤트 발생
+            // 3. 글자 입력
+            // 4. keypress 이벤트 발생
+            // 5. 사용자가 키보드에서 손을 뗌
+            // 6. keyup 이벤트 발생
+            $('textarea').keyup(function () {
+                let inputlength=$(this).val().length;
+                /* let remain=80-inputlength;
+                if(remain < 0){
+                    $('h2').html('MMS').css('color','red'); // 80자가 넘어가면 html을 MSS로 변경, 글씨색 빨강
+                }else{
+                    $('h2').html(remain).css('color','black'); 
+                } */
+                $('p').html(inputlength + '/150')
+            });
+            // 일반 태그 사이의 값 -> html()
+            // input, textarea -> val()
+            // select option -> html(), val() 둘다 가능
+        });      
+    </script>
+</head>
+<body>
+    <div>
+        <h1>메모장</h1>
+        <!-- <h2>80</h2> -->
+        <textarea cols="20" rows="5" maxlength="150"></textarea>
+        <p>0/150</p>
+    </div>
+</body>
+</html>

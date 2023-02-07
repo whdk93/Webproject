@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>46제이쿼리-윈도우이벤트</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <style>
+
+    </style>
+    <script>        
+        $(function () {
+            let baseFont=16;
+            $('#zoom button').on('click',function () {
+                if($(this).hasClass('zoomout')) { // hasClass('클래스이름') : 선택요소가 지정클래스명을 가지고있는지 검사
+                    if(baseFont <= 8) return false;
+                    baseFont--;
+                }else if($(this).hasClass('zoomin')) {
+                    if(baseFont >= 30) return false;
+                    baseFont++;
+                }else {
+                    baseFont=16;
+                }
+                $('.font').text(baseFont + 'px');
+                $('body').css('fontSize', baseFont);
+            });
+        });      
+    </script>
+</head>
+<body>
+    <p id="zoom">
+        <button class="zoomout">-</button>
+        <button class="base">100%</button>
+        <button class="zoomin">+</button>
+    </p>
+    <p class="font">16px</p>
+    <div id="wrap">
+        한국 축구대표팀 차기 감독 선임에 또 다른 변수가 생겼다. 리즈 유나이티드가 마르셀로 비엘사에 접근하고 있는 것으로 알려졌다. 비엘사 감독을 후보군으로 올려놓고 있는 한국 대표팀에게 좋은 소식은 아니다.
+        BBC와 데일리 미러 등 영국 언론들은 7일(한국시간) 일제히 제시 마쉬 감독을 경질한 리즈 유나이티드가 마르셀로 비엘사 감독을 차기 사령탑 후보군으로 올려놨다. 특히 데일리 미러는 이미 리즈가 비엘사 감독에 접근하고 있다고 전했다.
+    </div>
+</body>
+</html>
