@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>57제이쿼리-애니메이션10</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <style>
+        img {
+            width: 37px;
+            height: 21px;
+            cursor : pointer;
+            position: relative;
+        }
+    </style>
+    <script>        
+        $(function () {
+            $('img').click(function (event) {
+                $(this).animate({
+                    left : '+=50'
+                },2000).animate({
+                    width : '+=37'
+                },2000).animate({
+                    height : '+=21'
+                },2000);
+            });
+            $('button').click(function () {
+                $('img').clearQueue(); // clearQueue : queue를 비우는 메소드
+            });
+        });      
+    </script>
+</head>
+<body>
+    <button>큐 비우기</button><br>
+    <img src="images/car_green.jpg" alt="">
+</body>
+</html>

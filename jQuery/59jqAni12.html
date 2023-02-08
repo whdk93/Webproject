@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>59제이쿼리-애니메이션12</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <style>
+        img {
+            width: 74px;
+            height: 42px;
+            cursor : pointer;
+            position: relative;
+        }
+    </style>
+    <script>        
+        $(function () {
+            let index;
+            setInterval(function () {
+                $('img').animate({
+                    left : 1000
+                },2000).animate({
+                    left : 0
+                },2000);
+            },4000);
+
+            // stop메소드 : 현재 수행중인 애니메이션 중지
+            // $(선택자).stop();
+            // $(선택자).stop(clearQueue); 
+            // clearQueue: queue에 저장된 값 삭제여부, ture/false
+            // $(선택자).stop(clearQueue, goToEnd); 
+            // goToEnd: 애니메이션의 완료지점으로 보내는지 여부, true/false
+
+            $('button').click(function () {
+                index=$(this).index();
+                switch(index) {
+                    case 0 :
+                        $('img').stop();
+                        break;
+                    case 1:
+                        $('img').stop(true);
+                        break;
+                    case 2 :
+                        $('img').stop(false,true);
+                        break;
+                    case 3 :
+                        $('img').stop(true,true);
+                        break;                       
+                }
+            });
+
+        });      
+    </script>
+</head>
+<body>
+    <button>중지</button>
+    <button>중지(큐 비움)</button>
+    <button>중지(큐 비우지 말고 끝으로)</button>
+    <button>중지(큐 비우고 끝으로)</button>
+    <br>
+    <img src="images/car_green.jpg" alt="">
+</body>
+</html>

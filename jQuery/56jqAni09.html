@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>56제이쿼리-애니메이션09</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <style>
+        img {
+            width: 37px;
+            height: 21px;
+            cursor : pointer;
+        }
+    </style>
+    <script>        
+        $(function () {
+            $('img').click(function (event) { // 이벤트함수는 변수로 event를 가짐
+                // let w=parseInt($(this).css('width')); // parseInt : 문자포함된 값에서 문자 제거
+                // let h=parseInt($(this).css('height'));
+                // $(this).animate({
+                //     width : w+37,
+                //     height : h+21
+                // },1000);
+                if(event.shiftKey){
+                    $(this).animate({
+                        width : '-=37',
+                        height : '-=21'
+                    },1000);
+                }else{
+                    $(this).animate({
+                        width : '+=37',
+                        height : '+=21'
+                    },1000);
+                }
+            });
+        });      
+    </script>
+</head>
+<body>
+    <img src="images/car_green.jpg" alt="">
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>62제이쿼리-애니메이션15</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <style>
+        img {
+            width: 100px;
+            position: relative;
+            margin-bottom: 30px;
+        }
+        .line {
+            position: absolute;
+            top: 30px;
+            left: 1100px;
+            width: 2px;
+            height: 400px;
+            background-color: red;
+        }
+    </style>
+    <script>        
+        $(function () {
+            let setVal;
+            let add=0;
+            $('#start').click(function () {
+                setVal=setInterval(function () {
+                    for(let i=0; i<5; i++) {
+                        let distance=Math.floor(Math.random()*30)+1;
+                        if(i==1) {
+                            if(distance<10) {
+                                distance+=5;
+                            }
+                        }
+                        $('img').eq(i).animate({
+                            left: '+=' + distance
+                        },500);
+                        let goalLine=$('img').eq(i).css('left');
+                        if(parseInt(goalLine)>=1000) {
+                            clearInterval(setVal);
+                            alert((i+1)+'번 표범 우승');
+                            $('.topName').html('☞' + (i+1) + '번 표범 우승');
+                        }
+                    }
+                },500);
+            });
+            $('#set').click(function () {
+                $('img').css('left', 0);
+                $('.topName').html('');
+            });
+        });      
+    </script>
+</head>
+<body>
+    <p>
+        <button id="start">출발</button> ----- <button id="set">초기화</button>
+        <span class="topName"></span>
+    </p>
+    <img src="images/표범.gif" alt="표범" title="1번범"><br>
+    <img src="images/표범.gif" alt="표범" title="2번범"><br>
+    <img src="images/표범.gif" alt="표범" title="3번범"><br>
+    <img src="images/표범.gif" alt="표범" title="4번범"><br>
+    <img src="images/표범.gif" alt="표범" title="5번범"><br>
+    <div class="line"></div>
+</body>
+</html>

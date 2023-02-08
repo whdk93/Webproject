@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>58제이쿼리-애니메이션11</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <style>
+        img {
+            width: 74px;
+            height: 42px;
+            cursor : pointer;
+            position: relative;
+        }
+    </style>
+    <script>        
+        $(function () {
+            $('img').click(function (event) {
+                $(this).animate({
+                    left : 1500
+                },5000).animate({
+                    left : 0
+                },5000);
+            $('button').click(function () {
+                $('img').stop(); // stop : 현재 수행중인 animation 중지
+                });
+            });
+        });      
+    </script>
+</head>
+<body>
+    <button>중지</button><br>
+    <img src="images/car_green.jpg" alt="">
+</body>
+</html>

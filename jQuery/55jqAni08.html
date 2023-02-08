@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>55제이쿼리-애니메이션08</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <style>
+        img {
+            width: 55px;
+            height: 40px;
+            opacity : 0.1;
+        }
+    </style>
+    <script>        
+        $(function () {
+            $('img').on('mouseenter',function () {
+                $(this).animate({
+                    width : 550,
+                    height : 400,
+                    opacity : 1
+                },'normal', function () {
+                    $(this).delay(2000).animate({ // delay : queue에 있는 명령을 잠시 중지시킴
+                        width : 55,
+                        height : 40,
+                        opacity : 0.1
+                    },'fast');
+                });
+            });
+        });      
+    </script>
+</head>
+<body>
+    <img src="images/ghost.jpg" alt="">
+</body>
+</html>
