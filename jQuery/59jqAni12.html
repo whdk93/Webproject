@@ -27,10 +27,8 @@
 
             // stop메소드 : 현재 수행중인 애니메이션 중지
             // $(선택자).stop();
-            // $(선택자).stop(clearQueue); 
-            // clearQueue: queue에 저장된 값 삭제여부, ture/false
-            // $(선택자).stop(clearQueue, goToEnd); 
-            // goToEnd: 애니메이션의 완료지점으로 보내는지 여부, true/false
+            // $(선택자).stop(clearQueue); // clearQueue: queue에 저장된 값 삭제, ture/false
+            // $(선택자).stop(clearQueue, goToEnd); // goToEnd: 애니메이션의 완료지점으로 이동, true/false
 
             $('button').click(function () {
                 index=$(this).index();

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>63제이쿼리-애니메이션16</title>
+    <title>63제이쿼리-drag&drop(제이쿼리)</title>
     <script src="js/jquery-3.6.3.min.js"></script>
     <style>
         img {
@@ -35,7 +35,7 @@
                     event.preventDefault();
                 },
                 mouseup : function (event) {
-                    sw=false;
+                    sw=false; // sw값을 설정하지 않으면 마우스를 떼도 이미지가 따라옴
                     event.preventDefault();
                 }
             });

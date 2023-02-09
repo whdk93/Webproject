@@ -24,7 +24,7 @@
     <script>        
         $(function () {
             let setVal;
-            let add=0;
+            let add=0; // 등수조작
             $('#start').click(function () {
                 setVal=setInterval(function () {
                     for(let i=0; i<5; i++) {
@@ -47,7 +47,7 @@
                 },500);
             });
             $('#set').click(function () {
-                $('img').css('left', 0);
+                $('img').css('left', 0); // 초기화
                 $('.topName').html('');
             });
         });      
