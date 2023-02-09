@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>67제이쿼리-ui 플러그인(show)</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <style>
+        img {
+            position: relative;
+            display: none;
+        }
+    </style>
+    <script>        
+        $(function () {
+            // let sw=false;
+            // $('button').click(function () {
+            //     sw=!sw;
+            //     if(sw) {
+            //         $('img').show(2000);
+            //         $(this).html('이미지 감추기');
+            //     }else {
+            //         $('img').hide(2000);
+            //         $(this).html('이미지 보이기');
+            //     }
+            // });
+            $('button').click(function () {
+                $('img').show('explode',2000).animate({
+                    left: 1500
+                },5000, function () {
+                    $('img').css('left',0).hide('explode',2000);
+                });  
+            });
+        });      
+    </script>
+</head>
+<body>
+    <button>이미지 보이기</button><br>
+    <img src="images/car_purple.jpg" alt="">
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>54제이쿼리-애니메이션07</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <style>
+        div {
+            width: 50px;
+            height: 50px;
+            background-color: orangered;
+            position: relative;
+            margin-bottom: 10px;
+        }
+    </style>
+    <script>        
+        $(function () {
+            $('div').hover(function () {
+                $(this).animate({
+                    left : 800,
+                    opacity : 0
+                },2000);
+            }, function () {
+                $(this).animate({
+                    left : 0,
+                    opacity : 1
+                },2000);
+            });
+        });      
+    </script>
+</head>
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</body>
+</html>

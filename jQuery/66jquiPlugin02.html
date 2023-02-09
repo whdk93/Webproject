@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>66제이쿼리-ui 플러그인(easing)</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <style>
+        img {
+            position: relative;
+            width: 300px;
+            left : 100px;
+        }
+        .ball {
+            position: relative;
+            left: 300px;
+            width: 150px;
+        }
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: orangered;
+            border-radius: 50%;
+            position: relative;
+            margin-top: 10px;
+        }
+        /* #square {
+            border-radius: 2px solid;
+            left: 50px;
+        } */
+    </style>
+    <script>        
+        $(function () {
+            let easing;
+            $('select').change(function () {
+                easing=$('select>option:selected').html();
+            });
+            $('img').click(function () {
+                $(this).animate({
+                    left : 1000
+                },2000,easing).delay(2000).animate({
+                    left : 100
+                },2000,easing);
+            });
+            $('#bsktball').click(function () {
+                $(this).animate({
+                    top : 500
+                },2000,'easeOutBounce');
+            });
+            $('button').on('click', function () {
+                $('#bsktball').css('top',0);
+            });
+        });      
+    </script>
+</head>
+<body>
+    <select>
+        <option>linear</option>
+        <option>swing</option>
+        <option>easeInQuad</option>
+        <option>easeOutQuad</option>
+        <option>easeInOutQuad</option>
+        <option>easeInCubic</option>
+        <option>easeOutCubic</option>
+        <option>easeInOutCubic</option>
+        <option>easeInQuart</option>
+        <option>easeOutQuart</option>
+        <option>easeInOutQuart</option>
+        <option>easeInQuint</option>
+        <option>easeOutQuint</option>
+        <option>easeInOutQuint</option>
+        <option>easeInSine</option>
+        <option>easeOutSine</option>
+        <option>easeInOutSine</option>
+        <option>easeInExpo</option>
+        <option>easeOutExpo</option>
+        <option>easeInOutExpo</option>
+        <option>easeInCirc</option>
+        <option>easeOutCirc</option>
+        <option>easeInOutCirc</option>
+        <option>easeInElastic</option>
+        <option>easeOutElastic</option>
+        <option>easeInOutElastic</option>
+        <option>easeInBack</option>
+        <option>easeOutBack</option>
+        <option>easeInOutBack</option>
+        <option>easeInBounce</option>
+        <option>easeOutBounce</option>
+        <option>easeInOutBounce</option>
+    </select>
+    <button>초기화</button>
+    <div id="bsktball">
+        <div id="square"></div>
+    </div>
+    <img src="images/car_green.jpg" alt="">
+    <img class="ball" src="images/12.png" alt="">
+</body>
+</html>

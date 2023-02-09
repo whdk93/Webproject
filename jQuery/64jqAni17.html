@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>64제이쿼리-drag&drop (플러그인)</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <style>
+        
+    </style>
+    <script>        
+        $(function () {
+            $('img').draggable({ // 드래그앤드롭 메소드(플러그인)
+                revert : 'invalid' // 원래 자리로 돌아감
+            });
+            $('h1').draggable();
+        });      
+    </script>
+</head>
+<body>
+    <img src="images/car_green.jpg" alt="">
+    <h1>c( @_@ c</h1>
+</body>
+</html>
