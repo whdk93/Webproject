@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>65제이쿼리-addClass</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <style>
+        .reverse{
+            color : white;
+            background-color: black;
+            border: 1px solid red;
+        }
+    </style>
+    <script>        
+        $(function () {
+            $('div').hover(function () {
+                $(this).addClass('reverse',1000);
+            }, function () {
+                $(this).removeClass('reverse',1000);
+            });
+        });      
+    </script>
+</head>
+<body>
+    <div>
+    <h1>자바스크립트</h1>
+    <p>정적인 홈페이지를 동적으로 만들어주는 웹 언어</p>
+    </div>
+    <div>
+        <h1>제이쿼리</h1>
+        <p>자바스크립트로 만들어진 라이브러리</p>
+    </div>
+    <div>
+        <h1>제이쿼리 플러그인(Plug-in)</h1>
+        <p>다양한 기능을 구현해 놓은 라이브러리</p>
+    </div>
+</body>
+</html>
