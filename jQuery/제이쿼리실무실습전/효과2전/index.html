@@ -7,7 +7,23 @@
         <script src="http://code.jquery.com/jquery-1.7.min.js"></script>
         <script>
 		$(document).ready(function() {
-			
+            // 사이드 메뉴가 안으로 들어감
+            $('#navigation > li').animate({
+                //left : -80 // li : position 설정 필요
+                marginLeft : -80 // position 설정 없이 움직임
+            }, 1000);
+            // 사이드 메뉴에 hover하면 해당 메뉴가 나옴
+            $('#navigation > li').hover(function () {
+                $(this).stop().animate({ // stop을 넣어야함!! > 이전 애니메이션이 남지않게 삭제
+                    //left : -2
+                    marginLeft : -2
+                }, 'fast');
+            }, function () {
+                $(this).stop().animate({
+                    //left : -80
+                    marginLeft : -80
+                }, 'fast');
+            });
 		});
 		</script>
     </head>

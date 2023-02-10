@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Furry Friends Campaign</title>
+		<link rel="stylesheet" type="text/css" href="styles/my_style.css">
+		<script src="http://code.jquery.com/jquery-1.7.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				let sw=false;
+				$('#clickMe').click(function () {
+					// 슬라이드 다운, 슬라이드 업
+					sw=!sw;
+					if(sw){
+						// $('#picframe').show('slide');
+						$('#picframe').slideDown();
+					}else {
+						// $('#picframe').hide('slide');
+						$('#picframe').slideUp();
+					}
+					// 슬라이드 토글
+					// $('#picframe').slideToggle('slow');
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div id="clickMe">Show me the the Furry Friend of the Day</div>
+		<div id="picframe">
+			<img src="images/furry_friend.jpg">
+		</div>
+		</body>
+</html>
