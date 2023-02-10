@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS테스트3</title>
+    <style>
+        .chooseLabel input[type="radio"] {
+            display: none;
+        }
+        .chooseLabel input[type="radio"] + span {
+            display: inline-block;
+            width: 100px;
+            height: 70px;
+            font-size: 1.3em;
+            text-align: center;
+            line-height: 60px;
+            cursor: pointer;
+            padding : 0 10px;
+            border: 1px dashed #ccc;
+            background: none;
+        }
+        .chooseLabel input[type="radio"]:checked + span {
+            background-color: hotpink;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <label for="chooseSexf" class="chooseLabel">
+        <input type="radio" name="sex" id="chooseSexf">
+        <span>여자</span>
+    </label>
+    <label for="chooseSexm" class="chooseLabel">
+        <input type="radio" name="sex" id="chooseSexm">
+        <span>남자</span>
+    </label>
+</body>
+</html>

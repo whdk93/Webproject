@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS테스트2</title>
+    <style>
+        input[type=checkbox]:checked + div {
+            height: 0;
+        }
+        div {
+            width: 400px;
+            height: 350px;
+            border: 1px dashed red;
+            overflow: hidden;
+            transition: 2s;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox">뉴스감추기
+    <div>
+        <h2>오늘의 뉴스</h2>
+        <p>경유차 배출가스 저감기술(SCR)을 개발하면서 친환경 효과가 떨어지는 기술 도입을 담합한 벤츠·BMW·아우디·폭스바겐 등 독일 자동차 회사들이 400억원대 과징금을 물게 됐다. R&D(승용차 배출가스 저감기술 개발)에 대해 사업자들의 행위를 담합으로 제재한 최초 사례다.</p>
+        <p>매출은 22조2761억원으로 전년 대비 22.9% 증가했지만 당기순이익은 411억원으로 97% 감소했다. 롯데케미칼은 실적 부진 배경에 대해 "중국 코로나19 봉쇄와 러시아-우크라이나 전쟁 장기화, 세계경기 침체에 따른 제품가격 및 수요 감소, 원료가 상승 등 대외 불안정성이 지속됐다"고 말했다.</p>
+    </div>
+</body>
+</html>
