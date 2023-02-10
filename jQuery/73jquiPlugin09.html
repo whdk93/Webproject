@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>73제이쿼리-accordion</title>
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <style>
+    </style>
+    <script>        
+        $(function () {
+            let icons = {
+                header : 'ui-icon-circle-arrow-e',
+                activeHeader : 'ui-icon-circle-arrow-s'
+            };
+            $('#news').accordion({
+                heightStyle : 'content',
+                icons : icons
+            });
+        });      
+    </script>
+</head>
+<body>
+    <div id="news">
+        <h3>친환경 외면한 독일차들…'벤츠·BMW 등에 과징금 423억원'</h3>
+        <p>경유차 배출가스 저감기술(SCR)을 개발하면서 친환경 효과가 떨어지는 기술 도입을 담합한 벤츠·BMW·아우디·폭스바겐 등 독일 자동차 회사들이 400억원대 과징금을 물게 됐다. R&D(승용차 배출가스 저감기술 개발)에 대해 사업자들의 행위를 담합으로 제재한 최초 사례다.</p>
+        <h3>롯데케미칼, 지난해 영업손실 7584억원…적자 전환</h3>
+        <p>매출은 22조2761억원으로 전년 대비 22.9% 증가했지만 당기순이익은 411억원으로 97% 감소했다. 롯데케미칼은 실적 부진 배경에 대해 "중국 코로나19 봉쇄와 러시아-우크라이나 전쟁 장기화, 세계경기 침체에 따른 제품가격 및 수요 감소, 원료가 상승 등 대외 불안정성이 지속됐다"고 말했다.</p>
+        <h3>제이쿼리 UI 플러그인 수업</h3>
+        <p>Nisi duis velit commodo labore exercitation magna commodo sit aliquip mollit do. Nulla cupidatat culpa ea occaecat est pariatur occaecat sunt et irure incididunt deserunt adipisicing in. Aliquip occaecat et quis qui dolore non sint occaecat elit ad veniam ullamco. Ullamco fugiat magna irure aute quis eiusmod est enim proident labore. Sint magna aliquip dolor adipisicing ut in dolor culpa reprehenderit culpa in voluptate. In occaecat officia aute aliqua ex sint sit ad labore consectetur. Anim officia mollit reprehenderit aliqua cupidatat aliquip labore dolor anim.</p>
+    </div>
+</body>
+</html>

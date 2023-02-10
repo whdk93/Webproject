@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>80제이쿼리-ui플러그인 드래그앤드롭</title>
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <style>
+       .item {
+        margin: 3px;
+        padding: 5px;
+       }
+       .item img {
+        width: 100px;
+        height: 100px;
+       }
+       #wrap {
+        overflow: hidden;
+       }
+       #wrap > div {
+        float: left;
+       }
+       #dock {
+        position: fixed;
+        min-height: 120px;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+       }
+       #dock > div {
+        float: left;
+       }
+    </style>
+    <script>        
+        $(function () {
+            for(let i=0; i<21; i++) {
+                let icon='';
+                icon+='<div class="ui-widget-content ui-corner-all item">';
+                icon+='<img src="images/' + i + '.png">';
+                icon+='</div>';
+                $('#wrap').append(icon);
+            }
+            $('#wrap > div').draggable({
+                zIndex : 100,
+                helper : 'clone',
+                scroll : false,
+                revert : 'invalid'
+            });
+            //  wrap에서 dock으로 드래그앤드롭
+            $('#dock').droppable({
+                accept : '#wrap > div',
+                drop : function (event, ui) { // ui: 움직인 객체
+                    $(ui.draggable).fadeOut('fast', function () {
+                        $(this).appendTo('#dock').fadeIn('fast');
+                    });
+                }
+            });
+            // 한번 draggable 되면 또 설정안해도 됨
+
+            // dock 에서 wrap으로 드래그앤드롭
+            $('#wrap').droppable({
+                accept : '#dock > div',
+                drop : function (event, ui) {
+                    $(ui.draggable).fadeOut('fast',function () {
+                        $(this).appendTo('#wrap').fadeIn('fast');
+                    });
+                }
+            });
+        });      
+    </script>
+</head>
+<body>
+    <div id="wrap">
+
+    </div>
+    <div id="dock" class="ui-state-error">
+
+    </div>
+</body>
+</html>

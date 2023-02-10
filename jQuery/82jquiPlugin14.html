@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>82제이쿼리-ui플러그인 탭메뉴</title>
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <style>
+       #tabs {
+        width: 500px;
+       }
+       ul > li > a {
+        background-color: yellowgreen;
+       }
+    </style>
+    <script>        
+        $(function () {
+            $('#tabs').tabs({
+                event : 'mouseover' // 마우스 오버로 탭 전환
+            });
+        });      
+    </script>
+</head>
+<body>
+    <div id="tabs">
+        <ul>
+            <li><a href="#news-1">경제뉴스</a></li>
+            <li><a href="#news-2">사회뉴스</a></li>
+            <li><a href="#news-3">스포츠뉴스</a></li>
+        </ul>
+        <div id="news-1">
+            <p>8일 코스피 지수는 전 거래일 대비 15.89포인트(0.65%) 오른 2467.60에 거래를 시작했다. 투자자별로는 현재 오전 9시 6분 기준 개인과 외국인은 각각 390억원, 250억원 사들이고 있고 기관은 627억원 팔아치우고 있다.</p>
+            <p>시가총액 상위 10개 종목은 모두 상승 출발했다. 반도체 대장주 삼성전자(005930)는 전 거래일 대비 0.97%(600원) 오른 6만2500원에 거래되고 있다. SK하이닉스(000660)는 전일 대비 1.21%(1100원) 오른 9만1900원에 거래를 시작했다.</p>
+        </div>
+        <div id="news-2">
+            <p>제주에서도 이미 교복 디자인 변경을 완료한 학교가 있는 반면, 신학기를 앞두고도 아직까지 디자인 변경 작업이 진행 중인 학교도 있는 것으로 나타났습니다. 10일 제주자치도교육청에 따르면 교복에 체크무늬가 있는 제주도내 14개 학교(중학교 9, 고등학교 5)의 교복이 올해부터 바뀔 예정입니다.
+            </p>
+        </div>
+        <div id="news-3">
+            <p>경기 초반부터 애틀랜타가 주도권을 잡았다. 영과 콜린스가 연속 득점을 올렸고, 디안드레 헌터도 공격을 성공시켰다. 머레이와 보그단 보그다노비치 또한 외곽에서 지원 사격을 했다. 2쿼터 이쉬 웨인라이트와 조쉬 오코기에게 3점슛을 맞았지만 헌터와 콜린스의 득점으로 맞받아쳤다. 머레이의 외곽포를 더한 애틀랜타는 56-47로 전반전을 마쳤다.</p>
+        </div>
+    </div>
+</body>
+</html>
