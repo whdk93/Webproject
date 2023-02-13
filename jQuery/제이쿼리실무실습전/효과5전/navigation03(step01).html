@@ -41,9 +41,9 @@
 	$('.sub').hide();
 	// 상위메뉴 hover 시 하위메뉴 slide up down
 	$('#navi>li').hover(function () {
-		// hover하면 하위메뉴로 가도 닫히지 않게 find로 선택
-		$(this).find('.sub').stop(true,true).slideDown(); // stop하고 queue 비운뒤 gotoend
-		$(this).find('a:first').addClass('on'); // :first : a태그 중에 첫번째
+		// 상위메뉴에 hover하고 하위메뉴로 가도 닫히지 않게 find로 선택
+		$(this).find('.sub').stop(true,true).slideDown(); // stop하고 queue 비운뒤 gotoend : stop하고 queue만 비워버리면 아예 내려오지 않는 현상 발생
+		$(this).find('a:first').addClass('on'); // first필터 : a태그 중에 첫번째
 	},function () {
 		$(this).find('.sub').slideUp();
 		$(this).find('a:first').removeClass('on');

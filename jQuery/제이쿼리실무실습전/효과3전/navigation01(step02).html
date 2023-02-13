@@ -80,19 +80,20 @@ ul.sub li:hover {
 	// 실행 시 상위메뉴만 보임
 	// $('.sub').css('display','none');
 	$('.sub').hide();
-	let oldIndex=-1, index; // 열린 상위메뉴를 선택하면 다시 열리지 않게 설정
 	// 해당 상위 메뉴를 클릭하면 슬라이드 다운되어 보인다.(이전에 열어본 페이지는 닫힘)
+	let oldIndex=-1, index; 
 	$('.title').click(function () {
 		index=$(this).parent().index();
-		if(index != oldIndex) {
+		if(index != oldIndex) {// 열린 상위메뉴를 선택하면 다시 slidedown되지않게 설정
 			$('.sub').slideUp();
 			// $(this).siblings().slideDown(); // siblings : 선택한 요소의 형제요소들
 			$(this).next().slideDown(); // next : 선택한 요소의 바로 다음 형제 요소
 			oldIndex=index;
-		}else { // 메뉴를 다시 누르면 해당 메뉴를 닫을 수 있음
-			$('.sub').slideUp();
-			oldIndex=-1;
 		}
+		// else { // 메뉴를 다시 누르면 해당 메뉴를 닫을 수 있음:근데 메뉴가 닫히는건 별로라서 잘 사용x
+		// 	$('.sub').slideUp();
+		// 	oldIndex=-1;
+		// }
 	});
 	// 3초 후 pos번째 메뉴 슬라이드 다운
 	function init (pos) {
