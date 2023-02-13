@@ -52,28 +52,40 @@ ul.sub li:hover {
 <body onload="init(2)">
 <ul id="navi">
 	<li class="group">
-		<div class="title">Title 1</div>
+		<div class="title">회사소개</div>
 		<ul class="sub">
-			<li><a href="#">sub1</a></li>
-			<li><a href="#">sub1</a></li>
-			<li><a href="#">sub1</a></li>
+			<li><a href="#">CEO인사말</a></li>
+			<li><a href="#">회사연혁</a></li>
+			<li><a href="#">이용안내</a></li>
 		</ul>
 	</li>
 	<li class="group">
-		<div class="title">Title 2</div>
+		<div class="title">제품정보</div>
 		<ul class="sub">
-			<li><a href="#">sub2</a></li>
+			<li><a href="#">샤프</a></li>
+			<li><a href="#">볼펜</a></li>
+			<li><a href="#">만년필</a></li>
+			<li><a href="#">노트</a></li>
 		</ul>
 	</li>
 	<li class="group">
-		<div class="title">Title 3</div>
+		<div class="title">커뮤니티</div>
 		<ul class="sub">
-			<li><a href="#">sub3</a></li>
-			<li><a href="#">sub3</a></li>
+			<li><a href="#">리뷰</a></li>
+			<li><a href="#">자료실</a></li>
 		</ul>
 	</li>
 </ul>
-
+<script>
+	// 상위메뉴만 보인다.
+	$('.sub').hide();
+	// 상위메뉴에 hover하면 하위메뉴가 펼쳐진다.
+	$('.group').hover(function () { // sub메뉴 위에 hover해도 펼쳐져야해서 group에 hover함
+		$(this).find('.sub').slideDown();
+	},function () {
+		$(this).find('.sub').slideUp();
+	});
+</script>
 
 </body>
 </html>
