@@ -32,18 +32,18 @@
 		<script>
 			$(document).ready(function () {
 				let sw=[false,false,false]; // 카드별로 스위치를 만들어야해서 배열 사용
-				let pos=[22,4,30];
+				let pos=[22,4,30]; // 원래 있던 위치가 각각 다르기 때문에 배열 사용
 				let index;
-				// 클릭하면 인덱스가 꽂힘
-				// 다시 클릭하면 인덱스가 빠짐
 				$('.col').click(function () {
 					index=$(this).index();
 					sw[index]=!sw[index];
-					if(sw[index]){
+				
+					if(sw[index]){	// 클릭하면 인덱스가 꽂힘
 						$(this).animate({
 							top : 95
 						},'fast');
-					}else {
+						
+					}else {	// 다시 클릭하면 인덱스가 빠짐
 						$(this).animate({
 							top : pos[index]
 						},'fast');
