@@ -63,7 +63,17 @@ li {
 </div>
 
 <script>
-		
+	$('#box li').hover(function () {
+		$(this).find('.pagecurl').stop(true,false).animate({
+			left : -100,
+			top : 100
+		},500,'easeInCubic');
+	},function () {
+		$(this).find('.pagecurl').animate({
+			left : 0,
+			top : 0
+		},500,'easeOutElastic');
+	});	
 </script>
 </body>
 </html>

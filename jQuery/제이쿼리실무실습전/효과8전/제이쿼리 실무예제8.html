@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 	<head>
 		<meta charset="utf-8" />
 		<style>
@@ -27,10 +27,28 @@
 	       .col_ani {top:95px;}
 		</style>
 		<title>jex1</title>
-		<script src="jquery-1.11.3.min.js"></script>
+		<script src="js/jquery-3.6.3.min.js"></script>
+		<script src="js/jquery-ui.min.js"></script>
 		<script>
 			$(document).ready(function () {
-				
+				let sw=[false,false,false]; // 카드별로 스위치를 만들어야해서 배열 사용
+				let pos=[22,4,30];
+				let index;
+				// 클릭하면 인덱스가 꽂힘
+				// 다시 클릭하면 인덱스가 빠짐
+				$('.col').click(function () {
+					index=$(this).index();
+					sw[index]=!sw[index];
+					if(sw[index]){
+						$(this).animate({
+							top : 95
+						},'fast');
+					}else {
+						$(this).animate({
+							top : pos[index]
+						},'fast');
+					}
+				});
 			});
 		</script>
 	</head>

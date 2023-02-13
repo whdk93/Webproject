@@ -50,34 +50,58 @@ ul.sub li:hover {
 
 </head>
 
-<body onload="init(0)">
+<body onload="init(1)">
 <ul id="navi">
 	<li class="group">
 		<div class="title">회사소개</div>
 		<ul class="sub">
-			<li><a href="#">sub1</a></li>
-			<li><a href="#">sub1</a></li>
-			<li><a href="#">sub1</a></li>
+			<li><a href="#">CEO인사말</a></li>
+			<li><a href="#">회사연혁</a></li>
+			<li><a href="#">이용안내</a></li>
 		</ul>
 	</li>
 	<li class="group">
 		<div class="title">제품정보</div>
 		<ul class="sub">
-			<li><a href="#">sub2</a></li>
+			<li><a href="#">블루투스 스피커</a></li>
+			<li><a href="#">무선이어폰</a></li>
+			<li><a href="#">헤드셋</a></li>
 		</ul>
 	</li>
 	<li class="group">
-		<div class="title">Title 3</div>
+		<div class="title">커뮤니티</div>
 		<ul class="sub">
-			<li><a href="#">sub3</a></li>
-			<li><a href="#">sub3</a></li>
+			<li><a href="#">자료실</a></li>
+			<li><a href="#">공지사항</a></li>
 		</ul>
 	</li>
 </ul>
 <script>
-
-	 
-
+	// 실행 시 상위메뉴만 보임
+	// $('.sub').css('display','none');
+	$('.sub').hide();
+	let oldIndex=-1, index; // 열린 상위메뉴를 선택하면 다시 열리지 않게 설정
+	// 해당 상위 메뉴를 클릭하면 슬라이드 다운되어 보인다.(이전에 열어본 페이지는 닫힘)
+	$('.title').click(function () {
+		index=$(this).parent().index();
+		if(index != oldIndex) {
+			$('.sub').slideUp();
+			// $(this).siblings().slideDown(); // siblings : 선택한 요소의 형제요소들
+			$(this).next().slideDown(); // next : 선택한 요소의 바로 다음 형제 요소
+			oldIndex=index;
+		}else { // 메뉴를 다시 누르면 해당 메뉴를 닫을 수 있음
+			$('.sub').slideUp();
+			oldIndex=-1;
+		}
+	});
+	// 3초 후 pos번째 메뉴 슬라이드 다운
+	function init (pos) {
+		setTimeout(function () {
+			$('.sub').slideUp();
+			$('#navi>li').eq(pos).find('.sub').slideDown();
+			oldIndex=pos;
+		},3000);
+	}
 </script>
 
 </body>

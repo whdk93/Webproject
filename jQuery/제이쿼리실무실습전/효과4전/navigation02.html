@@ -7,7 +7,32 @@
 <script src="http://code.jquery.com/jquery-1.7.min.js"></script>
 <script>
 	$(document).ready(function() {
-		
+		//home클릭하면 ul 나옴
+		let sw=false;
+		$('#home').click(function () {
+			sw=!sw;
+			if(sw) {
+				$('#menu').animate({
+					left : 50
+				},500);
+			}else {
+				$('#menu').animate({
+					left : -600
+				},500);
+			}
+		});
+		//img들에 hover하면 선명해짐
+		$('#menu>li').hover(function () {
+			// $(this).css('opacity',1);
+			$(this).animate({
+				opacity : 1
+			},300);
+		},function () {
+			// $(this).css('opacity',0.2);
+			$(this).animate({
+				opacity : 0.2
+			},300);
+		});
 	});
 </script>
 <style>

@@ -55,7 +55,15 @@
 	</div>
 </div>
 <script>
-	
+	// 상위메뉴만 보임
+	$('.depth2').hide();
+	// 클릭하면 하위메뉴 나옴+상위메뉴에 주황색 배경
+	$('.lnb').click(function () {
+		$('.depth2').slideUp('fast');
+		$(this).next().slideDown('fast');
+		$('.lnb').removeClass('on');
+		$(this).addClass('on');
+	});
 </script>
 </body>
 </html>

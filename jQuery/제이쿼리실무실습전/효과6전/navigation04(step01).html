@@ -67,6 +67,18 @@ li {
 	</ul>
 </div>
 <script>
-	</script>
+	// hover 하면 div 사라지고 내용보임
+	$('#box li').hover(function () {
+		$(this).find('.pagecurl').stop(true,false).animate({
+			left : -100,
+			top : 100
+		},500);
+	},function () {
+		$(this).find('.pagecurl').animate({
+			left : 0,
+			top : 0
+		},500);
+	});
+</script>
 </body>
 </html>
