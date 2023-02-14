@@ -7,26 +7,27 @@
     <title>GIROKHADA</title>
     <link rel="stylesheet" type="text/css" href="css/common.css">
     <link rel="stylesheet" type="text/css" href="css/index.css">
+    <script src="https://kit.fontawesome.com/3391129e8e.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <!-- 퀵메뉴 영역 시작 -->
     <!-- 퀵메뉴(오늘 본 상품) -->
     <div id="quickMenu">
         <div class="quick_prod">
-        <a href="#"><img src="만년필사진1" alt="센츄리 라벤더"></a>
-        <a href="#"><img src="만년필사진2" alt="펠리칸 m200"></a>
-        <a href="#"><img src="만년필사진3" alt="세일러 프로기어 슬림"></a>
+        <a href="#"><img src="img/century_nice_lavande.jpg" alt="century lavande"></a>
+        <a href="#"><img src="img/pelikan_apatite.jpg" alt="pelikan apatite"></a>
+        <a href="#"><img src="img/sailor_overthostorm.jpg" alt="sailor over the storm"></a>
         </div>
         <div class="quick_btn">
-            <span class="quick_prev"></span>
-            <span class="quick_next"></span>
+            <a href="#" class="quick_up"><i class="fa-solid fa-angle-up"></i><span>up</span></a>
+            <a href="#" class="quick_down"><i class="fa-solid fa-angle-down"></i><span>down</span></a>
         </div>
     </div>
     <!-- 퀵메뉴(맨위로,홈으로,장바구니) -->
     <div id="topMenu">
-        <a href="#head_top"><span class="top top1">top</span></a>
-        <span class="top top2"><a href="#">home</a></span>
-        <span class="top top3"><a href="#">cart</a></span>
+        <a href="#head_top"><i class="fa-solid fa-angles-up"></i><span class="top top1">top</span></a>
+        <a href="#" class="top top2"><i class="fa-solid fa-house"></i><span>home</span></a>
+        <a href="#" class="top top3"><i class="fa-solid fa-cart-shopping"></i><span>cart</span></a>
     </div>
     <!-- 퀵메뉴 영역 종료 -->
     <!-- 헤더 영역 시작 -->
@@ -36,60 +37,66 @@
         <ul id="gnb">
             <li><a href="#">로그인</a></li>
             <li><a href="#signup.html">회원가입</a></li>
-            <li><a href="#">마이페이지</a></li>
             <li><a href="#">장바구니</a></li>
+            <li><a href="#">마이페이지</a></li>
         </ul>
+        <!-- 검색 영역 -->
+        <form action="#" method="get">
+            <fieldset>
+                <legend>검색</legend>
+                <input type="search" placeholder="검색어를 입력하세요">
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </fieldset>
+        </form>
         <!-- 메인 메뉴 영역 -->
         <nav id="mainMenu">
             <h2>메인메뉴</h2>
             <ul>
+                <li><a href="#">브랜드</a></li>
                 <li><a href="#">필기구</a></li>
                 <li><a href="#">잉크</a></li>
                 <li><a href="#">노트</a></li>
-                <li><a href="#">잡화</a></li>
+                <li><a href="#">에디터's Pick</a></li>
+                <li><a href="">공지사항</a></li>
+                <li><a href="">Q&amp;A</a></li>
             </ul>
-            <input type="search" />
-            <button type="submit">검색</button>
         </nav>
-        <!-- 사이드 메뉴 영역 -->
-        <div id="sideMenu">
-            <h2>브랜드별메뉴</h2>
-            <ul class="side_brand">
-                <li><a href="">전체 브랜드</a></li>
-                <li><a href="">나라별 브랜드</a></li>
-                <li><a href="">가격별 만년필</a></li>
-            </ul>
-        </div>
     </header>
     <!-- 헤더 영역 종료 -->
     <!-- 컨텐츠 영역 시작 -->
     <div id="content">
         <!-- 이미지 슬라이드 -->
         <section id="slideArea">
-            <ul>
-                <li><a href="#"><img src="" alt=""></a></li>
-                <li><a href="#"><img src="" alt=""></a></li>
-                <li><a href="#"><img src="" alt=""></a></li>
-            </ul>
+            <div id="slideContent">
+               <ul>
+                    <li><a href="#"><img src="img/main_bluemarine.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="img/main1_lamy_2023al.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="img/main_pla_izumo_g.jpg" alt=""></a></li>
+                </ul> 
+            </div>
             <div class="slide_btn">
-                <span class="slide_prev"></span>
-                <span class="slide_next"></span>
+                <span class="slide_prev"><i class="fa-solid fa-chevron-left"></i></span>
+                <span class="slide_next"><i class="fa-solid fa-chevron-right"></i></span>
             </div>
         </section>
         <!-- 배너 영역 -->
         <section id="bannerArea">
-            <div >
-                <a class="small_b banner1" href="#" title="나에게 맞는 만년필은?">나에게 맞는 만년필은?</a>
+            <div>
+                <a class="small_b banner1" href="#" title="나에게 맞는 만년필은?">
+                    <img src="img/mainbanner1.jpg" alt="">나에게 맞는 만년필은?</a>
             </div>
             <div >
-                <a class="small_b banner2" href="#" title="만년필 세척법">만년필 세척법</a>
+                <a class="small_b banner2" href="#" title="만년필 세척법">
+                    <img src="img/mainbanner2.jpg" alt="">만년필 세척법</a>
             </div>
             <div >
-                <a class="small_b banner3" href="#" title="만년필과 잘 어울리는 노트들">만년필과 잘 어울리는 노트들</a>
+                <a class="small_b banner3" href="#" title="만년필과 잘 어울리는 노트들">
+                    <img src="img/mainbanner3.jpg" alt="">만년필과 잘 어울리는 노트들</a>
             </div>
         </section>
         <!-- 신상품 영역 -->
         <section id="newprodArea" class="prod">
+            <h2>new arrival</h2>
             <ul>
                 <li>
                     <a href="#"><img src="img/KW94240-ZZZ_Kaweco-Collection-Fountain-Pen-Iridescent-Pearl_P1.jpg" alt="카웨코 이리디센트"></a>
@@ -115,6 +122,7 @@
         </section>
         <!-- 베스트 세일 상품 -->
         <section id="bstprodArea" class="prod">
+            <h2>best sale</h2>
             <ul>
                 <li>
                     <a href="#"><img src="img/KW94240-ZZZ_Kaweco-Collection-Fountain-Pen-Iridescent-Pearl_P1.jpg" alt="카웨코 이리디센트"></a>
@@ -136,33 +144,86 @@
                     <a href="#"><p>트위스비 에코 펄 퍼플</p></a>
                     <a href="#"><p>48800원</p></a>
                 </li>
+                <li>
+                    <a href="#"><img src="img/TW00003-ZZZ_TWSBI-Eco-Fountain-Pen-Glow-Purple_P1.jpg" alt=""></a>
+                    <a href="#"><p>트위스비 에코 펄 퍼플</p></a>
+                    <a href="#"><p>48800원</p></a>
+                </li>
+                <li>
+                    <a href="#"><img src="img/TW00003-ZZZ_TWSBI-Eco-Fountain-Pen-Glow-Purple_P1.jpg" alt=""></a>
+                    <a href="#"><p>트위스비 에코 펄 퍼플</p></a>
+                    <a href="#"><p>48800원</p></a>
+                </li>
             </ul>
         </section>
     </div>
     <!-- 컨텐츠 영역 종료 -->
     <!-- 푸터 영역 시작 -->
     <footer>
-        <ul>
-            <li>a/s안내</li>
-            <li>은행정보 입금계좌</li>
-            <li>택배추적</li>
-            <li>공지사항 q&amp;a 리뷰</li>
-        </ul>
-        <div class="f_social">
-            <a href="#">유튜브</a>
-            <a href="#">트위터</a>
-            <a href="#">인스타그램</a>
+        <div id="footer_boxArea">
+            <div class="footbox">
+                <strong>customer center</strong>
+                <p>00-000-0000~0</p>
+                <p>영업시간 AM 10:00 - PM 5:00</p>
+                <p>점심시간 PM 1:00 - PM 2:00</p>
+                <p>주말, 공휴일 휴무</p>
+            </div>
+            <div class="footbox">
+                <strong>bank info</strong>
+                <p>예금주 조아라</p>
+                <p>국민 458-831-453123</p>
+                <select name="banksite">
+                    <option value="default">인터넷 뱅킹 바로가기</option>
+                    <option value="국민은행">국민은행</option>
+                    <option value="신한은행">신한은행</option>
+                    <option value="">농협</option>
+                    <option value="">기업은행</option>
+                </select>
+            </div>
+            <div class="footbox">
+                <strong>order tracking</strong>
+                <p>로젠택배 (TEL: 1588-9988)</p>
+                <a href="https://www.ilogen.com/web/personal/tkSearch">배송위치 조회하기</a>
+                <strong>return &amp; exchange</strong>
+                <p>반품배송지 서울시 종로구 종로 78 미려빌딩 3층</p>
+            </div>
+            <div class="footbox">
+                <strong>주문 메뉴</strong>
+                <a href="#">상품 문의</a>
+                <a href="#">상품 후기</a>
+            </div>
         </div>
-        <div>
-            <span>기록(GIROK)</span>
-            <address></address>
-            <ul>
-                <li><a href="#">회사소개</a></li>
-                <li><a href="#">사이트 이용안내</a></li>
-                <li><a href="#">개인정보처리방침</a></li>
-                <li><a href="#">이용약관</a></li>
+        <div class="footer_social">
+            <a href="#">유튜브<i class="fa-brands fa-youtube"></i></a>
+            <a href="#">트위터<i class="fa-brands fa-twitter"></i></a>
+            <a href="#">인스타그램<i class="fa-brands fa-instagram"></i></a>
+        </div>
+        <address>
+            <h3>기록하다</h3>
+                <p>
+                    <strong>회사명</strong><span>주식회사 탄</span>
+                    <strong>대표</strong><span>조아라</span>
+                    <strong>주소</strong><span>서울시 종로구 종로 78 미려빌딩 3층</span>
+                </p>
+                <p>
+                    <strong>사업자 번호</strong><span>000-00-00000</span>
+                    <strong>통신판매번호</strong><span>제 ㅇㅇ-21534호</span>
+                </p>    
+                <p>
+                    <strong>대표전화</strong><span>00-000-0000</span>
+                    <strong>개인정보보호책임자</strong><span>조아라</span>
+                    <strong>E-mail</strong><span>girokhada@girokhada.kr</span>
+                </p>
             </ul>
-            <span>Copyright &copy; All rights reserved. GIROKHADA.</span>
+        </address>
+        <ul>
+            <li><a href="#">회사소개</a></li>
+            <li><a href="#">쇼핑몰 이용안내</a></li>
+            <li><a href="#">개인정보처리방침</a></li>
+            <li><a href="#">이용약관</a></li>
+        </ul>
+        <div class="footer_bottom">
+            <p>copyright &copy; 2023 <span>GIROKHADA.</span> all rights reserved.</p>
         </div>
     </footer>
     <!-- 푸터 영역 종료 -->

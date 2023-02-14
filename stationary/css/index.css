@@ -1,77 +1,25 @@
 @charset "utf-8";
-/* quick Menu start */
-/* seen today */
-#quickMenu {
-    position: absolute;
-    width: 80px;
-    height: 300px;
-    top: 300px;
-    border: 1px solid;
-    text-align: center;
-    z-index: 100;
-    display: none;
+/* 콘텐츠 영역 시작 */
+/* 이미지 슬라이드 */
+#slideArea {
+    position: relative;
 }
-.quick_prod {
-    position: absolute;
-    top: 45px;
-}
-.quick_prod a {
-    display: inline-block;
-    width: 70px;
-    height: 70px;
-    border: 1px solid;
-}
-.quick_prev {
-    position: absolute;
-    top: 10px;
-}
-.quick_next {
-    position: absolute;
-    bottom: 10px;
-}
-/* top, home, cart */
-#topMenu {
-    position: absolute;
-    width: 50px;
-    height: 150px;
-    border: 1px solid;
-    top: 100px;
-    right: 0;
-}
-#topMenu span{
-    display: inline-block;
-    width: 90%;
-    height: 30%;
-    margin: 1px;
-    border: 1px solid;
-}
-
-/* quick Menu end */
-
-/* header start */
-header {
-    width: 100%;
-}
-/* gnb start */
-#gnb {
-    position: absolute;
-    width: 100%;
+#slideContent{
+    width: 1300px;
     margin: 0 auto;
-    top: 0;
-    right: 10px;
     overflow: hidden;
 }
-#gnb li {
-    position: relative;
-    height: 20px;
-    padding: 5px;
-    float: right;
-    list-style: none;
+#slideContent ul {
+    width: 3900px;
 }
-/* mainMenu start */
-
-/* header end */
-/* content start */
+#slideContent li {
+    position: relative;
+    float: left;
+}
+#slideContent img {
+    width: 1300px;
+}
+/* 신상품 */
 .prod ul {
     overflow: hidden;
 }
@@ -82,4 +30,5 @@ header {
     display: inline-block;
     width: 200px;
 }
-/* contetn end */
+/* 베스트 상품 */
+/* 콘텐츠 영역 끝 */

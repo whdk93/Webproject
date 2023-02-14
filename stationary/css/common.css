@@ -4,7 +4,6 @@ html, body, div, header, nav, section, aside, article, footer, figure,
 figcaption, fieldset, legend, ul, ol, li, dl, dt, dd, h1, h2, h3, p{
     margin: 0;
     padding: 0;
-    font-family: "Nanum",sans-serif;
 }
 ul {
     list-style: none;
@@ -48,3 +47,100 @@ a:link {
 a:visited {
     color: #000;
 }
+/* 기본 스타일 */
+body {
+    color: #000;
+    background-color: #fff;
+    font-size: 0.8em;
+    line-height: 1.2;
+    font-family: "Nanum";
+}
+/* 퀵메뉴 영역 */
+#quickMenu {
+    position: fixed;
+    width: 80px;
+    height: 280px;
+    top: 300px;
+    border: 1px solid #ccc;
+    text-align: center;
+    z-index: 100;
+    background-color: #fff;
+}
+.quick_prod {
+    position: absolute;
+    top: 28px;
+}
+.quick_prod a {
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    border: 1px solid #ccc;
+}
+.quick_prod a:last-of-type{
+    margin-top: 2px;
+}
+.quick_prod img {
+    width: 70px;
+}
+.quick_btn {
+    font-size: 2em;
+}
+.quick_btn a {
+    color: #555;
+}
+.quick_btn span {
+    display: inline-block;
+    text-indent: -100em;
+}
+.quick_up {
+    position: absolute;
+    top: 0;
+    left: 30px;
+}
+.quick_down {
+    position: absolute;
+    bottom: 0;
+    left: 30px;
+}
+/* 탑메뉴 영역 */
+#topMenu {
+    position: absolute;
+    width: 50px;
+    height: 150px;
+    border: 1px solid;
+    top: 100px;
+    right: 0;
+}
+#topMenu span{
+    display: inline-block;
+    width: 90%;
+    height: 30%;
+    margin: 1px;
+    border: 1px solid;
+}
+/* 전체 레이아웃 */
+#content {
+    position: relative;
+}
+
+/* 헤더 영역 */
+header {
+    width: 100%;
+}
+/* gnb 영역 */
+#gnb {
+    position: absolute;
+    width: 1300px;
+    margin: 0 auto;
+    top: 0;
+    right: 10px;
+    overflow: hidden;
+}
+#gnb li {
+    position: relative;
+    height: 20px;
+    padding: 5px;
+    float: right;
+    list-style: none;
+}
+/* 푸터 영역 */
