@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<style>
+		    body {
+		    	background: #282828;
+		    }
+			#wrap {
+				width:300px; height:300px; 
+				position:relative; overflow:hidden; 
+				margin:3em auto;}
+		     #blocks {
+	       	width:300px; height:300px; 
+	       	 position:absolute; top:0; left:0;
+	         overflow:hidden;}
+	        .mask {position:absolute; top:118px; left:0;
+	         z-index:500;}	
+	        .col {width:72px;height:144px;
+	      	position:absolute;	top:10px; }
+	       	.col1 {background: url(images/aslider.png);
+	      	 top:22px; left:26px;}
+	        .col2 {background:url(images/bslider.png);
+	         top:4px; left: 100px;}
+	        .col3 {background:url(images/cslider.png);
+	         top:30px; left:174px;}
+	       .col_ani {top:95px;}
+		</style>
+		<title>jex1</title>
+		<script src="js/jquery-3.6.3.min.js"></script>
+		<script src="js/jquery-ui.min.js"></script>
+		<script>
+			$(document).ready(function () {
+				// 객체를 배열 생성
+				let card=[
+					{position : 'up', height : 22},
+					{position : 'up', height : 4},
+					{position : 'up', height : 30}
+				];
+				let index;
+				// 책갈피를 클릭했을때 이벤트
+				$('.col').click(function () {
+					index=$(this).index();
+					// 인덱스 다운
+					if(card[index].position=='up'){	
+						$(this).animate({
+							top : 95
+						},'fast');
+						card[index].position='down';
+					}
+					// 인덱스 업	
+					else {	
+						$(this).animate({
+							top : card[index].height
+						},'fast');
+						card[index].position='up';
+					}
+				});
+			});
+		</script>
+	</head>
+	<body>
+	 <div id="wrap">
+		<img src="images/abcmask.png" class="mask">
+		<div id="blocks">
+			<div class="col col1" ></div>
+			<div class="col col2"></div>
+			<div class="col col3"></div>
+		</div>
+	</div>
+		
+	</body>
+</html>
