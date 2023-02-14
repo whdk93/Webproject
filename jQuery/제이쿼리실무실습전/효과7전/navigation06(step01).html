@@ -55,13 +55,16 @@
 	</div>
 </div>
 <script>
-	// 상위메뉴만 보임
+	// 브라우저 로딩 후 상위메뉴만 visible
 	$('.depth2').hide();
-	// 클릭하면 하위메뉴 나옴+상위메뉴에 주황색 배경
+	// click 이벤트
 	$('.lnb').click(function () {
-		$('.depth2').slideUp('fast');
-		$(this).next().slideDown('fast');
-		$('.lnb').removeClass('on');
+		// slide이벤트
+		$('.depth2').slideUp('fast'); // 기존 하위메뉴 전체 slideUp
+		$(this).next().slideDown('fast'); // 해당 하위메뉴 slideDown
+		
+		// 클릭시 상위메뉴 css 변경
+		$('.lnb').removeClass('on'); // 
 		$(this).addClass('on');
 	});
 </script>
