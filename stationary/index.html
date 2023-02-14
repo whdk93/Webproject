@@ -5,36 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GIROKHADA</title>
-    <style>
-        .prod ul {
-            overflow: hidden;
-        }
-        .prod li {
-            float: left;
-        }
-        .prod li img{
-            display: inline-block;
-            width: 200px;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
 </head>
 <body>
-    <!-- 퀵메뉴(오늘본상품) -->
+    <!-- 퀵메뉴 영역 시작 -->
+    <!-- 퀵메뉴(오늘 본 상품) -->
     <div id="quickMenu">
+        <div class="quick_prod">
         <a href="#"><img src="만년필사진1" alt="센츄리 라벤더"></a>
         <a href="#"><img src="만년필사진2" alt="펠리칸 m200"></a>
         <a href="#"><img src="만년필사진3" alt="세일러 프로기어 슬림"></a>
+        </div>
         <div class="quick_btn">
-            <span class="q_prev"></span>
-            <span class="q_next"></span>
+            <span class="quick_prev"></span>
+            <span class="quick_next"></span>
         </div>
     </div>
-    <!-- 탑메뉴(맨위로,홈으로,장바구니) -->
+    <!-- 퀵메뉴(맨위로,홈으로,장바구니) -->
     <div id="topMenu">
         <span class="top top1">top</span>
         <span class="top top2">home</span>
         <span class="top top3">cart</span>
     </div>
+    <!-- 퀵메뉴 영역 종료 -->
     <!-- 헤더 영역 시작 -->
     <header>
         <h1>GIROKHADA</h1>
@@ -46,29 +40,24 @@
             <li><a href="#">장바구니</a></li>
         </ul>
         <!-- 메인 메뉴 -->
-        <nav id="mnb">
+        <nav id="mainMenu">
+            <h2>메인메뉴</h2>
             <ul>
-                <li>신상품</li>
-                <li>베스트</li>
-                <li>이벤트</li>
-                <li>고객센터</li>
+                <li><a href="#">필기구</a></li>
+                <li><a href="#">잉크</a></li>
+                <li><a href="#">노트</a></li>
+                <li><a href="#">잡화</a></li>
             </ul>
             <input type="search" />
             <button type="submit">검색</button>
         </nav>
         <!-- 사이드 메뉴 -->
         <div id="sideMenu">
-            <ul class="side_cate">
-                <li>필기구</li>
-                <li>캘리그라피 / 화방</li>
-                <li>문구 / 사무</li>
-                <li>다이어리 / 노트</li>
-                <li>잡화</li>
-            </ul>
+            <h2>브랜드별메뉴</h2>
             <ul class="side_brand">
-                <li>전체 브랜드</li>
-                <li>나라별 브랜드</li>
-                <li>가격별 만년필</li>
+                <li><a href="">전체 브랜드</a></li>
+                <li><a href="">나라별 브랜드</a></li>
+                <li><a href="">가격별 만년필</a></li>
             </ul>
         </div>
     </header>
@@ -83,8 +72,8 @@
                 <li><a href="#"><img src="" alt=""></a></li>
             </ul>
             <div class="slide_btn">
-                <span class="s_prev"></span>
-                <span class="s_next"></span>
+                <span class="slide_prev"></span>
+                <span class="slide_next"></span>
             </div>
         </section>
         <!-- 배너 영역 -->

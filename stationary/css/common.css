@@ -1,0 +1,50 @@
+@charset "utf-8";
+/* 초기화 */
+html, body, div, header, nav, section, aside, article, footer, figure, 
+figcaption, fieldset, legend, ul, ol, li, dl, dt, dd, h1, h2, h3, p{
+    margin: 0;
+    padding: 0;
+    font-family: "Nanum",sans-serif;
+}
+ul {
+    list-style: none;
+}
+fieldset {
+    border: none;
+}
+/* 숨김 콘텐츠 */
+.hidden, legend, caption {
+    position: absolute;
+    left: -9999px;
+}
+/* 전체 기본 스타일 */
+/* 웹 폰트 */
+@font-face {
+    font-family: "Nanum";
+    font-weight: 400;
+    src: url("font/NanumGothic.eot?#iefix")format("embedded-opentype"),
+    url("font/NanumGothic.woff")format("woff"),
+    url("font/NanumGothic.ttf")format("truetype");
+}
+@font-face {
+    font-family: "NanumBold";
+    font-weight: 600;
+    src: url("font/NanumGothicBold.eot?#iefix?#iefix")format("embedded-opentype"),
+    url("font/NanumGothicBold.woff")format("woff"),
+    url("font/NanumGothicBold.ttf")format("truetype");
+}
+@font-face {
+    font-family: "NanumEx";
+    font-weight: 900;
+    src: url("font/NanumGothicExtraBold.eot?#iefix")format("embedded-opentype"),
+    url("font/NanumGothicExtraBold.woff")format("woff"),
+    url("font/NanumGothicExtraBold.ttf")format("truetype");
+}
+/* 링크 스타일 */
+a:link {
+    color: #000;
+    text-decoration: none;
+}
+a:visited {
+    color: #000;
+}

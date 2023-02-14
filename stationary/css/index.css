@@ -1,1 +1,69 @@
 @charset "utf-8";
+/* quick Menu start */
+/* seen today */
+#quickMenu {
+    position: absolute;
+    width: 80px;
+    height: 300px;
+    top: 300px;
+    border: 1px solid;
+    text-align: center;
+    z-index: 100;
+    display: none;
+}
+.quick_prod {
+    position: absolute;
+    top: 45px;
+}
+.quick_prod a {
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    border: 1px solid;
+}
+.quick_prev {
+    position: absolute;
+    top: 10px;
+}
+.quick_next {
+    position: absolute;
+    bottom: 10px;
+}
+/* top, home, cart */
+
+/* quick Menu end */
+
+/* header start */
+header {
+    width: 100%;
+}
+#gnb {
+    position: absolute;
+    width: 100%;
+    margin: 0 auto;
+    top: 0;
+    right: 10px;
+    overflow: hidden;
+}
+#gnb li {
+    position: relative;
+    width: 100px;
+    height: 20px;
+    padding: 5px;
+    float: right;
+    list-style: none;
+    border: 1px solid;
+}
+/* header end */
+/* content start */
+.prod ul {
+    overflow: hidden;
+}
+.prod li {
+    float: left;
+}
+.prod li img{
+    display: inline-block;
+    width: 200px;
+}
+/* contetn end */
