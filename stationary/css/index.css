@@ -5,19 +5,19 @@
     position: relative;
 }
 #slideContent{
-    width: 1300px;
+    width: 1200px;
     margin: 0 auto;
     overflow: hidden;
 }
 #slideContent ul {
-    width: 3900px;
+    width: 3600px;
 }
 #slideContent li {
     position: relative;
     float: left;
 }
 #slideContent img {
-    width: 1300px;
+    width: 1200px;
 }
 /* 신상품 */
 .prod ul {

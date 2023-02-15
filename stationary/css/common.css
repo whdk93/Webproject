@@ -142,35 +142,52 @@ header h1 {
     position: relative;
     top: 80px;
     left: 50%;
-    /* text-indent: -999px; */
+    height: 0;
+    border-left: 1px solid;
+    text-indent: -9999px;
 }
 #mainBanner {
-    width: 1300px;
+    width: 1200px;
     height: 150px;
     margin: 0 auto;
-    top: 30px;
+}
+#mainBanner::before {
+    content: "";
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    top: 190px;
+    left: 0;
+    background-color: #ccc;
+}
+#mainBanner::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    top: 229px;
+    left: 0;
+    background-color: #ccc;    
 }
 /* gnb 영역 */
 #gnb {
     position: relative;
-    width: 1300px;
-    height: 50px;
-    top: -180px;
+    width: 1200px;
+    height: 40px;
     margin: 0 auto;
 }
 #gnb ul {
     position: absolute;
     width: 300px;
     top: 1%;
-    overflow: hidden;
+    right: 140px;
     padding: 5px;
 }
 #gnb li {
-    position: relative;
     height: 20px;
     padding: 5px;
-    float: left;
     list-style: none;
+    display: inline-block;
 }
 #gnb li :after {
     content: "|";
@@ -183,7 +200,7 @@ header h1 {
 #gnb form {
     position: absolute;
     top: 5px;
-    left: 80%;
+    right: 0;
     background-color: #ccc;
     border-radius: 5px;
     padding: 5px;
@@ -197,7 +214,57 @@ header h1 {
     border: none;
     background-color: #ccc;
 }
-
 /* 메인 메뉴 영역 */
-
+#mainMenu {
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+    border-left: 1px solid;
+    border-right: 1px solid;
+}
+#mainMenu h2{
+    position: absolute;
+    left: 0;
+    text-indent: -999px;
+}
+#mainMenu p {
+    display: inline-block;
+    width: 14%;
+}
+#mainMenu p a {
+    display: inline-block;
+    font-size: 1.3em;
+    width: 100px;
+    padding: 10px 5px;
+    text-align: center;
+}
+#mainMenu p:hover a {
+    font-weight: bold;
+}
+#mainMenu ul {
+    position: relative;
+    display: inline-block;
+    width: 85%;
+    left: 1.82%;
+}
+#mainMenu ul li {
+    display: inline-block;
+    width: 15%;
+    font-size: 1.3em;
+    padding: 10px 5px;
+    text-align: center;
+}
+#mainMenu ul li:hover a {
+    font-weight: bold;
+}
 /* 푸터 영역 */
+footer {
+    position: relative;
+}
+#footArea {
+    width: 1200px;
+    margin: 0 auto;
+}
+address{
+
+}
