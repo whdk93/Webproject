@@ -25,7 +25,7 @@
     </div>
     <!-- 퀵메뉴(맨위로,홈으로,장바구니) -->
     <div id="topMenu">
-        <a href="#head_top"><i class="fa-solid fa-angles-up"></i><span class="top top1">top</span></a>
+        <a href="#head_top" class="top top1"><i class="fa-solid fa-angles-up"></i><span>top</span></a>
         <a href="#" class="top top2"><i class="fa-solid fa-house"></i><span>home</span></a>
         <a href="#" class="top top3"><i class="fa-solid fa-cart-shopping"></i><span>cart</span></a>
     </div>
@@ -33,21 +33,25 @@
     <!-- 헤더 영역 시작 -->
     <header id="head_top">
         <h1>GIROKHADA</h1>
+        <div id="mainBanner"></div>
         <!-- gnb 영역 -->
-        <ul id="gnb">
-            <li><a href="#">로그인</a></li>
-            <li><a href="#signup.html">회원가입</a></li>
-            <li><a href="#">장바구니</a></li>
-            <li><a href="#">마이페이지</a></li>
-        </ul>
-        <!-- 검색 영역 -->
+        <div id="gnb">
+            <!-- 상단메뉴 -->
+            <ul>
+                <li><a href="#">로그인</a></li>
+                <li><a href="#signup.html">회원가입</a></li>
+                <li><a href="#">장바구니</a></li>
+                <li><a href="#">마이페이지</a></li>
+            </ul>  
+            <!-- 검색 영역 -->
         <form action="#" method="get">
             <fieldset>
                 <legend>검색</legend>
-                <input type="search" placeholder="검색어를 입력하세요">
+                <input type="search">
                 <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
             </fieldset>
         </form>
+        </div>
         <!-- 메인 메뉴 영역 -->
         <nav id="mainMenu">
             <h2>메인메뉴</h2>
