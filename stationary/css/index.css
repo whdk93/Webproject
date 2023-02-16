@@ -1,34 +1,133 @@
 @charset "utf-8";
 /* 콘텐츠 영역 시작 */
 /* 이미지 슬라이드 */
-#slideArea {
+#contentArea {
     position: relative;
 }
-#slideContent{
-    width: 1200px;
+#slideArea{
+    width: 1202px;
+    height: 413px;
     margin: 0 auto;
     overflow: hidden;
 }
-#slideContent ul {
-    width: 3600px;
+#slideContent {
+    width: 3606px;
 }
 #slideContent li {
     position: relative;
     float: left;
 }
 #slideContent img {
-    width: 1200px;
+    width: 1202px;
 }
-/* 신상품 */
+.slideBtn {
+    position: absolute;
+    top: 171px;
+    font-size: 4em;
+}
+.slideBtn a {
+    display: inline-block;
+    width: 30px;
+    height: 60px;
+    padding: 0 15px;
+    color: #555;
+}
+.slidePrev {
+    position: relative;
+    left: 80px;
+}
+.slideNext {
+    position: relative;
+    left: 1042px;
+}
+/* 배너 영역 */
+#bannerArea {
+    position: relative;
+    background-color: #f3efef;
+}
+#bannerArea ul {
+    position: relative;
+    width: 1200px;
+    height: 450px;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+#bannerArea .conbanner {
+    position: relative;
+    float: left;
+    width: 320px;
+    height: 400px;
+    margin: 0 40px;
+    background-color: #fff;
+}
+#bannerArea .conbanner a {
+    display: inline-block;
+    width: 320px;
+    height: 300px;
+}
+#bannerArea .conbanner a img {
+    width: 320px;
+    height: 300px;
+}
+#bannerArea .conbanner strong, #bannerArea .conbanner span {
+    width: 320px;
+    text-indent: 15px;
+}
+#bannerArea .conbanner strong {
+    display: inline-block;
+    font-size: 1.5em;
+    padding: 10px 0;
+}
+#bannerArea .conbanner span {
+    display: inline-block;
+    font-size: 1.1em;
+}
+/* 상품 전체 영역 */
+.prod {
+    position: relative;
+    width: 1200px;
+    height: 440px;
+    margin: 0 auto;
+}
+.prod h2 {
+    position: relative;
+    text-transform: uppercase;
+    font-size: 1.8em;
+    width: 200px;
+    text-align: center;
+    left: 50%;
+    margin-left: -100px;
+    font-weight: normal;
+    padding: 20px 0;
+}
 .prod ul {
+    position: relative;
     overflow: hidden;
 }
-.prod li {
+.prod ul li {
     float: left;
+    width: 290px;
+    margin: 0 5px;
 }
-.prod li img{
+.prod ul li a:nth-of-type(1){
     display: inline-block;
-    width: 200px;
+    width: 250px;
 }
-/* 베스트 상품 */
+.prod ul li a:nth-of-type(1) img{
+    width: 250px;
+}
+.prod ul li a:nth-of-type(2) {
+    display: inline-block;
+    width: 250px;
+    font-size: 1.4em;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+}
+.prod ul li .originPrice {
+    color: #999;
+    padding: 5px 0;
+}
+.prod ul li .originPrice span {
+    text-decoration: line-through;
+}
 /* 콘텐츠 영역 끝 */

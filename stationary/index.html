@@ -7,6 +7,8 @@
     <title>GIROKHADA</title>
     <link rel="stylesheet" type="text/css" href="css/common.css">
     <link rel="stylesheet" type="text/css" href="css/index.css">
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
     <script src="https://kit.fontawesome.com/3391129e8e.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -38,7 +40,7 @@
             <!-- 상단메뉴 -->
             <ul>
                 <li><a href="#">로그인</a></li>
-                <li><a href="#signup.html">회원가입</a></li>
+                <li><a href="#join.html">회원가입</a></li>
                 <li><a href="#">장바구니</a></li>
                 <li><a href="#">마이페이지</a></li>
             </ul>  
@@ -72,32 +74,41 @@
     <div id="contentArea">
         <!-- 이미지 슬라이드 -->
         <section id="slideArea">
-            <div id="slideContent">
-               <ul>
+               <ul id="slideContent">
                     <li><a href="#"><img src="img/main_bluemarine.jpg" alt=""></a></li>
                     <li><a href="#"><img src="img/main1_lamy_2023al.jpg" alt=""></a></li>
                     <li><a href="#"><img src="img/main_pla_izumo_g.jpg" alt=""></a></li>
                 </ul> 
-            </div>
-            <div class="slide_btn">
-                <span class="slide_prev"><i class="fa-solid fa-chevron-left"></i></span>
-                <span class="slide_next"><i class="fa-solid fa-chevron-right"></i></span>
+            <div class="slideBtn">
+                <a class="slidePrev" href="#"><i class="fa-solid fa-chevron-left"></i></a>
+                <a class="slideNext" href="#"><i class="fa-solid fa-chevron-right"></i></a>
             </div>
         </section>
         <!-- 배너 영역 -->
-        <section id="contentbannerArea">
-            <div>
-                <a class="small_b banner1" href="#" title="나에게 맞는 만년필은?">
-                    <img src="img/mainbanner1.jpg" alt="">나에게 맞는 만년필은?</a>
-            </div>
-            <div >
-                <a class="small_b banner2" href="#" title="만년필 세척법">
-                    <img src="img/mainbanner2.jpg" alt="">만년필 세척법</a>
-            </div>
-            <div >
-                <a class="small_b banner3" href="#" title="만년필과 잘 어울리는 노트들">
-                    <img src="img/mainbanner3.jpg" alt="">만년필과 잘 어울리는 노트들</a>
-            </div>
+        <section id="bannerArea">
+            <ul>
+                <li class="conbanner banner1">
+                    <a href="#">
+                        <img src="img/mainbanner1.jpg" alt="">
+                    </a>
+                    <strong>손글씨 부문 온라인 클래스 1위!</strong>
+                    <span>화제의 미꽃체, 지금 바로 확인해보세요</span>
+                </li>
+                <li class="conbanner banner2">
+                    <a href="#">
+                        <img src="img/mainbanner2.jpg" alt="">
+                    </a>
+                    <strong>만년필 구조키트</strong>
+                    <span>만년필 초보자를 위한 필수 물품들</span>
+                </li>
+                <li class="conbanner banner3">
+                    <a href="#">
+                        <img src="img/mainbanner3.jpg" alt="">
+                    </a>
+                    <strong>호보니치, 미도리MD 등</strong>
+                    <span>만년필과 찰떡 궁합♡</span>
+                </li>
+            </ul>
         </section>
         <!-- 신상품 영역 -->
         <section id="newprodArea" class="prod">
@@ -106,22 +117,26 @@
                 <li>
                     <a href="#"><img src="img/KW94240-ZZZ_Kaweco-Collection-Fountain-Pen-Iridescent-Pearl_P1.jpg" alt="카웨코 이리디센트"></a>
                     <a href=""><p>이리디센트 펄</p></a>
-                    <a href=""><p>35000원</p></a>
+                    <p class="originPrice">소비자가 :<span>35000원</span></p>
+                    <p>판매가 : 35000원</p>
                 </li>
                 <li>
                     <a href="#"><img src="img/PK05057-ZZZ_Pelikan-Souveran-M400-Fountain-Pen-Tortoise-Shell-White-Gold-Cap_P1.jpg" alt=""></a>
                     <a href=""><p>M400 쉘 화이트</p></a>
-                    <a href=""><p>350000원</p></a>
+                    <p class="originPrice">소비자가 :<span>350000원</span></p>
+                    <p>판매가 : 350000원</p>
                 </li>
                 <li>
                     <a href="#"><img src="img/SR86861_Sailor-Shikiori-Sound-of-Rain-Fountain-Pen-Winter-Rain-Medium-Fine_P1.jpg" alt=""></a>
                     <a href=""><p>시키오리-빗소리(겨울)</p></a>
-                    <a href=""><p>370000원</p></a>
+                    <p class="originPrice">소비자가 :<span>370000원</span></p>
+                    <p>판매가 : 370000원</p>
                 </li>
                 <li>
                     <a href=""><img src="img/TW00003-ZZZ_TWSBI-Eco-Fountain-Pen-Glow-Purple_P1.jpg" alt=""></a>
                     <a href=""><p>트위스비 에코 펄 퍼플</p></a>
-                    <a href=""><p>48800원</p></a>
+                    <p class="originPrice">소비자가 :<span>48800원</span></p>
+                    <p>판매가 : 48800원</p>
                 </li>
             </ul>
         </section>
@@ -131,23 +146,27 @@
             <ul>
                 <li>
                     <a href="#"><img src="img/KW94240-ZZZ_Kaweco-Collection-Fountain-Pen-Iridescent-Pearl_P1.jpg" alt="카웨코 이리디센트"></a>
-                    <a href="#"><p>이리디센트 펄</p></a>
-                    <a href="#"><p>35000원</p></a>
+                    <a href=""><p>이리디센트 펄</p></a>
+                    <p class="originPrice">소비자가 :<span>35000원</span></p>
+                    <p>판매가 : 35000원</p>
                 </li>
                 <li>
                     <a href="#"><img src="img/PK05057-ZZZ_Pelikan-Souveran-M400-Fountain-Pen-Tortoise-Shell-White-Gold-Cap_P1.jpg" alt=""></a>
-                    <a href="#"><p>M400 쉘 화이트</p></a>
-                    <a href="#"><p>350000원</p></a>
+                    <a href=""><p>M400 쉘 화이트</p></a>
+                    <p class="originPrice">소비자가 :<span>350000원</span></p>
+                    <p>판매가 : 350000원</p>
                 </li>
                 <li>
                     <a href="#"><img src="img/SR86861_Sailor-Shikiori-Sound-of-Rain-Fountain-Pen-Winter-Rain-Medium-Fine_P1.jpg" alt=""></a>
-                    <a href="#"><p>시키오리-빗소리(겨울)</p></a>
-                    <a href="#"><p>370000원</p></a>
+                    <a href=""><p>시키오리-빗소리(겨울)</p></a>
+                    <p class="originPrice">소비자가 :<span>370000원</span></p>
+                    <p>판매가 : 370000원</p>
                 </li>
                 <li>
-                    <a href="#"><img src="img/TW00003-ZZZ_TWSBI-Eco-Fountain-Pen-Glow-Purple_P1.jpg" alt=""></a>
-                    <a href="#"><p>트위스비 에코 펄 퍼플</p></a>
-                    <a href="#"><p>48800원</p></a>
+                    <a href=""><img src="img/TW00003-ZZZ_TWSBI-Eco-Fountain-Pen-Glow-Purple_P1.jpg" alt=""></a>
+                    <a href=""><p>트위스비 에코 펄 퍼플</p></a>
+                    <p class="originPrice">소비자가 :<span>48800원</span></p>
+                    <p>판매가 : 48800원</p>
                 </li>
             </ul>
         </section>
@@ -202,11 +221,11 @@
                         <strong>주소</strong><span>서울시 종로구 종로 78 미려빌딩 3층</span>
                     </p>
                     <p>
-                        <strong>사업자 번호</strong><span>000-00-00000</span>
-                        <strong>통신판매번호</strong><span>제 ㅇㅇ-21534호</span>
+                        <strong>사업자 번호</strong><span>135-09-885492</span>
+                        <strong>통신판매번호</strong><span>제 85-21534호</span>
                     </p>    
                     <p>
-                        <strong>대표전화</strong><span>00-000-0000</span>
+                        <strong>대표전화</strong><span>02-653-9956</span>
                         <strong>개인정보보호책임자</strong><span>조아라</span>
                         <strong>E-mail</strong><span>girokhada@girokhada.kr</span>
                     </p>

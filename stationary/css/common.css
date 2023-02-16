@@ -5,6 +5,10 @@ figcaption, fieldset, legend, ul, ol, li, dl, dt, dd, h1, h2, h3, p{
     margin: 0;
     padding: 0;
 }
+span, a, strong {
+    font-style: normal;
+    font-weight: normal;
+}
 ul {
     list-style: none;
 }
@@ -107,7 +111,7 @@ body {
     position: fixed;
     width: 50px;
     height: 150px;
-    top: 80%;
+    top: 85%;
     right: 10px;
     z-index: 100;
 }
@@ -119,6 +123,10 @@ body {
     border: 1px solid #ccc;
     background-color: #ccc;
     text-align: center;
+    transition: background-color 1s;
+}
+#topMenu a:hover {
+    background-color: #999;
 }
 #topMenu i {
     margin-top: 8px;
@@ -139,12 +147,20 @@ header {
     width : 100%;
 }
 header h1 {
-    position: relative;
-    top: 80px;
+    position: absolute;
+    top: 120px;
     left: 50%;
-    height: 0;
-    border-left: 1px solid;
-    text-indent: -9999px;
+    margin-left: -65px;
+    /* text-indent: -9999px; */
+}
+header h1::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: -90px;
+    left: 20px;
+    background: url(../img/indexLogo.png) no-repeat;
 }
 #mainBanner {
     width: 1200px;
@@ -153,16 +169,16 @@ header h1 {
 }
 #mainBanner::before {
     content: "";
-    width: 100%;
+    width: 3000px;
     height: 1px;
     position: absolute;
     top: 190px;
     left: 0;
-    background-color: #ccc;
+    background-color: #000;
 }
 #mainBanner::after {
     content: "";
-    width: 100%;
+    width: 3000px;
     height: 1px;
     position: absolute;
     top: 229px;
@@ -186,7 +202,6 @@ header h1 {
 #gnb li {
     height: 20px;
     padding: 5px;
-    list-style: none;
     display: inline-block;
 }
 #gnb li :after {
@@ -219,8 +234,8 @@ header h1 {
     position: relative;
     width: 1200px;
     margin: 0 auto;
-    border-left: 1px solid;
-    border-right: 1px solid;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
 }
 #mainMenu h2{
     position: absolute;
@@ -261,35 +276,73 @@ header h1 {
 footer {
     position: relative;
 }
+footer::after {
+    content: "";
+    width: 100%;
+    height: 20px;
+    position: absolute;
+    background-color: #555;
+    left: 0;
+    bottom: -10px;
+    padding-bottom: 10px;
+}
 #footArea {
     width: 1200px;
     margin: 0 auto;
+}
+#footArea::before {
+    content: "";
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    background-color: #555;
+    left: 0;
+    top: 0;
+}
+#footArea::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    background-color: #555;
+    left: 0;
+    top: 190px;
 }
 /* 푸터 박스 영역 */
 #footBoxArea {
     width: 100%;
     position: relative;
-}
-#footBoxArea::after {
-    content: "";
-    display: block;
-    clear: both;
+    height: 150px;
+    padding: 20px 0;
 }
 .footbox {
-    width: 298px;
-    height: 180px;
+    width: 238px;
+    height: 130px;
     float: left;
     line-height: 2em;
+    margin: 0 30px;
+    margin-top: 5px;
+    border-right: 1px solid #ccc;
 }
-.footbox::after {
-    position: absolute;
-    width: 1px;
-    height: 180px;
-    background-color: #ccc;
-    left: 290px;
+.footbox:first-child {
+    margin-left: 0;
 }
-.footbox p, .footbox select, .footbox strong, .footbox a {
-    margin-left: 10px;
+.footbox:nth-child(2) {
+    width: 268px;
+    margin-left: 0;
+}
+.footbox:nth-child(3) {
+    width: 298px;
+    margin-right: 0;
+    margin-left: 0;
+}
+.footbox:last-child {
+    margin-right: 0;
+    border: none;
+}
+.footbox strong {
+    font-size: 1.3em;
+    font-weight: bold;
 }
 .footbox strong, .footbox a {
     display: block;
@@ -300,7 +353,7 @@ footer {
 }
 /* 푸터 소셜 영역 */
 #footsocial {
-    width: 180px;
+    width: 160px;
     height: 60px;
     margin: 0 auto;
     padding: 10px 0;
@@ -312,6 +365,10 @@ footer {
     background-color: #ccc;
     border-radius: 50%;
     text-align: center;
+    transition: background-color 1s;
+}
+#footsocial a:hover {
+    background-color: #999;
 }
 #footsocial i {
     position: relative;
@@ -344,6 +401,7 @@ footer {
     padding: 2px 0; 
 }
 #footArea address strong {
+    font-weight: bold;
    margin-right: 5px;
 }
 #footArea address span {
@@ -351,11 +409,25 @@ footer {
 }
 /* 푸터 메뉴 및 카피라이트 영역 */
 .footNav {
-
+ position: relative;
+ margin: 20px 0;
 }
 .footNav li {
-
+    position: relative;
+    left: 438px;
+    display: inline-block;
+    margin-right: 5px;
+    font-size: 1.1em;
+}
+.footNav li:hover a {
+    text-decoration: underline;
 }
 .footCopy {
+    position: relative;
+    left: 10px;
     text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 10px;
+    z-index: 10;
+    color: white;
 }
