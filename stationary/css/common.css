@@ -264,14 +264,98 @@ footer {
 #footArea {
     width: 1200px;
     margin: 0 auto;
-    overflow: hidden;
+}
+/* 푸터 박스 영역 */
+#footBoxArea {
+    width: 100%;
+    position: relative;
+}
+#footBoxArea::after {
+    content: "";
+    display: block;
+    clear: both;
 }
 .footbox {
-    width: 300px;
-    height: 200px;
+    width: 298px;
+    height: 180px;
     float: left;
     line-height: 2em;
 }
-address{
+.footbox::after {
+    position: absolute;
+    width: 1px;
+    height: 180px;
+    background-color: #ccc;
+    left: 290px;
+}
+.footbox p, .footbox select, .footbox strong, .footbox a {
+    margin-left: 10px;
+}
+.footbox strong, .footbox a {
+    display: block;
+    text-transform: uppercase;
+}
+.rtnex, .footbox select {
+    margin-top: 5px;
+}
+/* 푸터 소셜 영역 */
+#footsocial {
+    width: 180px;
+    height: 60px;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+#footsocial a {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-color: #ccc;
+    border-radius: 50%;
+    text-align: center;
+}
+#footsocial i {
+    position: relative;
+    top: 25%;
+    font-size: 2em;
+}
+#footsocial a span {
+    display: inline-block;
+    text-indent: -9999px;
+}
+/* 푸터 어드레스 영역 */
+#footArea address {
+    position: relative;
+}
+#footArea address .footLogo {
+    position: relative;
+    width: 80px;
+    left: 50%;
+    margin-left: -40px;
+    font-size: 1.5em;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+#footArea address p {
+    width: 600px;
+    margin: 0 auto;
+    font-style: normal;
+    font-size: 1.1em;
+    text-align: center;
+    padding: 2px 0; 
+}
+#footArea address strong {
+   margin-right: 5px;
+}
+#footArea address span {
+    margin-right: 7px;
+}
+/* 푸터 메뉴 및 카피라이트 영역 */
+.footNav {
 
+}
+.footNav li {
+
+}
+.footCopy {
+    text-transform: uppercase;
 }
