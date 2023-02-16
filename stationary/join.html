@@ -47,9 +47,38 @@
     <!-- 헤더 영역 종료 -->
     <!-- 컨텐츠 영역 시작 -->
     <div id="contentArea">
-        <h2>회원 가입</h2>
+        <section id="memberArea">
         <p><a href="index.html">home</a>&gt;<a href="join.html">회원가입</a></p>
-
+        <h2>회원 가입</h2>
+        <form action="join.jsp" method="post" id="joinForm" name="joinForm">
+            <fieldset>
+                <legend>회원 가입 폼</legend>
+                <p>기본정보</p>
+                <p>
+                    <label for="id">아이디<strong class="require">필수</strong></label>
+                    <input type="text" name="id" id="id" required >(영문대소문자&#47;숫자 4~16자)
+                </p>
+                <p>
+                    <label for="password">비밀번호<strong class="require">필수</strong></label>
+                    <input type="password" name="password" id="password" required>(영문대소문자&#47;숫자 4~16자)
+                </p>
+                <p>
+                    <label for="confirmPwd">비밀번호 확인<strong class="require">필수</strong></label><input type="pas
+                    " id="confirmPwd" name="confirmPwd" required>
+                </p>
+                <p>
+                    <label for="name">이름<strong class="require">필수</strong></label>
+                    <input type="text" name="name" id="name" required>
+                </p>
+                <p>
+                    <label for="address"></label><a href="findZipcode">우편번호</a>
+                    <input type="text" id="address" name="address" maxlength="100">
+                    <span>기본주소</span>
+                    <input type="text" id="address" name="address" maxlength="100"><span>나머지주소 (선택입력가능)</span>
+                </p>
+            </fieldset>
+        </form>
+    </section>
     </div>
     <!-- 컨텐츠 영역 종료 -->
     <!-- 푸터 영역 시작 -->
