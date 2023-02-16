@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax(Asynchronous Javascript And XML)</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script>
+        $(function () {   
+            $.ajax({
+                url : '89_2header.html',
+                success : function (data) {
+                    $('body').prepend(data);
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="contents">
+        <h2>Culpa labore</h2>
+        <p>Culpa labore in nostrud minim aute ex deserunt ad Lorem voluptate tempor ad amet anim.</p>
+    </div>
+    
+</body>
+</html>

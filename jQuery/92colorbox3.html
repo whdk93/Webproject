@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>컬러박스</title>
+    <link rel="stylesheet" type="text/css" href="css/colorbox.css">
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/jquery.colorbox.js"></script>
+    <script>
+        $(function () {
+            // ↓ javascript에서 먼저 체크하고 서버로 넘기는 경우 
+           $('#search-form').submit(function (event) {
+                // Ajax를 수행
+                let url='http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?';
+                $.getJSON(url, $(this).serialize(), function (data) {
+                    $('#images').empty();
+                    $.each(data.items, function (index, item) {
+                        let $image=$('<img />').attr({
+                            src : item.media.m
+                        });
+                        $('<a></a>').attr({
+                            class : 'flickr-image',
+                            href : item.media.m,
+                            rel : 'colorbox'
+                        }).html($image).appendTo('#images');
+                    });
+                    $('a.flickr-image').colorbox({
+                        width : 400,
+                        height : 400
+                    });
+                });
+                return false;
+           }); 
+        });
+    </script>
+</head>
+<body>
+    <h1>컬러박스를 활용한 플리커 이미지 앨범</h1>
+    <form id="search-form">
+        <input type="text" name="tags">
+        <input type="hidden" name="format" value="json"> <!-- 클라이언트 화면에 노출되지 않지만 클라이언트 정보를 서버로 가져가야할때 -->
+        <input type="submit" value="검색">
+    </form>
+    <div id="images">
+        
+    </div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>masonry</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #525252;
+        }
+        .item {
+            width: 100px;
+            height: 100px;
+            margin: 5px;
+            background-color: #fff;
+            border-radius: 10px;
+            float: left;
+        }
+        .big {
+            width: 210px;
+            height: 430px;
+        }
+        .normal {
+            width: 210px;
+            height: 210px;
+        }
+        .small {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/masonry.pkgd.min.js"></script>
+    <script>
+        $(function () {
+            $('#masonry-container').masonry({
+                itemSelector : '.item',
+                cloumnWidth : 110,
+
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="masonry-container">
+        <div class="item small"></div>
+        <div class="item big"></div>
+        <div class="item normal"></div>
+        <div class="item small"></div>
+        <div class="item small"></div>
+        <div class="item small"></div>
+        <div class="item normal"></div>
+        <div class="item normal"></div>
+        <div class="item small"></div>
+        <div class="item small"></div>
+        <div class="item small"></div>
+        <div class="item small"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax(Asynchronous Javascript And XML)</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script>
+        $(function () {   
+            $.getJSON('90product.json',function (data) {
+                $.each(data, function (index, item) {
+                    $('#list').append('<h2>' + item.name + ' ☞ ' + item.price +'</h2>');
+                });
+            })
+        });
+    </script>
+</head>
+<body>
+    <h1>편의점 물품 리스트</h1>
+    <div id="list">
+        
+    </div>
+</body>
+</html>

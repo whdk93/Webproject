@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bxslider</title>
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
+    <style>
+        #ani_canvas {
+            width: 500px;
+            overflow: hidden;
+        }
+        .slider img {
+            width: 500px;
+        }
+    </style>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
+    <script>
+        $(function () {
+            $('.slider').bxSlider({
+                auto:true,
+                autoControls:true,
+                stopAutoOnClick:true,
+                pager:true
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="ani_canvas">
+        <ul class="slider">
+            <li><img src="images/Koala.jpg" alt="Koala"></li>
+            <li><img src="images/Penguins.jpg" alt="Penguins"></li>
+            <li><img src="images/Jellyfish.jpg" alt="Jellyfish"></li>
+            <li><img src="images/Lighthouse.jpg" alt="Lighthouse"></li>
+            <li><img src="images/Desert.jpg" alt="Desert"></li>
+            <li><img src="images/Tulips.jpg" alt="Tulips"></li>
+            <li><img src="images/Chrysanthemum.jpg" alt="Chrysanthemum"></li>
+        </ul>
+    </div>
+</body>
+</html>

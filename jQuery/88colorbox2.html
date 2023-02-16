@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>컬러박스 플러그인</title>
+    <link rel="stylesheet" type="text/css" href="css/colorbox.css">
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/jquery.colorbox.js"></script>
+    <script>
+        $(function () {
+            $('#colorbox').colorbox({
+                inline : true, // a태그에 연결된 div를 보려면 써줘야..?
+                width : 400
+            }).click(function () {
+                setTimeout(function () {
+                    $.colorbox.close(); // colorbox가 닫히는 메소드
+                },3000);
+            }).trigger('click'); // trigger를 써서 click 이벤트 강제 실행     
+        });
+    </script>
+</head>
+<body>
+    <a href="#popup" id="colorbox">알림창보기</a>
+    <!-- 알림창 영역 -->
+    <div id="popup_area" style="display : none;">
+        <div id="popup">
+            <h2>공지사항</h2>
+            <p>내일(2/17 금요일)까지 개인 홈페이지 완성</p>
+            <p>2/22(수요일)까지 UI테스트를 진행</p>
+            <p>2/23(목요일) UI구현, UI테스트 평가</p>
+            <p>※이 공지사항은 3초 후에 자동으로 사라집니다.</p>
+        </div>
+    </div>
+</body>
+</html>
