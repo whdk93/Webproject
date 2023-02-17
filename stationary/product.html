@@ -4,7 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Product Detail</title>
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/product.css">
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/product.js"></script>
+    <script src="https://kit.fontawesome.com/3391129e8e.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <!-- 헤더 영역 시작 -->
@@ -47,21 +54,106 @@
     <!-- 헤더 영역 종료 -->
     <!-- 컨텐츠 영역 시작 -->
     <div id="contentArea">
-        <div id="orderArea">
-            <div class="orderImage">
-
+        <div id="prodOrderArea">
+            <h2>상품 주문 정보</h2>
+            <div class="prodImg">
+                <img src="img/century_nice_lavande.jpg" alt="">
+                <ul class="smallImg">
+                    <li></li>
+                </ul>
             </div>
-            <div class="orderDetail">
-                <table>
-                    <tr></tr>
-                    <tr></tr>
-                    <tr></tr>
-                    <tr></tr>
-                    <tr></tr>
-                    <tr></tr>
-                    <tr></tr>
-                    <tr></tr>
-                </table>
+            <div class="orderOption">
+                <form action="" method="get">
+                    <fieldset>
+                        <legend>상품주문정보</legend>
+                        <table>
+                            <caption>상품옵션</caption>
+                            <tbody>
+                                <tr>
+                                    <th>상품이름</th>
+                                    <td>센츄리 니스 라벤더</td></tr>
+                                <tr>
+                                    <th>소비자가격</th>
+                                    <td>200000원</td>
+                                </tr>
+                                <tr>
+                                    <th>판매가격</th>
+                                    <td>190000원</td>
+                                </tr>
+                                <tr>
+                                    <th>적립금</th>
+                                    <td>5%</td>
+                                </tr>
+                                <tr>
+                                    <th>원산지</th>
+                                    <td>영국</td>
+                                </tr>   
+                            </tbody>
+                        </table>
+                        <table>
+                            <caption>옵션 지정</caption>
+                            <tbody>
+                                <tr>
+                                    <th>색상선택</th>
+                                    <td>
+                                        <select name="color" id="color">
+                                            <option value="red">빨강</option>
+                                            <option value="green">초록</option>
+                                            <option value="blue">파랑</option>
+                                            <option value="purple">보라</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>닙 사이즈</th>
+                                    <td>
+                                        <select name="weight" id="weight">
+                                            <option value="ef">EF닙</option>
+                                            <option value="f">F닙</option>
+                                            <option value="m">M닙</option>
+                                            <option value="b">B닙</option>
+                                        </select>
+                                    </td>
+                                </tr>   
+                            </tbody>
+                        </table>
+                        <table>
+                            <caption>주문내역상세</caption>
+                            <tr><th>상품명</th><th>상품수</th><th>가격</th></tr>
+                            <tr><td>플래티넘 센츄리 니스 라벤더</td><td>1</td><td>190000원</td></tr>
+                            <tr>
+                                <th>총 상품금액</th>
+                                <td>190000원</td>
+                            </tr>
+                            <tr>
+                                <th>구매/장바구니</th>
+                                <td><button type="submit">바로 구매</button><button type="submit">장바구니</button></td>
+                            </tr>
+                        </table>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+        <div id="prodDetailArea">
+            <div>
+                <h2>상품 상세 설명</h2>
+                <img class="prodDetailImage" src="" alt="">
+            </div>
+            <div>
+                <h2>상품 후기</h2>
+                <ul>
+                    <li><a href="#"></a><time datetime=""></time></li>
+                    <li><a href="#"></a><time datetime=""></time></li>
+                    <li><a href="#"></a><time datetime=""></time></li>
+                    <li><a href="#"></a><time datetime=""></time></li>
+                    <li><a href="#"></a><time datetime=""></time></li>
+                </ul>
+            </div>
+            <div>
+                <h2>제품 문의</h2>
+            </div>
+            <div>
+                <h2>판매/교환/반품정책</h2>
             </div>
         </div>
     </div>
@@ -91,9 +183,9 @@
                 </div>
                 <div class="footbox">
                     <strong>order tracking</strong>
-                    <p>로젠택배 (TEL: 1588-9988)</p>
+                    <p>로젠택배 (tel: 1588-9988)</p>
                     <a href="https://www.ilogen.com/web/personal/tkSearch">배송위치 조회하기</a>
-                    <strong>return &amp; exchange</strong>
+                    <strong class="rtnex">return &amp; exchange</strong>
                     <p>반품배송지 서울시 종로구 종로 78 미려빌딩 3층</p>
                 </div>
                 <div class="footbox">
@@ -101,37 +193,37 @@
                     <a href="#">상품 문의</a>
                     <a href="#">상품 후기</a>
                 </div>
-                <div class="footer_social">
-                    <a href="#">유튜브<i class="fa-brands fa-youtube"></i></a>
-                    <a href="#">트위터<i class="fa-brands fa-twitter"></i></a>
-                    <a href="#">인스타그램<i class="fa-brands fa-instagram"></i></a>
-                </div>
+            </div>
+            <div id="footsocial">
+                <a href="#"><span>유튜브</span><i class="fa-brands fa-youtube"></i></a>
+                <a href="#"><span>트위터</span><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><span>인스타그램</span><i class="fa-brands fa-instagram"></i></a>
             </div>
             <address>
-                <h3>기록하다</h3>
+                <p class="footLogo">기록하다</p>
                     <p>
                         <strong>회사명</strong><span>주식회사 탄</span>
                         <strong>대표</strong><span>조아라</span>
                         <strong>주소</strong><span>서울시 종로구 종로 78 미려빌딩 3층</span>
                     </p>
                     <p>
-                        <strong>사업자 번호</strong><span>000-00-00000</span>
-                        <strong>통신판매번호</strong><span>제 ㅇㅇ-21534호</span>
+                        <strong>사업자 번호</strong><span>135-09-885492</span>
+                        <strong>통신판매번호</strong><span>제 85-21534호</span>
                     </p>    
                     <p>
-                        <strong>대표전화</strong><span>00-000-0000</span>
+                        <strong>대표전화</strong><span>02-653-9956</span>
                         <strong>개인정보보호책임자</strong><span>조아라</span>
                         <strong>E-mail</strong><span>girokhada@girokhada.kr</span>
                     </p>
                 </ul>
             </address>
-            <ul>
+            <ul class="footNav">
                 <li><a href="#">회사소개</a></li>
                 <li><a href="#">쇼핑몰 이용안내</a></li>
                 <li><a href="#">개인정보처리방침</a></li>
                 <li><a href="#">이용약관</a></li>
             </ul>
-            <p class="footer_copyright">copyright &copy; 2023 <span>GIROKHADA.</span> all rights reserved.</p>
+            <p class="footCopy">copyright &copy; 2023 <span>GIROKHADA.</span> all rights reserved.</p>
         </div>
     </footer>
     <!-- 푸터 영역 종료 -->

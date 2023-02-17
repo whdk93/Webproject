@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/join.css">
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/join.js"></script>
+    <script src="https://kit.fontawesome.com/3391129e8e.js" crossorigin="anonymous"></script>
     <title>회원가입</title>
 </head>
 <body>
@@ -50,6 +57,7 @@
         <section id="memberArea">
         <p><a href="index.html">home</a>&gt;<a href="join.html">회원가입</a></p>
         <h2>회원 가입</h2>
+        <p><strong class="require">필수</strong>필수입력사항</p>
         <form action="join.jsp" method="post" id="joinForm" name="joinForm">
             <fieldset>
                 <legend>회원 가입 폼</legend>
@@ -74,8 +82,31 @@
                     <label for="address"></label><a href="findZipcode">우편번호</a>
                     <input type="text" id="address" name="address" maxlength="100">
                     <span>기본주소</span>
-                    <input type="text" id="address" name="address" maxlength="100"><span>나머지주소 (선택입력가능)</span>
+                    <input type="text" id="address" name="address" maxlength="100"><span>나머지주소 (선택입력)</span>
                 </p>
+                <p>
+                    <label for="tel">휴대전화<strong class="require">필수</strong></label>
+                    <select name="1stnum" id="1stnum" required>
+                        <option value="010">010</option>
+                        <option value="011">011</option>
+                        <option value="016">016</option>
+                        <option value="017">017</option>
+                        <option value="018">018</option>
+                        <option value="019">019</option>
+                    </select>
+                    &#45;
+                    <input type="tel" maxlength="6" size="3" required>
+                    &#45;
+                    <input type="tel" maxlength="6" size="3" required>
+                </p>
+                <p>
+                    <label for="email">이메일<strong class="require">필수</strong></label>
+                    <input type="email" name="email" id="email" size="20" required>
+                </p>
+                <div class="joinBtn">
+                    <button type="submit">회원가입</button>
+                    <button type="reset">회원가입 취소</button>
+                </div>
             </fieldset>
         </form>
     </section>
@@ -106,9 +137,9 @@
                 </div>
                 <div class="footbox">
                     <strong>order tracking</strong>
-                    <p>로젠택배 (TEL: 1588-9988)</p>
+                    <p>로젠택배 (tel: 1588-9988)</p>
                     <a href="https://www.ilogen.com/web/personal/tkSearch">배송위치 조회하기</a>
-                    <strong>return &amp; exchange</strong>
+                    <strong class="rtnex">return &amp; exchange</strong>
                     <p>반품배송지 서울시 종로구 종로 78 미려빌딩 3층</p>
                 </div>
                 <div class="footbox">
@@ -116,37 +147,37 @@
                     <a href="#">상품 문의</a>
                     <a href="#">상품 후기</a>
                 </div>
-                <div class="footer_social">
-                    <a href="#">유튜브<i class="fa-brands fa-youtube"></i></a>
-                    <a href="#">트위터<i class="fa-brands fa-twitter"></i></a>
-                    <a href="#">인스타그램<i class="fa-brands fa-instagram"></i></a>
-                </div>
+            </div>
+            <div id="footsocial">
+                <a href="#"><span>유튜브</span><i class="fa-brands fa-youtube"></i></a>
+                <a href="#"><span>트위터</span><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><span>인스타그램</span><i class="fa-brands fa-instagram"></i></a>
             </div>
             <address>
-                <h3>기록하다</h3>
+                <p class="footLogo">기록하다</p>
                     <p>
                         <strong>회사명</strong><span>주식회사 탄</span>
                         <strong>대표</strong><span>조아라</span>
                         <strong>주소</strong><span>서울시 종로구 종로 78 미려빌딩 3층</span>
                     </p>
                     <p>
-                        <strong>사업자 번호</strong><span>000-00-00000</span>
-                        <strong>통신판매번호</strong><span>제 ㅇㅇ-21534호</span>
+                        <strong>사업자 번호</strong><span>135-09-885492</span>
+                        <strong>통신판매번호</strong><span>제 85-21534호</span>
                     </p>    
                     <p>
-                        <strong>대표전화</strong><span>00-000-0000</span>
+                        <strong>대표전화</strong><span>02-653-9956</span>
                         <strong>개인정보보호책임자</strong><span>조아라</span>
                         <strong>E-mail</strong><span>girokhada@girokhada.kr</span>
                     </p>
                 </ul>
             </address>
-            <ul>
+            <ul class="footNav">
                 <li><a href="#">회사소개</a></li>
                 <li><a href="#">쇼핑몰 이용안내</a></li>
                 <li><a href="#">개인정보처리방침</a></li>
                 <li><a href="#">이용약관</a></li>
             </ul>
-            <p class="footer_copyright">copyright &copy; 2023 <span>GIROKHADA.</span> all rights reserved.</p>
+            <p class="footCopy">copyright &copy; 2023 <span>GIROKHADA.</span> all rights reserved.</p>
         </div>
     </footer>
     <!-- 푸터 영역 종료 -->

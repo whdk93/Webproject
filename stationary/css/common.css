@@ -225,6 +225,9 @@ header h1::before {
     border: none;
     background-color: #ccc;
 }
+#gnb form input:focus {
+    outline: none;
+}
 #gnb form button {
     border: none;
     background-color: #ccc;
