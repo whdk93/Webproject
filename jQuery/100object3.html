@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+    <style>
+        div {
+            text-align: center; /* 자식요소를 움직임 */
+        }
+        p {
+            text-align: center; 
+        }
+    </style>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script>
+        let arr1=[1,2,3];
+        arr1.push(4); // push로 배열 확장
+        // console.log(arr1);
+        let arr2=[1,2,3];
+        let arr3=Array.from(arr2); // Array.from(원본배열) : 배열 복제
+        arr3.push(4);
+        // console.log(arr3);
+        let arr4=[1,2,3];
+        let arr5=arr4.concat(4); // arr4에 4값을 합쳐서 arr5에 넣음, concat 추가?
+        console.log(arr5);
+        $(function () {
+            $('.coffee').wrap('<div></div>'); // wrap : 노드 밖에 부모 노드 생성
+        });
+    </script>
+</head>
+<body>
+    <img class="coffee" src="images/coffee-blue.jpg" alt="coffee-blue">
+    <p>로얄블루 헤미스피어 에디션</p>
+</body>
+</html>

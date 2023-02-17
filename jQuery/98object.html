@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script>
+           let product = {
+               name : '냉장고',
+               price : 195000,
+               type : '양문형' 
+           };
+            // console.log(product['name']);
+            // console.log(product.name);
+            let result=proName.bind(product); // bind : 객체와 함수를 연결?
+           function proName() {
+               alert(this.name); 
+           }
+           let pCode = {
+            code : 'ss7777',
+            number : 123
+           }
+           $.extend(product, pCode); // product객체에 pCode객체를 추가해서 확장
+           console.log(product);
+           alert(product.code);
+    </script>
+</head>
+<body>
+    <h2 onclick="result()">제품이름??</h2>
+</body>
+</html>

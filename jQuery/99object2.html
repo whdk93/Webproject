@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script>
+        let area = {
+            width : 500,
+            height : 700
+        };
+        let pArea = {
+            width : 300,
+            height : 200
+        };
+        $.extend(area, pArea);
+        console.log(area); // 객체를 확장할 때 속성이름이 같으면 속성값을 변경
+    </script>
+</head>
+<body>
+</body>
+</html>

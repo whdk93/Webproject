@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>플러그인 테스트</title>
+    <style>
+        img {
+            width: 100%;
+        }
+    </style>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/jquery.pivot.js"></script>
+    <script>
+        $(function () {
+            $('#pivot_slider').pivot({
+                width: 700,
+                height: 700
+            });
+            // $(선택자).pivot({
+
+            // });
+        });
+    </script>
+</head>
+<body>
+    <div id="pivot_slider">
+        <div>
+            <h2>Koala</h2>
+            <img src="images/Koala.jpg" alt="Koala">
+            <p>유대목 코알라과에 속하는 포유류. 현지에서는 네이티브베어(native bear)라고 하며, 아기보기곰·나무타기주머니곰·네이티브베어라고도 한다.</p>
+        </div>
+        <div>
+            <h2>Desert</h2>
+            <img src="images/Desert.jpg" alt="Desert">
+            <p>사막(沙漠/砂漠, desert)은 강수량이 적고 모래가 많은 지역이다. 일반적으로 연평균 강수량이 250mm 이하인 지역을 사막이라 정의한다.</p>
+        </div>
+        <div>
+            <h2>Lighthouse</h2>
+            <img src="images/Lighthouse.jpg" alt="Lighthouse">
+            <p>등대(燈臺)는 불빛을 비추도록 만들어진 탑(塔) 또는 건축물을 말한다. </p>
+        </div>
+        <div>
+            <h2>Jellyfish</h2>
+            <img src="images/Jellyfish.jpg" alt="Jellyfish">
+            <p>해파리는 대체로 투명하며, 갓 둘레에 많은 촉수를 가지고 있다. 촉수에는 자세포(쏘기세포)가 있어 동물분류학상 자포동물(刺胞動物)문에 속한다.</p>
+        </div>
+        <div>
+            <h2>Penguins</h2>
+            <img src="images/Penguins.jpg" alt="Penguin">
+            <p>조류 펭귄목 펭귄과 동물을 통틀어 이르는 말. 펭귄과의 바닷새로서 남반구에 6속 18종이 있다.</p>
+        </div>
+    </div>
+</body>
+</html>
