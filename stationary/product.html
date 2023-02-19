@@ -14,6 +14,13 @@
     <script src="https://kit.fontawesome.com/3391129e8e.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <!-- 퀵메뉴(맨위로,홈으로,장바구니) -->
+    <div id="topMenu">
+        <a href="#head_top" class="top top1"><i class="fa-solid fa-angles-up"></i><span>top</span></a>
+        <a href="index.html" class="top top2"><i class="fa-solid fa-house"></i><span>home</span></a>
+        <a href="#" class="top top3"><i class="fa-solid fa-cart-shopping"></i><span>cart</span></a>
+    </div>
+    <!-- 퀵메뉴 영역 종료 -->
     <!-- 헤더 영역 시작 -->
     <header id="head_top">
         <h1>GIROKHADA</h1>
@@ -54,106 +61,126 @@
     <!-- 헤더 영역 종료 -->
     <!-- 컨텐츠 영역 시작 -->
     <div id="contentArea">
-        <div id="prodOrderArea">
-            <h2>상품 주문 정보</h2>
-            <div class="prodImg">
-                <img src="img/century_nice_lavande.jpg" alt="">
-                <ul class="smallImg">
-                    <li></li>
+        <!-- 상품 디테일 및 옵션 선택 -->
+        <div id="prodOptionArea">
+            <p class="location">home &gt; new arrivals &gt; <strong>만년필</strong></p>
+            <!-- 상품 상단 정보 -->
+            <!-- 상품 이미지 영역 -->
+            <div class="prodThumb">
+                <img src="img/century_nice_lavande.jpg" alt="센츄리니스라벤더">
+                <!-- <ul class="thumbList">
+                    <li><img src="img/century_nice_lavande.jpg" alt="" width="100"></li>
+                </ul> -->
+            </div>
+            <!-- 상품 옵션 영역 -->
+            <div class="prodInfo">
+                <h2>플래티넘 센츄리 #3776 니스 라벤더</h2>
+                <ul class="infoOption">
+                    <li class="commas"><span>판매가</span>190000원</li>
+                    <li class="commas"><span>소비자가</span>300000원</li>
+                    <li><span>제조사</span>플래티넘</li>
+                    <li>
+                        <span>배송비</span>
+                        <select name="" id="">
+                            <option value="">주문시 결제(선결제)</option>
+                            <option value="">수령시 결제(착불)</option>
+                        </select>
+                    </li>
+                    <li><span>옵션선택</span>
+                        <select name="tipsize" id="tipsize">
+                            <option value="default">옵션을 선택하세요</option>
+                            <option value="ef">EF닙</option>
+                            <option value="f">F닙</option>
+                            <option value="m">M닙</option>
+                            <option value="b">B닙</option>
+                        </select>
+                    </li>
                 </ul>
-            </div>
-            <div class="orderOption">
-                <form action="" method="get">
-                    <fieldset>
-                        <legend>상품주문정보</legend>
-                        <table>
-                            <caption>상품옵션</caption>
-                            <tbody>
-                                <tr>
-                                    <th>상품이름</th>
-                                    <td>센츄리 니스 라벤더</td></tr>
-                                <tr>
-                                    <th>소비자가격</th>
-                                    <td>200000원</td>
-                                </tr>
-                                <tr>
-                                    <th>판매가격</th>
-                                    <td>190000원</td>
-                                </tr>
-                                <tr>
-                                    <th>적립금</th>
-                                    <td>5%</td>
-                                </tr>
-                                <tr>
-                                    <th>원산지</th>
-                                    <td>영국</td>
-                                </tr>   
-                            </tbody>
-                        </table>
-                        <table>
-                            <caption>옵션 지정</caption>
-                            <tbody>
-                                <tr>
-                                    <th>색상선택</th>
-                                    <td>
-                                        <select name="color" id="color">
-                                            <option value="red">빨강</option>
-                                            <option value="green">초록</option>
-                                            <option value="blue">파랑</option>
-                                            <option value="purple">보라</option>
-                                        </select>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>닙 사이즈</th>
-                                    <td>
-                                        <select name="weight" id="weight">
-                                            <option value="ef">EF닙</option>
-                                            <option value="f">F닙</option>
-                                            <option value="m">M닙</option>
-                                            <option value="b">B닙</option>
-                                        </select>
-                                    </td>
-                                </tr>   
-                            </tbody>
-                        </table>
-                        <table>
-                            <caption>주문내역상세</caption>
-                            <tr><th>상품명</th><th>상품수</th><th>가격</th></tr>
-                            <tr><td>플래티넘 센츄리 니스 라벤더</td><td>1</td><td>190000원</td></tr>
-                            <tr>
-                                <th>총 상품금액</th>
-                                <td>190000원</td>
-                            </tr>
-                            <tr>
-                                <th>구매/장바구니</th>
-                                <td><button type="submit">바로 구매</button><button type="submit">장바구니</button></td>
-                            </tr>
-                        </table>
-                    </fieldset>
-                </form>
-            </div>
+                <div id="orderList">
+                    <div class="orderprod">
+                        <button class="delete"><i class="fa-solid fa-xmark"></i></button>
+                    </div>
+                    <div class="orderListDetail">
+                        <input type="text" id="quantity" size="1" value="0">
+                        <button class="plus quanBtn"><i class="fa-solid fa-plus"></i></button>
+                        <button class="minus quanBtn"><i class="fa-solid fa-minus"></i></button>
+                        <span class="quanPrice">190000원</span>
+                    </div>
+                    <p class="totalPrice">총 상품 금액<span class="commas">0원</span></p>
+                </div>
+                <div class="orderbtn">
+                    <button type="submit">바로 구매</button>
+                    <button type="submit">찜하기</button>
+                    <button type="submit">장바구니</button>
+                </div>
+            </div>    
         </div>
+        <!-- 상품 정보 영역-->
         <div id="prodDetailArea">
+            <!-- 상품 디테일 이미지 -->
             <div>
-                <h2>상품 상세 설명</h2>
-                <img class="prodDetailImage" src="" alt="">
+                <h2 class="hidden">상품상세정보</h2>
+                <nav class="navDetail">
+                    <ul>
+                        <li class="focus"><a href="#prodDetailArea">상품상세정보</a></li>
+                        <li><a href="#prodTerms">상품구매안내</a></li>
+                        <li><a href="#prodReview">상품후기</a></li>
+                        <li><a href="#prodQnA">상품문의</a></li>
+                    </ul>
+                </nav>
+                <div class="prodDetailImg">
+                    <img class="detailImg" src="img/PNB_20000R_87.jpg" alt="">
+                </div>
             </div>
-            <div>
-                <h2>상품 후기</h2>
-                <ul>
-                    <li><a href="#"></a><time datetime=""></time></li>
-                    <li><a href="#"></a><time datetime=""></time></li>
-                    <li><a href="#"></a><time datetime=""></time></li>
-                    <li><a href="#"></a><time datetime=""></time></li>
-                    <li><a href="#"></a><time datetime=""></time></li>
-                </ul>
+            <!-- 상품구매안내 -->
+            <div id="prodTerms">
+                <h2 class="hidden">상품구매안내</h2>
+                <nav class="navDetail">
+                    <ul>
+                        <li><a href="#prodDetailArea">상품상세정보</a></li>
+                        <li class="focus"><a href="#prodTerms">상품구매안내</a></li>
+                        <li><a href="#prodReview">상품후기</a></li>
+                        <li><a href="#prodQnA">상품문의</a></li>
+                    </ul>
+                </nav>
+                <h3>배송 안내</h3>
+                <p></p>
+                <h3>교환 및 반품 안내</h3>
+                <p></p>  
+                <h3>A/S 정책</h3>
+                <p></p>      
             </div>
-            <div>
-                <h2>제품 문의</h2>
+            <!-- 상품 후기 -->
+            <div id="prodReview">
+                <h2 class="hidden">상품후기</h2>
+                <nav class="navDetail">
+                    <ul>
+                        <li><a href="#prodDetailArea">상품상세정보</a></li>
+                        <li><a href="#prodTerms">상품구매안내</a></li>
+                        <li class="focus"><a href="#prodReview">상품후기</a></li>
+                        <li><a href="#prodQnA">상품문의</a></li>
+                    </ul>
+                </nav>
+                <div class="reviewList">
+                    <p>게시물이 없습니다</p>
+                </div>
+                <a href="#">후기작성하기</a>
             </div>
-            <div>
-                <h2>판매/교환/반품정책</h2>
+            <!-- 상품 문의 -->
+            <div id="prodQnA">
+                <h2 class="hidden">상품문의</h2>
+                <nav class="navDetail">
+                    <ul>
+                        <li><a href="#prodDetailArea">상품상세정보</a></li>
+                        <li><a href="#prodTerms">상품구매안내</a></li>
+                        <li><a href="#prodReview">상품후기</a></li>
+                        <li class="focus"><a href="#prodQnA">상품문의</a></li>
+                    </ul>
+                </nav>
+                <div class="qnaList">
+                    <p>게시물이 없습니다</p>
+                </div>
+                <a href="#">상품문의하기</a>
             </div>
         </div>
     </div>
