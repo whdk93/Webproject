@@ -43,6 +43,22 @@ fieldset {
     url("font/NanumGothicExtraBold.woff")format("woff"),
     url("font/NanumGothicExtraBold.ttf")format("truetype");
 }
+@font-face {
+    font-family: "NanumSquareNeo";
+    src: url("font/NanumSquareNeo-bRg.ttf")format("truetype");
+}
+@font-face {
+    font-family: "NanumSquareNeoBold";
+    src: url("font/NanumSquareNeo-cBd.ttf")format("truetype");
+}
+@font-face {
+    font-family: 'NanumSquareNeoExtraBold';
+    src: url("font/NanumSquareNeo-dEb.ttf")format("truetype");
+}
+@font-face {
+    font-family: "NanumSquareNeoHeavy";
+    src: url("font/NanumSquareNeo-eHv.ttf")format("truetype");
+}
 /* 링크 스타일 */
 a:link {
     color: #000;
@@ -56,8 +72,8 @@ body {
     color: #000;
     background-color: #fff;
     font-size: 0.8em;
-    line-height: 1.2;
-    font-family: "Nanum";
+    /* line-height: 1.2; */
+    font-family: "NanumSquareNeo";
 }
 /* 퀵메뉴 영역 */
 #quickMenu {
@@ -111,7 +127,7 @@ body {
     position: fixed;
     width: 50px;
     height: 150px;
-    top: 85%;
+    top: 80%;
     right: 10px;
     z-index: 100;
 }
@@ -146,45 +162,6 @@ header {
     position: relative;
     width : 100%;
 }
-header h1 {
-    position: absolute;
-    top: 120px;
-    left: 50%;
-    margin-left: -65px;
-    /* text-indent: -9999px; */
-}
-header h1::before {
-    content: "";
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    top: -90px;
-    left: 20px;
-    background: url(../img/indexLogo.png) no-repeat;
-}
-#mainBanner {
-    width: 1200px;
-    height: 150px;
-    margin: 0 auto;
-}
-#mainBanner::before {
-    content: "";
-    width: 3000px;
-    height: 1px;
-    position: absolute;
-    top: 190px;
-    left: 0;
-    background-color: #000;
-}
-#mainBanner::after {
-    content: "";
-    width: 3000px;
-    height: 1px;
-    position: absolute;
-    top: 229px;
-    left: 0;
-    background-color: #ccc;    
-}
 /* gnb 영역 */
 #gnb {
     position: relative;
@@ -211,6 +188,9 @@ header h1::before {
 #gnb li:last-of-type :after {
     content: "";
 }
+#gnb li:hover a {
+    text-shadow: 0px 1px 1px #ccc;
+}
 /* 검색 영역 */
 #gnb form {
     position: absolute;
@@ -232,48 +212,94 @@ header h1::before {
     border: none;
     background-color: #ccc;
 }
+/* 메인 배너 영역 */
+#mainBanner {
+    width: 1200px;
+    height:180px;
+    margin: 0 auto;
+}
+#mainBanner h1 {
+    position: relative;
+    text-align: center;
+    margin-top: 20px;
+}
+#mainBanner h1 a {
+    font-family: "NanumSquareNeoHeavy";
+}
+#mainBanner h1 img{
+    display: block;
+    margin: 0 auto;
+}
 /* 메인 메뉴 영역 */
-#mainMenu {
+#mainMenuArea {
+    position: relative;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+#mainMenuArea .mainNav {
     position: relative;
     width: 1200px;
     margin: 0 auto;
     border-left: 1px solid #ccc;
     border-right: 1px solid #ccc;
 }
-#mainMenu h2{
+#mainMenuArea h2{
     position: absolute;
-    left: 0;
-    text-indent: -999px;
+    width: 10px;
+    height: 0;
+    white-space: nowrap;
+    text-indent: -10px;
+    overflow: hidden;
 }
-#mainMenu p {
+#mainMenuArea .mainNav p {
     display: inline-block;
     width: 14%;
 }
-#mainMenu p a {
+#mainMenuArea .mainNav p a {
     display: inline-block;
     font-size: 1.3em;
     width: 100px;
     padding: 10px 5px;
     text-align: center;
 }
-#mainMenu p:hover a {
-    font-weight: bold;
+#mainMenuArea .mainNav p:hover a {
+    font-family: "NanumSquareNeoExtraBold";
 }
-#mainMenu ul {
+#mainMenuArea .mainMenu {
     position: relative;
     display: inline-block;
     width: 85%;
-    left: 1.82%;
 }
-#mainMenu ul li {
+#mainMenuArea .mainMenu>li {
+    position: relative;
     display: inline-block;
     width: 15%;
     font-size: 1.3em;
     padding: 10px 5px;
     text-align: center;
 }
-#mainMenu ul li:hover a {
-    font-weight: bold;
+/* #mainMenuArea .mainMenu>li:hover>a {
+    font-family: "NanumSquareNeoExtraBold";
+} */
+#mainMenuArea .subMenu {
+    position: absolute;
+    width: 138px;
+    top: 39px;
+    background-color: #fff;
+    z-index: 10;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+#mainMenuArea .subMenu li {
+    position: relative;
+}
+#mainMenuArea .subMenu li a {
+    display: inline-block;
+    width: 138px;
+    height: 17px;
+    padding: 5px 0;
+    font-size: 0.9em;
 }
 /* 푸터 영역 */
 footer {
@@ -417,13 +443,20 @@ footer::after {
 }
 .footNav li {
     position: relative;
-    left: 438px;
+    left: 415px;
     display: inline-block;
     margin-right: 5px;
     font-size: 1.1em;
 }
+.footNav li :after {
+    content: "|";
+    margin-left: 10px;
+}
+.footNav li:last-of-type :after {
+    content: "";
+}
 .footNav li:hover a {
-    text-decoration: underline;
+    text-shadow: 0px 1px 1px #ccc;
 }
 .footCopy {
     position: relative;

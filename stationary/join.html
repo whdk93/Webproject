@@ -22,13 +22,12 @@
     <!-- 퀵메뉴 영역 종료 -->
     <!-- 헤더 영역 시작 -->
     <header id="head_top">
-        <a href="index.html"><h1>GIROKHADA</h1></a>
         <!-- gnb 영역 -->
         <div id="gnb">
             <!-- 상단메뉴 -->
             <ul>
                 <li><a href="#">로그인</a></li>
-                <li><a href="#join.html">회원가입</a></li>
+                <li><a href="join.html">회원가입</a></li>
                 <li><a href="#">장바구니</a></li>
                 <li><a href="#">마이페이지</a></li>
             </ul>  
@@ -42,20 +41,55 @@
         </form>
         </div>
         <!-- 메인 배너 영역 -->
-        <div id="mainBanner"></div>
-            <!-- 메인 메뉴 영역 -->
-            <nav id="mainMenu">
+        <div id="mainBanner">
+            <h1><a href="index.html"><img src="img/indexLogo.png" alt="sitelogo">GIROKHADA</a></h1>
+        </div>
+        <!-- 메인 메뉴 영역 -->
+        <div id="mainMenuArea">
+            <nav class="mainNav">
                 <h2>메인메뉴</h2>
                 <p><a href="">브랜드</a></p>
-                <ul>
-                    <li><a href="#">필기구</a></li>
-                    <li><a href="#">잉크</a></li>
-                    <li><a href="#">노트 및 잡화</a></li>
-                    <li><a href="#">에디터's Pick</a></li>
+                <ul class="mainMenu">
+                    <li>
+                        <a href="#">필기구</a>
+                        <ul class="subMenu sub1">
+                            <li><a href="#">만년필</a></li>
+                            <li><a href="#">볼펜</a></li>
+                            <li><a href="#">샤프</a></li>
+                            <li><a href="#">딥펜</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">잉크</a>
+                        <ul class="subMenu sub2">
+                            <li><a href="#">컬러차트</a></li>
+                            <li><a href="#">병잉크</a></li>
+                            <li><a href="#">카트리지</a></li>
+                            <li><a href="#">소분잉크</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">노트 및 잡화</a>
+                        <ul class="subMenu sub3">
+                            <li><a href="#">노트</a></li>
+                            <li><a href="#">연습지</a></li>
+                            <li><a href="#">파우치</a></li>
+                            <li><a href="#">기타</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">에디터's Pick</a>
+                        <ul class="subMenu sub4">
+                            <li><a href="#">new&amp;best</a></li>
+                            <li><a href="#">만년필 입문</a></li>
+                            <li><a href="#">금액대별 만년필</a></li>
+                        </ul>
+                    </li>
                     <li><a href="">공지사항</a></li>
                     <li><a href="">Q&amp;A</a></li>
                 </ul>
-            </nav>
+            </nav>    
+        </div>
     </header>
     <!-- 헤더 영역 종료 -->
     <!-- 컨텐츠 영역 시작 -->
@@ -104,9 +138,9 @@
                                 <option value="019">019</option>
                             </select>
                             &#45;
-                            <input type="tel" maxlength="6" size="3" required>
+                            <input type="text" maxlength="6" size="3" required>
                             &#45;
-                            <input type="tel" maxlength="6" size="3" required>
+                            <input type="text" maxlength="6" size="3" required>
                         </p>
                         <p>
                             <label for="email">이메일<strong class="require">필수</strong></label>

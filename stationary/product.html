@@ -14,6 +14,19 @@
     <script src="https://kit.fontawesome.com/3391129e8e.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <!-- 퀵메뉴 영역 시작 -->
+    <!-- 퀵메뉴(오늘 본 상품) -->
+    <div id="quickMenu">
+        <div class="quick_prod">
+        <a href="#"><img src="img/century_nice_lavande.jpg" alt="century lavande"></a>
+        <a href="#"><img src="img/pelikan_apatite.jpg" alt="pelikan apatite"></a>
+        <a href="#"><img src="img/sailor_overthostorm.jpg" alt="sailor over the storm"></a>
+        </div>
+        <div class="quick_btn">
+            <a href="#" class="quick_up"><i class="fa-solid fa-angle-up"></i><span>up</span></a>
+            <a href="#" class="quick_down"><i class="fa-solid fa-angle-down"></i><span>down</span></a>
+        </div>
+    </div>
     <!-- 퀵메뉴(맨위로,홈으로,장바구니) -->
     <div id="topMenu">
         <a href="#head_top" class="top top1"><i class="fa-solid fa-angles-up"></i><span>top</span></a>
@@ -23,13 +36,12 @@
     <!-- 퀵메뉴 영역 종료 -->
     <!-- 헤더 영역 시작 -->
     <header id="head_top">
-        <a href="index.html"><h1>GIROKHADA</h1></a>
         <!-- gnb 영역 -->
         <div id="gnb">
             <!-- 상단메뉴 -->
             <ul>
                 <li><a href="#">로그인</a></li>
-                <li><a href="#join.html">회원가입</a></li>
+                <li><a href="join.html">회원가입</a></li>
                 <li><a href="#">장바구니</a></li>
                 <li><a href="#">마이페이지</a></li>
             </ul>  
@@ -43,20 +55,55 @@
         </form>
         </div>
         <!-- 메인 배너 영역 -->
-        <div id="mainBanner"></div>
+        <div id="mainBanner">
+            <h1><a href="index.html"><img src="img/indexLogo.png" alt="sitelogo">GIROKHADA</a></h1>
+        </div>
         <!-- 메인 메뉴 영역 -->
-        <nav id="mainMenu">
-            <h2>메인메뉴</h2>
-            <p><a href="">브랜드</a></p>
-            <ul>
-                <li><a href="#">필기구</a></li>
-                <li><a href="#">잉크</a></li>
-                <li><a href="#">노트 및 잡화</a></li>
-                <li><a href="#">에디터's Pick</a></li>
-                <li><a href="">공지사항</a></li>
-                <li><a href="">Q&amp;A</a></li>
-            </ul>
-        </nav>
+        <div id="mainMenuArea">
+            <nav class="mainNav">
+                <h2>메인메뉴</h2>
+                <p><a href="">브랜드</a></p>
+                <ul class="mainMenu">
+                    <li>
+                        <a href="#">필기구</a>
+                        <ul class="subMenu sub1">
+                            <li><a href="#">만년필</a></li>
+                            <li><a href="#">볼펜</a></li>
+                            <li><a href="#">샤프</a></li>
+                            <li><a href="#">딥펜</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">잉크</a>
+                        <ul class="subMenu sub2">
+                            <li><a href="#">컬러차트</a></li>
+                            <li><a href="#">병잉크</a></li>
+                            <li><a href="#">카트리지</a></li>
+                            <li><a href="#">소분잉크</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">노트 및 잡화</a>
+                        <ul class="subMenu sub3">
+                            <li><a href="#">노트</a></li>
+                            <li><a href="#">연습지</a></li>
+                            <li><a href="#">파우치</a></li>
+                            <li><a href="#">기타</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">에디터's Pick</a>
+                        <ul class="subMenu sub4">
+                            <li><a href="#">new&amp;best</a></li>
+                            <li><a href="#">만년필 입문</a></li>
+                            <li><a href="#">금액대별 만년필</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">공지사항</a></li>
+                    <li><a href="">Q&amp;A</a></li>
+                </ul>
+            </nav>    
+        </div>
     </header>
     <!-- 헤더 영역 종료 -->
     <!-- 컨텐츠 영역 시작 -->
@@ -77,33 +124,33 @@
                 <h2>플래티넘 센츄리 #3776 니스 라벤더</h2>
                 <ul class="infoOption">
                     <li class="commas"><span>판매가</span>190000원</li>
-                    <li class="commas"><span>소비자가</span>300000원</li>
+                    <li class="commas"><span>소비자가</span><strong class="linethrough">300000원</strong></li>
                     <li><span>제조사</span>플래티넘</li>
                     <li>
                         <span>배송비</span>
                         <select name="deliveryfee" id="deliveryfee">
-                            <option value="">주문시 결제(선결제)</option>
-                            <option value="">수령시 결제(착불)</option>
+                            <option value="3000">주문시 결제(선결제)</option>
+                            <option value="0">수령시 결제(착불)</option>
                         </select>
                     </li>
                     <li><span>옵션선택</span>
                         <select name="tipsize" id="tipsize">
-                            <option value="default">옵션을 선택하세요</option>
-                            <option value="ef">EF닙</option>
-                            <option value="f">F닙</option>
-                            <option value="m">M닙</option>
-                            <option value="b">B닙</option>
+                            <option value="0">옵션을 선택하세요</option>
+                            <option value="190000">EF닙</option>
+                            <option value="190000">F닙</option>
+                            <option value="190000">M닙</option>
+                            <option value="190000">B닙</option>
                         </select>
                     </li>
                 </ul>
                 <div id="orderList">
                     <div class="orderprod">
-                        <button class="delete"><i class="fa-solid fa-xmark"></i></button>
+                        <button class="delete">X</button>
                     </div>
                     <div class="orderListDetail">
                         <input type="text" id="quantity" size="1" value="0">
-                        <button class="plus quanBtn"><i class="fa-solid fa-plus"></i></button>
-                        <button class="minus quanBtn"><i class="fa-solid fa-minus"></i></button>
+                        <button class="plus quanBtn">+</button>
+                        <button class="minus quanBtn">-</button>
                         <span class="quanPrice">190000원</span>
                     </div>
                     <p class="totalPrice">총 상품 금액<span class="commas">0원</span></p>

@@ -3,7 +3,9 @@ $(function () {
     $('#slideContent').append($('.slider_image').first().clone());
     $('#slideContent').prepend($('.slider_image').eq(-2).clone());
     let index=1;
+    let autoslider;
     moveSlider(index);
+    autoslide();
     // 좌측 버튼 클릭 이벤트
     $('.slidePrev').click(function () {
         if(index > 1) {
@@ -27,20 +29,30 @@ $(function () {
             moveSlider(index);
         }
     });
-    setInterval(()=>{
-        $('.right_control').trigger('click');
-    },3000)
+    // 자동 슬라이드
+    function autoslide() {
+        autoslider=setInterval(()=>{
+            $('.slideNext').trigger('click');
+        },5000);
+    }   
+    // 이미지 슬라이더
     function moveSlider (index) {
         $('#slideContent').animate({
             left : -(index*1200)
         },'slow');
     }
-    // 배너 스케일
-    $('.conbanner').each(function () {
-        $(this).hover(function () {
-            $('.conbanner img').animate({
-                Transform : 
-            },'slow');
-        },function () {});
+    // 호버 시 정지
+    $('#slideContent').hover(function () {
+        clearInterval(autoslider);
+    }, function () {
+        autoslide();
+    });
+    // 슬라이드 버튼 이벤트 
+    $('.slideBtn a').each(function () {
+        $(this).hover(function() {
+            $(this).css('border','1px solid #666');
+        }, function () {
+            $(this).css('border','none');
+        })
     });
 });
