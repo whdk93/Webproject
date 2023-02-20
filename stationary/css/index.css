@@ -3,15 +3,19 @@
 /* 이미지 슬라이드 */
 #contentArea {
     position: relative;
+    width: 1920px;
 }
 #slideArea{
+    position: relative;
     width: 1202px;
     height: 413px;
     margin: 0 auto;
     overflow: hidden;
 }
 #slideContent {
-    width: 3606px;
+    position: relative;
+    width: 6010px;
+    left: 1202px;
 }
 #slideContent li {
     position: relative;

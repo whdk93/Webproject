@@ -9,7 +9,6 @@
     border: 1px solid;
     border-bottom: 1px solid white;
     color: #555;
-    font-weight: bold;
 }
 #contentArea>div {
     position: relative;
@@ -137,7 +136,7 @@
     display: inline-block;
     width: 120px;
     padding: 10px;
-    background-color: #eee;
+    background-color: #f5f5f5;
     border: 1px solid #ccc;
     border-bottom: none;
     font-size: 12px;
@@ -157,17 +156,72 @@
 }
 .termsDetail {
     border-top: 1px solid #555;
+    text-align: center;
 }
-/* 상품구매안내 영역 종료 *
-/
+.termBox {
+    width: 1000px;
+    margin: 20px 10px 20px 50px;
+    padding: 0 49px;
+    border: 1px solid #eee;
+    background-color: #f5f5f5;
+}
+.termBox h3 {
+    padding: 10px 0;
+    font-size: 1.5em;
+}
+.termBox p {
+    line-height: 1.8em;
+}
+/* 상품구매안내 영역 종료 */
 /* 상품후기 영역 시작 */
+#prodReview {
+    position: relative;
+}
 .reviewList {
     border-top: 1px solid #555;
+}
+.reviewList p {
+    margin: 20px 0;
+    padding: 20px 0;
+    border: 1px solid #555;
+}
+#prodReview .reviewBtn {
+    position: relative;
+    margin-left: 1100px;
+    
+    margin-bottom: 10px;
+    display: inline-block;
+    border: 1px solid #555;
+    border-radius: 5px;
+    padding: 5px 3px;
+    background-color: #7a7a7a;
+    color: #fafafa;
+    text-shadow: 1px 1px 1px #555, -1px -1px 1px #555;
 }
 /* 상품후기 영역 종료 */
 
 /* 상품문의 영역 시작 */
+#prodQnA {
+    margin-bottom: 20px;
+}
 .qnaList {
     border-top: 1px solid #555;
+}
+.qnaList p {
+    margin: 20px 0;
+    padding: 20px 0;
+    border: 1px solid #555;
+}
+#prodQnA>a {
+    position: relative;
+    margin-left: 1100px;
+    margin-bottom: 10px;
+    display: inline-block;
+    border: 1px solid #555;
+    border-radius: 5px;
+    padding: 5px 3px;
+    background-color: #7a7a7a;
+    color: #fafafa;
+    text-shadow: 1px 1px 1px #555, -1px -1px 1px #555;    
 }
 /* 상품문의 영역 종료 */
