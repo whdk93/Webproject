@@ -21,8 +21,7 @@ $(function () {
             index++;
             moveSlider(index);
         }else {
-            $('#slideContent').css('left',0); // animate되어서 들어오는데 흰화면 보임
-            // left를 0으로 하면 그냥 이미지가 떠버려서 slide가 안됨
+            $('#slideContent').css('left',0);
             index=1;
             moveSlider(index);
         }
@@ -36,11 +35,15 @@ $(function () {
         },'slow');
     }
     // 배너 스케일
-    $('.conbanner').each(function () {
+    $('.conbanner a').each(function () {
         $(this).hover(function () {
-            $('.conbanner img').animate({
-                Transform : 
+            $('.conbanner a img').animate({
+                scale : '1.2'
             },'slow');
-        },function () {});
+        },function () {
+            $('.conbanner a img').animate({
+                scale : '1'
+            },'slow');
+        });
     });
 });
