@@ -87,7 +87,7 @@
     background-color: #fafafa;
 }
 #joinInput label strong {
-    margin-left: 2px;
+    margin-left: 3px;
 }
 #joinInput p input {
     height: 20px;
@@ -109,7 +109,7 @@
     background-color: #7a7a7a;
     margin-left: 5px;
     color: #fafafa;
-    text-shadow: 1px 1px 1px #555, -1px -1px 1px #555;
+    text-shadow: 1px 1px 2px #000;
 }
 #joinInput #address  {
     position: absolute;
@@ -136,7 +136,8 @@
     background-color: #5a5a5a;
     color: #fafafa;
     text-shadow: 1px 1px 1px #222, -1px -1px 1px #222;
-    font-size: 1.2em;    
+    font-size: 1.2em;
+    cursor: pointer;  
 }
 #joinBtnArea .joinSubmit {
     margin-right: 10px;

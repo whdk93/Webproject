@@ -6,21 +6,21 @@
 }
 #slideArea{
     position: relative;
-    width: 1202px;
+    width: 1200px;
     height: 413px;
     margin: 0 auto;
     overflow: hidden;
 }
 #slideContent {
     position: relative;
-    width: 6010px;
+    width: 6000px;
 }
-#slideContent li {
+#slideContent .slider_image {
     position: relative;
     float: left;
 }
-#slideContent img {
-    width: 1202px;
+#slideContent a img {
+    width: 1200px;
 }
 .slideBtn {
     position: absolute;
@@ -63,13 +63,18 @@
     background-color: #fff;
 }
 #bannerArea .conbanner a {
-    display: inline-block;
+    display: block;
     width: 320px;
     height: 300px;
+    overflow: hidden;
+}
+#bannerArea .conbanner a:hover img {
+    transform: scale(1.1);
 }
 #bannerArea .conbanner a img {
     width: 320px;
     height: 300px;
+    transition: all 1s;
 }
 #bannerArea .conbanner strong, #bannerArea .conbanner span {
     width: 320px;
@@ -79,6 +84,8 @@
     display: inline-block;
     font-size: 1.5em;
     padding: 10px 0;
+    
+    font-family: "NanumSquareNeoBold";
 }
 #bannerArea .conbanner span {
     display: inline-block;
@@ -95,12 +102,13 @@
     position: relative;
     text-transform: uppercase;
     font-size: 1.8em;
+    font-family: "NanumSquareNeoExtraBold";
     width: 200px;
     text-align: center;
     left: 50%;
     margin-left: -100px;
-    font-weight: normal;
     padding: 20px 0;
+    color: #333;
 }
 .prod ul {
     position: relative;
@@ -117,6 +125,7 @@
 }
 .prod ul li a:nth-of-type(1) img{
     width: 250px;
+    height: 253px;
 }
 .prod ul li a:nth-of-type(2) {
     display: inline-block;
@@ -131,5 +140,6 @@
 }
 .prod ul li .originPrice span {
     text-decoration: line-through;
+    margin-left: 5px;
 }
 /* 콘텐츠 영역 끝 */
