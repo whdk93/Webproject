@@ -123,43 +123,38 @@
             <div class="prodInfo">
                 <h2>플래티넘 센츄리 #3776 니스 라벤더</h2>
                 <ul class="infoOption">
-                    <li class="commas"><span>판매가</span>190000원</li>
+                    <li class="commas"><span>판매가</span><strong class="realprice">190000원</strong></li>
                     <li class="commas"><span>소비자가</span><strong class="linethrough">300000원</strong></li>
                     <li><span>제조사</span>플래티넘</li>
-                    <li>
-                        <span>배송비</span>
-                        <select name="deliveryfee" id="deliveryfee">
-                            <option value="3000">주문시 결제(선결제)</option>
-                            <option value="0">수령시 결제(착불)</option>
-                        </select>
-                    </li>
+                    <li><span>배송비</span>3000원</li>
                     <li><span>옵션선택</span>
                         <select name="tipsize" id="tipsize">
-                            <option value="0">옵션을 선택하세요</option>
-                            <option value="190000">EF닙</option>
-                            <option value="190000">F닙</option>
-                            <option value="190000">M닙</option>
-                            <option value="190000">B닙</option>
+                            <option value="default">옵션 선택</option>
+                            <option value="EF">EF닙</option>
+                            <option value="F">F닙</option>
+                            <option value="M">M닙</option>
+                            <option value="B">B닙</option>
                         </select>
                     </li>
                 </ul>
                 <div id="orderList">
-                    <div class="orderprod">
-                        <button class="delete">X</button>
+                    <div class="orderBox">
+                        <p class=pNameBox>
+                            <span class="pName">센츄리 니스 라벤더-</span>
+                        </p>
+                        <div class="orderListDetail">
+                            <input type="text" id="quantity" value="0">
+                            <p class="plusBtn olBtn"><i class="fa-solid fa-plus"></i></p>
+                            <p class="minusBtn olBtn"><i class="fa-solid fa-minus"></i></p>
+                            <strong class="pPrice">0원</strong>
+                        </div>
                     </div>
-                    <div class="orderListDetail">
-                        <span class="selectedOptions"></span>
-                        <input type="text" id="quantity" size="1" value="0">
-                        <button class="plus quanBtn">+</button>
-                        <button class="minus quanBtn">-</button>
-                        <span class="quanPrice">190000원</span>
-                    </div>
-                    <p class="totalPrice">총 상품 금액<span class="commas"></span></p>
                 </div>
-                <div class="orderbtn">
-                    <button type="submit">바로 구매</button>
-                    <button type="submit">찜하기</button>
-                    <button type="submit">장바구니</button>
+                <p class="totalPrice">총 상품 금액<strong class="tPrice">0원</strong></p>
+                <div class="orderBtnArea">
+                    <button class="buynow" type="submit">바로 구매</button>
+                    <button class="addfavorite" type="submit">찜하기</button>
+                    <button calss="addcart" type="submit">장바구니</button>
                 </div>
             </div>    
         </div>
