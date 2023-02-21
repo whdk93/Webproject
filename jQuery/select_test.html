@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex</title>
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul,li{
+            list-style: none;
+        }
+    </style>
+    <script>
+        $(function(){
+            $("select[name=pen]").change(function(){
+                console.log($("select[name=pen] option:selected").text())
+                $("#selected_pen").html("색상 : "+($("select[name=pen] option:selected").text()));
+                $(".result_price1").html("가격 : "+($("select[name=pen]").val())+"원");
+                $(".real_total_price").html(($("select[name=pen]").val())+($("select[name=option]").val())+"원")
+            });
+
+            $("select[name=option]").change(function(){
+                console.log(($("select[name=option]").val()))
+                $(".result_price2").html(($("select[name=option] option:selected").text())+" : "+($("select[name=option]").val())+"원")
+                $(".real_total_price").html(parseInt(($("select[name=pen]").val()))+(parseInt($("select[name=option]").val()))+"원")
+            })
+
+           
+
+
+            // 옵션선택해야 진행가능 기능 미구현
+            // if($("select[name=pen] option:selected")){
+            //     function(){
+            //         $(".result_price").html()
+            //     }
+            // }
+        
+        });
+    </script>
+</head>
+<body>
+    <div id="ex_div">
+        <p>판매가격<span>49,600</span>원</p>
+        <form action="">
+            <ul>
+                <li>
+                    <select name="pen" id="pen_option">
+                        <option value="">옵션 선택</option>
+                        <option value="49600">블루</option>
+                        <option value="49600">레드</option>
+                        <option value="49600">블랙</option>
+                        <option value="49600">화이트</option>
+                    </select>
+                </li>
+                <!-- <li>
+                    <select name="ink" id="ink_option">
+                        <option value="">옵션 선택</option>
+                        <option value="">얇음</option>
+                        <option value="">보통</option>
+                        <option value="">두꺼움</option>
+                        <option value="">완전두꺼움</option>
+                    </select>
+                </li> -->
+                <li>
+                    <select name="option" id="more_option">
+                        <option value="">옵션 선택</option>
+                        <option value="100">각인</option>
+                        <option value="200">선물 포장</option>
+                        <option value="300">메세지 카드</option>
+                    </select>
+                </li>
+            </ul>
+            <div id="selected_pen">
+        
+            </div>
+            <div class="result_price1">
+                <p></p>
+            </div>
+            <div class="result_price2">
+                <p></p>
+            </div>
+            <div class="total_price">
+                <span>총 상품 금액</span>
+                <p class="real_total_price">0원</p>
+            </div>
+        </form>    
+    </div>
+    
+</body>
+</html>
