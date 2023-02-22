@@ -304,6 +304,7 @@ header {
 /* 푸터 영역 */
 footer {
     position: relative;
+    margin-top: 50px;
 }
 footer::after {
     content: "";

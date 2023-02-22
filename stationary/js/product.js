@@ -29,4 +29,5 @@ $(function () {
             $('#quantity').val(0);
         }
     }));
+    
 });
