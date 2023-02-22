@@ -108,6 +108,7 @@
     text-align: center;
     left: 50%;
     margin-left: -100px;
+    margin-bottom: 50px;
     padding: 20px 0;
     color: #333;
 }
@@ -119,6 +120,15 @@
     float: left;
     width: 290px;
     margin: 0 5px;
+}
+.scaleLink {
+    overflow: hidden;
+}
+.scaleImg {
+    transition: all 1s;
+}
+.scaleLink:hover .scaleImg {
+    transform: scale(1.05);
 }
 .prod ul li a:nth-of-type(1){
     display: inline-block;

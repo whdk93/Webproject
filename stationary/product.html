@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Detail</title>
+    <title>GIROKHADA-센츄리 니스 라벤더</title>
     <link rel="stylesheet" type="text/css" href="css/common.css">
     <link rel="stylesheet" type="text/css" href="css/product.css">
     <script src="js/jquery-3.6.3.min.js"></script>
@@ -18,9 +18,9 @@
     <!-- 퀵메뉴(오늘 본 상품) -->
     <div id="quickMenu">
         <div class="quick_prod">
-        <a href="#"><img src="img/century_nice_lavande.jpg" alt="century lavande"></a>
-        <a href="#"><img src="img/pelikan_apatite.jpg" alt="pelikan apatite"></a>
-        <a href="#"><img src="img/sailor_overthostorm.jpg" alt="sailor over the storm"></a>
+        <a href="product.html"><img src="img/century_nice_lavande.jpg" alt="century lavande"></a>
+        <a href="#"><img src="img/ecoRosegold.jpg" alt="twisbi eco rosegold"></a>
+        <a href="#"><img src="img/brausenibset.jpg" alt="brause nib set"></a>
         </div>
         <div class="quick_btn">
             <a href="#" class="quick_up"><i class="fa-solid fa-angle-up"></i><span>up</span></a>
@@ -29,9 +29,9 @@
     </div>
     <!-- 퀵메뉴(맨위로,홈으로,장바구니) -->
     <div id="topMenu">
-        <a href="#head_top" class="top top1"><i class="fa-solid fa-angles-up"></i><span>top</span></a>
-        <a href="index.html" class="top top2"><i class="fa-solid fa-house"></i><span>home</span></a>
-        <a href="#" class="top top3"><i class="fa-solid fa-cart-shopping"></i><span>cart</span></a>
+        <a href="#" class="topBtn"><i class="fa-solid fa-angles-up"></i><span>top</span></a>
+        <a href="index.html" class="home"><i class="fa-solid fa-house"></i><span>home</span></a>
+        <a href="#" class="cart"><i class="fa-solid fa-cart-shopping"></i><span>cart</span></a>
     </div>
     <!-- 퀵메뉴 영역 종료 -->
     <!-- 헤더 영역 시작 -->
@@ -62,7 +62,7 @@
         <div id="mainMenuArea">
             <nav class="mainNav">
                 <h2>메인메뉴</h2>
-                <p><a href="">브랜드</a></p>
+                <p><a href="#">브랜드</a></p>
                 <ul class="mainMenu">
                     <li>
                         <a href="#">필기구</a>
@@ -153,8 +153,8 @@
                 <p class="totalPrice">총 상품 금액<strong class="tPrice">0원</strong></p>
                 <div class="orderBtnArea">
                     <button class="buynow" type="submit">바로 구매</button>
-                    <button class="addfavorite" type="submit">찜하기</button>
-                    <button calss="addcart" type="submit">장바구니</button>
+                    <button class="addfavorite smllbtn" type="submit">찜하기</button>
+                    <button class="addcart smllbtn" type="submit">장바구니</button>
                 </div>
             </div>    
         </div>
@@ -165,10 +165,10 @@
                 <h2 class="hidden">상품상세정보</h2>
                 <nav class="navDetail">
                     <ul>
-                        <li class="focus"><a href="#prodDetailArea">상품상세정보</a></li>
-                        <li><a href="#prodTerms">상품구매안내</a></li>
-                        <li><a href="#prodReview">상품후기</a></li>
-                        <li><a href="#prodQnA">상품문의</a></li>
+                        <li class="focus"><a class="moveScroll" href="#prodDetailArea">상품상세정보</a></li>
+                        <li><a class="moveScroll" href="#prodTerms">상품구매안내</a></li>
+                        <li><a class="moveScroll" href="#prodReview">상품후기</a></li>
+                        <li><a class="moveScroll" href="#prodQnA">상품문의</a></li>
                     </ul>
                 </nav>
                 <div class="prodDetailImg">
@@ -180,10 +180,10 @@
                 <h2 class="hidden">상품구매안내</h2>
                 <nav class="navDetail">
                     <ul>
-                        <li><a href="#prodDetailArea">상품상세정보</a></li>
-                        <li class="focus"><a href="#prodTerms">상품구매안내</a></li>
-                        <li><a href="#prodReview">상품후기</a></li>
-                        <li><a href="#prodQnA">상품문의</a></li>
+                        <li><a class="moveScroll" href="#prodDetailArea">상품상세정보</a></li>
+                        <li class="focus"><a class="moveScroll" href="#prodTerms">상품구매안내</a></li>
+                        <li><a class="moveScroll" href="#prodReview">상품후기</a></li>
+                        <li><a class="moveScroll" href="#prodQnA">상품문의</a></li>
                     </ul>
                 </nav>
                 <div class="termsDetail">
@@ -217,32 +217,32 @@
                 <h2 class="hidden">상품후기</h2>
                 <nav class="navDetail">
                     <ul>
-                        <li><a href="#prodDetailArea">상품상세정보</a></li>
-                        <li><a href="#prodTerms">상품구매안내</a></li>
-                        <li class="focus"><a href="#prodReview">상품후기</a></li>
-                        <li><a href="#prodQnA">상품문의</a></li>
+                        <li><a class="moveScroll" href="#prodDetailArea">상품상세정보</a></li>
+                        <li><a class="moveScroll" href="#prodTerms">상품구매안내</a></li>
+                        <li class="focus"><a class="moveScroll" href="#prodReview">상품후기</a></li>
+                        <li><a class="moveScroll" href="#prodQnA">상품문의</a></li>
                     </ul>
                 </nav>
                 <div class="reviewList">
                     <p>게시물이 없습니다</p>
                 </div>
-                <a class="reviewBtn" href="#">후기작성하기</a>
+                <a class="reviewBtn listbtn" href="#">후기작성하기</a>
             </div>
             <!-- 상품 문의 -->
             <div id="prodQnA">
                 <h2 class="hidden">상품문의</h2>
                 <nav class="navDetail">
                     <ul>
-                        <li><a href="#prodDetailArea">상품상세정보</a></li>
-                        <li><a href="#prodTerms">상품구매안내</a></li>
-                        <li><a href="#prodReview">상품후기</a></li>
-                        <li class="focus"><a href="#prodQnA">상품문의</a></li>
+                        <li><a class="moveScroll" href="#prodDetailArea">상품상세정보</a></li>
+                        <li><a class="moveScroll" href="#prodTerms">상품구매안내</a></li>
+                        <li><a class="moveScroll" href="#prodReview">상품후기</a></li>
+                        <li class="focus"><a class="moveScroll" href="#prodQnA">상품문의</a></li>
                     </ul>
                 </nav>
                 <div class="qnaList">
                     <p>게시물이 없습니다</p>
                 </div>
-                <a href="#">상품문의하기</a>
+                <a class="qnaBtn listbtn" href="#">상품문의하기</a>
             </div>
         </div>
     </div>

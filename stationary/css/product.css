@@ -135,15 +135,23 @@
     width: 45%;
     height: 40px;
     cursor: pointer;
-    background-color: #aeaeae;
-    border: 1px solid #666;
+    background-color: #eee;
+    border: 1px solid #999;
     margin-left: 8px;
 }
 .orderBtnArea button:first-of-type {
     width: 92%;
     margin-bottom: 5px;
     color: #eee;
-    background-color: #7a7a7a;
+    background-color: #354568;
+}
+.orderBtnArea .buynow:hover {
+    color: #08225c;
+    background-color: #ffffff;    
+}
+.orderBtnArea .smllbtn:hover {
+    color: #eee;
+    background-color: #fc9a2a;
 }
 /* 상품 디테일 옵션 영역 종료 */
 /* 상품 정보 영역 시작*/
@@ -200,6 +208,17 @@
     line-height: 1.8em;
 }
 /* 상품구매안내 영역 종료 */
+#prodDetailArea .listbtn {
+    position: relative;
+    margin-left: 1100px;
+    margin-bottom: 10px;
+    display: inline-block;
+    border-radius: 2px;
+    padding: 5px 3px;
+    background-color: #eee;
+    border: 1px solid #999;
+    font-family: "Nanum";    
+}
 /* 상품후기 영역 시작 */
 #prodReview {
     position: relative;
@@ -212,17 +231,17 @@
     padding: 20px 0;
     border: 1px solid #555;
 }
-#prodReview .reviewBtn {
+/* #prodReview .reviewBtn {
     position: relative;
     margin-left: 1100px;
     margin-bottom: 10px;
     display: inline-block;
-    border-radius: 5px;
+    border-radius: 2px;
     padding: 5px 3px;
     background: linear-gradient(to bottom,#555 50%,#7a7a7a);
     color: white;
     font-family: "Nanum";
-}
+} */
 /* 상품후기 영역 종료 */
 
 /* 상품문의 영역 시작 */
@@ -237,7 +256,7 @@
     padding: 20px 0;
     border: 1px solid #555;
 }
-#prodQnA>a {
+/* #prodQnA>a {
     position: relative;
     margin-left: 1100px;
     margin-bottom: 10px;
@@ -246,5 +265,5 @@
     padding: 5px 3px;
     background: linear-gradient(to bottom, #555 50%,#7a7a7a);
     color: #fff;  
-}
+} */
 /* 상품문의 영역 종료 */

@@ -29,5 +29,11 @@ $(function () {
             $('#quantity').val(0);
         }
     }));
-    
+    // area 이동 
+    $('.moveScroll').click(function (event) {
+        event.preventDefault();
+        $('html, body').animate({
+            scrollTop : $(this.hash).offset().top
+        },1000);
+    });
 });
