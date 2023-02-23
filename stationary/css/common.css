@@ -157,7 +157,15 @@ body {
 #content {
     position: relative;
 }
-
+.location {
+    position: relative;
+    height : 15px;
+    line-height: 15px;
+    text-align: right;
+    padding: 10px 0;
+    margin: 20px 0 30px;
+    text-transform: uppercase;
+}
 /* 헤더 영역 */
 header {
     position: relative;
@@ -379,6 +387,23 @@ footer::after {
 }
 .rtnex, .footbox select {
     margin-top: 5px;
+}
+.footerbtn {
+    width: 95px;
+    height: 10px;
+    border-radius: 2px;
+    padding: 5px 5px;
+    background-color: #eee;
+    border: 1px solid #999;
+    font-size: 12px;
+    line-height: 12px;
+}
+.footprodbtn {
+    width: 50px;
+    margin-bottom: 5px;
+}
+.footprodbtn:last-of-type {
+    margin-bottom: 0;
 }
 /* 푸터 소셜 영역 */
 #footsocial {
