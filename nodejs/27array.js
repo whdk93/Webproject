@@ -1,0 +1,12 @@
+const numbers=[4,7,10,11,14];
+numbers.reverse();
+console.log(numbers);
+const stringArray='ppyong'.split("");
+stringArray.reverse();
+console.log(stringArray);
+const numbers2=[34,56,72,59,23];
+const sortNumbers=numbers2.sort();
+console.log("오름차순 정렬 :",sortNumbers);
+const names=['이명헌','정성구','신현철','정우성','김낙수'];
+const sortNames=names.sort();
+console.log("오름차순 정렬 : ",sortNames);
